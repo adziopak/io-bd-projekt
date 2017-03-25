@@ -4,6 +4,7 @@ require_once 'views/exampleView.php';
 require_once 'views/mapView.php';
 require_once 'views/phpInfoView.php';
 require_once 'views/buildingMapView.php';
+require_once 'utils/databaseConnect.php';
 
 if (isset($_GET['path']))
 {
@@ -33,6 +34,14 @@ if (isset($_GET['path']))
 		$view = new BuildingMapView;
 		$view->currentMap = "media/v_0.png";
 		echo $view->render();		
+	}
+	else if ($_GET['path'] == 'databaseTest')
+	{
+		$dbconn = new DatabaseConnect;
+		$sql = "select * from testtable";
+		$result = $dbconn->getConnection()->query($sql);
+
+		echo json_encode($result->fetch_all(MYSQLI_ASSOC));
 	}
 	else 
 	{
