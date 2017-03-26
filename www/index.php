@@ -31,8 +31,22 @@ if (isset($_GET['path']))
 	}
 	else if ($_GET['path'] == 'buildingMap')
 	{
+		$dbconn = new DatabaseConnect;
+		$sql = "select * from maps where name ='V_0'";
+		$result = $dbconn->getConnection()->query($sql);
+		$result = $result->fetch_assoc();
+
 		$view = new BuildingMapView;
-		$view->currentMap = "media/v_0.png";
+		$view->currentMap = "media/" . $result['image'];
+		$view->mapWidth = $result['map_width'];
+		$view->mapHeight = $result['map_height'];
+
+		$sql = "select * from pins where id = " . $result['id'];
+		$result = $dbconn->getConnection()->query($sql);
+		$result = $result->fetch_assoc();
+
+		$view->xPosition = $result['pos_x'] * $view->mapWidth;
+		$view->yPosition = $result['pos_y'] * $view->mapHeight;
 		echo $view->render();		
 	}
 	else if ($_GET['path'] == 'databaseTest')

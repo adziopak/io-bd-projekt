@@ -6,15 +6,23 @@
 		<style>
 			#building_map 
 			{
-				width: 800px;
-				height: 600px;
+				width: ::mapWidth::px;
+				height: ::mapHeight::px;
 				background-image: url("::currentMap::");
-				background-size: auto 600px
+			}
+
+			.pin
+			{
+				width: 34px;
+				height: 35px;
+				background-image: url("media/pin.jpg");
+				position: absolute;
 			}
 		</style>
 	</head>
 	<body>
 		<div id="building_map">
+			<div class="pin" style="left: ::xPosition::px; bottom: ::yPosition::px;"></div>
 		</div>
 	</body>
 </html>
