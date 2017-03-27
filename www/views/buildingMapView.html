@@ -9,6 +9,7 @@
 				width: ::mapWidth::px;
 				height: ::mapHeight::px;
 				background-image: url("::currentMap::");
+				position: relative;
 			}
 
 			.pin
@@ -17,12 +18,13 @@
 				height: 35px;
 				background-image: url("media/pin.jpg");
 				position: absolute;
+
 			}
 		</style>
 	</head>
 	<body>
 		<div id="building_map">
-			<div class="pin" style="left: ::xPosition::px; bottom: ::yPosition::px;"></div>
+			<div class="pin" style="left: ::xPosition::px; top: ::yPosition::px;"></div>
 		</div>
 	</body>
 </html>

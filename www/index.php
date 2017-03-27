@@ -47,6 +47,8 @@ if (isset($_GET['path']))
 
 		$view->xPosition = $result['pos_x'] * $view->mapWidth;
 		$view->yPosition = $result['pos_y'] * $view->mapHeight;
+		// $view->xPosition = 438;
+		// $view->yPosition = 483;
 		echo $view->render();		
 	}
 	else if ($_GET['path'] == 'databaseTest')
@@ -55,6 +57,7 @@ if (isset($_GET['path']))
 		$sql = "select * from testtable";
 		$result = $dbconn->getConnection()->query($sql);
 
+		header('Content-type: application/json');
 		echo json_encode($result->fetch_all(MYSQLI_ASSOC));
 	}
 	else 
