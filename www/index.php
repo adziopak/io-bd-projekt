@@ -5,9 +5,12 @@ require_once 'views/mapView.php';
 require_once 'views/phpInfoView.php';
 require_once 'views/buildingMapView.php';
 require_once 'utils/databaseConnect.php';
+require_once 'utils/point2D.php';
 
 if (isset($_GET['path']))
 {
+	$subviews = [ 'example', 'map', 'buildingMap', 'databaseTest' ];
+
 	if ($_GET['path'] == 'example')
 	{
 		$view = new ExampleView;
@@ -41,14 +44,21 @@ if (isset($_GET['path']))
 		$view->mapWidth = $result['map_width'];
 		$view->mapHeight = $result['map_height'];
 
-		$sql = "select * from pins where id = " . $result['id'];
-		$result = $dbconn->getConnection()->query($sql);
-		$result = $result->fetch_assoc();
+		$sql = "select * from pins";
+		$resultFetch = $dbconn->getConnection()->query($sql);
 
-		$view->xPosition = $result['pos_x'] * $view->mapWidth;
-		$view->yPosition = $result['pos_y'] * $view->mapHeight;
-		// $view->xPosition = 438;
-		// $view->yPosition = 483;
+		$pos = new Point2D;
+		$result = $resultFetch->fetch_assoc();
+		$pos->x = $result['pos_x'];
+		$pos->y = $result['pos_y'];
+		array_push($view->position, $pos);
+
+		$pos = new Point2D;
+		$result = $resultFetch->fetch_assoc();
+		$pos->x = $result['pos_x'];
+		$pos->y = $result['pos_y'];
+		array_push($view->position, $pos);
+
 		echo $view->render();		
 	}
 	else if ($_GET['path'] == 'databaseTest')

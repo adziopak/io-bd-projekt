@@ -1,30 +1,58 @@
 <!DOCTYPE html>
-<html>
-	<head>
-		<meta charset="UTF-8">
-		<title>Building map view</title>
-		<style>
-			#building_map 
-			{
-				width: ::mapWidth::px;
-				height: ::mapHeight::px;
-				background-image: url("::currentMap::");
-				position: relative;
-			}
+<html lang="pl">
+<head>
+<title>Mapka Prz</title>
+<meta charset="utf-8" />
+<style>
+#page {
+	width: 1200px;
+	margin: 0 auto;
+	min-height: 800px;
+}
 
-			.pin
-			{
-				width: 34px;
-				height: 35px;
-				background-image: url("media/pin.jpg");
-				position: absolute;
+div.mapka {
+	position: relative;
+}
 
-			}
-		</style>
-	</head>
-	<body>
-		<div id="building_map">
-			<div class="pin" style="left: ::xPosition::px; top: ::yPosition::px;"></div>
+div.zdjecieMapki {
+	position: absolute;
+	top: 0;
+	left: 0;	
+}
+
+div.sciezka {
+	position: absolute;
+	left: 0;
+	top: 0;
+	height: 100%;
+	width: 100%;	
+}
+
+div.sciezka .parametryLinii {
+	stroke:rgb(255,0,0);
+	stroke-width:4;
+}
+</style>
+
+</head>
+
+<body>
+<div id="page">
+	<div class="mapka">
+		<div class="sciezka">
+			<svg height="100%" width="100%">
+			<line x1="::xPosition::%" y1="::yPosition::%" x2="54%" y2="36%" class="parametryLinii" /> <!-- tutaj rysujemy linie kodem -->
+			<line x1="54%" y1="36%" x2="60%" y2="35.5%" class="parametryLinii" /> <!-- tutaj rysujemy linie kodem -->
+			<!-- ::Lines:: -->
+
+			::Pins::
+			</svg>
 		</div>
-	</body>
+			<div>
+				<img src="::currentMap::" width="100%" class="zdjecieMapki" />
+			</div>
+	</div>
+</div>
+</body>
+
 </html>
