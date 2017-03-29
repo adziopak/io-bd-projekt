@@ -1,12 +1,12 @@
 www/config/databaseConfig.json
 *.iml
-.gradle
-/local.properties
-/.idea/workspace.xml
-/.idea/libraries
-.DS_Store
-/build
-/captures
-.externalNativeBuild
+android/.gradle
+android/local.properties
+android/.idea/workspace.xml
+android/.idea/libraries
+andorid/.DS_Store
+android/build
+android/captures
+android/.externalNativeBuild
 
 
