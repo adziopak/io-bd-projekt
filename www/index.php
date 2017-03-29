@@ -47,17 +47,13 @@ if (isset($_GET['path']))
 		$sql = "select * from pins";
 		$resultFetch = $dbconn->getConnection()->query($sql);
 
-		$pos = new Point2D;
-		$result = $resultFetch->fetch_assoc();
-		$pos->x = $result['pos_x'];
-		$pos->y = $result['pos_y'];
-		array_push($view->position, $pos);
-
-		$pos = new Point2D;
-		$result = $resultFetch->fetch_assoc();
-		$pos->x = $result['pos_x'];
-		$pos->y = $result['pos_y'];
-		array_push($view->position, $pos);
+		for ($pin = $resultFetch->fetch_assoc(); $pin != null; $pin = $resultFetch->fetch_assoc())
+		{
+			$pos = new Point2D;
+			$pos->x = $pin['pos_x'];
+			$pos->y = $pin['pos_y'];
+			array_push($view->position, $pos);
+		}
 
 		echo $view->render();		
 	}
