@@ -29,7 +29,7 @@ public class MainActivity extends AppCompatActivity
         setSupportActionBar(toolbar);
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
-            this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
+                this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
         drawer.setDrawerListener(toggle);
         toggle.syncState();
 
@@ -37,14 +37,13 @@ public class MainActivity extends AppCompatActivity
         navigationView.setNavigationItemSelectedListener(this);
 
 
-        button1 = (Button)findViewById(R.id.button3);
-
+        button1 = (Button) findViewById(R.id.button3);
 
 
         button1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-               Intent newAct = new Intent(MainActivity.this, BuildingActivity.class);
+                Intent newAct = new Intent(MainActivity.this, BuildingActivity.class);
                 startActivity(newAct);
             }
         });
@@ -68,20 +67,20 @@ public class MainActivity extends AppCompatActivity
     }
 
 
-
     @SuppressWarnings("StatementWithEmptyBody")
     @Override
     public boolean onNavigationItemSelected(MenuItem item) {
         // Handle navigation view item clicks here.
         int id = item.getItemId();
-
         if (id == R.id.nav_camera) {
-            // Handle the camera action
-        } else if (id == R.id.nav_gallery) {
-
-        } else if (id == R.id.nav_slideshow) {
-
-        } else if (id == R.id.nav_manage) {
+            Intent op1 = new Intent(MainActivity.this, SearchActivity.class);
+            startActivity(op1);
+        }
+        else if (id == R.id.nav_gallery) {
+            Intent op2 = new Intent(MainActivity.this, MapsActivity.class);
+            startActivity(op2);
+        }
+        else if (id == R.id.nav_slideshow) {
 
         }
 

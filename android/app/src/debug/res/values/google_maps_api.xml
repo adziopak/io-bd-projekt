@@ -1,0 +1,21 @@
+<resources>
+    <!--
+    TODO: Before you run your application, you need a Google Maps API key.
+
+    To get one, follow this link, follow the directions and press "Create" at the end:
+
+    https://console.developers.google.com/flows/enableapi?apiid=maps_android_backend&keyType=CLIENT_SIDE_ANDROID&r=22:85:29:2E:EA:B1:F6:E1:F9:F2:36:66:28:91:F6:DB:38:F7:B4:74%3Bcom.example.gloxiak.menu
+
+    You can also add your credentials to an existing key, using this line:
+    22:85:29:2E:EA:B1:F6:E1:F9:F2:36:66:28:91:F6:DB:38:F7:B4:74;com.example.gloxiak.menu
+
+    Alternatively, follow the directions here:
+    https://developers.google.com/maps/documentation/android/start#get-key
+
+    Once you have your key (it starts with "AIza"), replace the "google_maps_key"
+    string in this file.
+    -->
+    <string name="google_maps_key" templateMergeStrategy="preserve" translatable="false">
+        AIzaSyBRLyWML5ZNhy8O9SHvuztfAlwr4O4uWhE
+    </string>
+</resources>
