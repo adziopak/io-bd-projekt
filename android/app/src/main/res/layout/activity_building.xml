@@ -11,23 +11,118 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.example.gloxiak.menu.BuildingActivity">
 
+
     <TextView
         android:text="Budynek V"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="140dp"
+        android:layout_height="40dp"
         android:id="@+id/textView"
-        android:textSize="24sp"
+        android:textSize="28sp"
         android:textColor="@color/colorPrimaryDark"
         android:layout_alignParentTop="true"
         android:layout_alignParentStart="true" />
 
-    <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:srcCompat="@drawable/v0"
-        android:id="@+id/imageView6"
+    <ScrollView
+        android:layout_width="match_parent"
         android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="67dp" />
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/textView"
+        android:layout_height="520dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="#f5f5f5">
+
+            <SearchView
+                android:layout_height="match_parent"
+                android:layout_width="match_parent"
+                android:background="#f1f1f1"
+                android:orientation="vertical"
+                android:layout_below="@+id/textView"
+                android:layout_alignParentStart="true" />
+
+            <TextView
+                android:text="Parter"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/textView3"
+                android:textColor="@color/colorPrimaryDark" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="240dp"
+                app:srcCompat="@drawable/v0"
+                android:layout_above="@+id/scrollView2"
+                android:layout_alignEnd="@+id/textView"
+                android:id="@+id/imageView"
+                android:adjustViewBounds="false"
+                android:cropToPadding="false" />
+
+            <TextView
+                android:text="I piętro"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/textView2"
+                android:textColor="@color/colorPrimaryDark" />
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="240dp"
+                app:srcCompat="@drawable/v1"
+                android:layout_above="@+id/scrollView2"
+                android:layout_alignEnd="@+id/textView"
+                android:id="@+id/imageView2" />
+
+            <TextView
+                android:text="II piętro"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/textView4"
+                android:textColor="@color/colorPrimaryDark"/>
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="240dp"
+                app:srcCompat="@drawable/v2"
+                android:layout_above="@+id/scrollView2"
+                android:layout_alignEnd="@+id/textView"
+                android:id="@+id/imageView3" />
+
+            <TextView
+                android:text="III piętro"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/textView5"
+                android:textColor="@color/colorPrimaryDark"/>
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="240dp"
+                app:srcCompat="@drawable/v3"
+                android:layout_above="@+id/scrollView2"
+                android:layout_alignEnd="@+id/textView"
+                android:id="@+id/imageView4" />
+
+            <TextView
+                android:text="IV piętro"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/textView6"
+                android:textColor="@color/colorPrimaryDark"/>
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="240dp"
+                app:srcCompat="@drawable/v4"
+                android:layout_above="@+id/scrollView2"
+                android:layout_alignEnd="@+id/textView"
+                android:id="@+id/imageView5" />
+
+
+        </LinearLayout>
+    </ScrollView>
+
 
 </RelativeLayout>
