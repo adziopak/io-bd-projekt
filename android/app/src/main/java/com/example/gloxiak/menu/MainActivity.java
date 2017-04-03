@@ -72,15 +72,17 @@ public class MainActivity extends AppCompatActivity
     public boolean onNavigationItemSelected(MenuItem item) {
         // Handle navigation view item clicks here.
         int id = item.getItemId();
-        if (id == R.id.nav_camera) {
+        if (id == R.id.nav_buildings) {
             Intent op1 = new Intent(MainActivity.this, SearchActivity.class);
             startActivity(op1);
         }
-        else if (id == R.id.nav_gallery) {
+        else if (id == R.id.nav_navigation) {
             Intent op2 = new Intent(MainActivity.this, MapsActivity.class);
             startActivity(op2);
         }
-        else if (id == R.id.nav_slideshow) {
+        else if (id == R.id.nav_map) {
+            Intent op3 = new Intent(MainActivity.this, MapActivity.class);
+            startActivity(op3);
 
         }
 

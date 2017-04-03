@@ -14,15 +14,16 @@
 
 
     <TextView
+        android:text="Szukaj:"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textColor="@color/colorPrimaryDark"
-        android:text="Menu"
-        android:paddingBottom="30dp"
-        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-        android:textSize="36sp" />
+        android:id="@+id/textView8"
+        android:textColor="@color/colorPrimaryDark" />
 
-
+    <SearchView
+        android:layout_width="match_parent"
+        android:background="#e7e7e7"
+        android:layout_height="40dp" />
 
 
 </LinearLayout>
