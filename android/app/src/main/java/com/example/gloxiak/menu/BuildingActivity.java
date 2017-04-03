@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.widget.ImageView;
 import uk.co.senab.photoview.PhotoViewAttacher;
 
+
 public class BuildingActivity extends AppCompatActivity {
     ImageView imageView;
     ImageView imageView2;

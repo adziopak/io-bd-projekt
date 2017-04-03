@@ -10,3 +10,4 @@ android/captures
 android/.externalNativeBuild
 
 
+android/app/src/main/java/com/example/gloxiak/menu/BuildingActivity.java
