@@ -1,0 +1,90 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="B85789C3-AAFF-2BDD-415E-B6E615776DE1" name="PIN">
+<createdBy>Michał</createdBy>
+<createdTime>2017-04-07 14:31:31 UTC</createdTime>
+<ownerDesignName>ERD1</ownerDesignName>
+<engineerTo>
+<item key="E2BAA996-536A-0088-CDB5-CB07080B35FC" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="id" id="B3DF3C75-C8A3-CE9F-682E-FB913E9DD7C5">
+<createdBy>Michał</createdBy>
+<createdTime>2017-04-07 14:32:05 UTC</createdTime>
+<ownerDesignName>ERD1</ownerDesignName>
+<engineerTo>
+<item key="E2BAA996-536A-0088-CDB5-CB07080B35FC" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="mapID" id="55D9A6F3-DBF3-ABD3-7FAA-C7F530D24EDA">
+<createdBy>Michał</createdBy>
+<createdTime>2017-04-07 14:32:14 UTC</createdTime>
+<ownerDesignName>ERD1</ownerDesignName>
+<engineerTo>
+<item key="E2BAA996-536A-0088-CDB5-CB07080B35FC" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="pos" id="BB08D7A1-3024-6E28-CB1A-9EB35F58127C">
+<createdBy>Michał</createdBy>
+<createdTime>2017-04-07 14:32:35 UTC</createdTime>
+<ownerDesignName>ERD1</ownerDesignName>
+<engineerTo>
+<item key="E2BAA996-536A-0088-CDB5-CB07080B35FC" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="name" id="DC09D12B-16B4-382D-9E7F-175110EB7384">
+<createdBy>Michał</createdBy>
+<createdTime>2017-04-07 14:32:46 UTC</createdTime>
+<ownerDesignName>ERD1</ownerDesignName>
+<engineerTo>
+<item key="E2BAA996-536A-0088-CDB5-CB07080B35FC" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="id1" id="A12B25FE-4F29-BCDC-A5C6-C2F9A4A90EBE">
+<createdBy>Michał</createdBy>
+<createdTime>2017-04-07 14:38:23 UTC</createdTime>
+<generatorID>D7A528CB-FA25-A4B3-9857-241F525DD395</generatorID>
+<ownerDesignName>ERD1</ownerDesignName>
+<engineerTo>
+<item key="E2BAA996-536A-0088-CDB5-CB07080B35FC" value="true"/>
+</engineerTo>
+<referedAttribute>8BDD4FA1-E707-CCCA-35AA-A151DD90B83E</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="EA451CFA-7BDA-6812-5559-10229BF0C71C" name="MAP PK">
+<createdBy>Michał</createdBy>
+<createdTime>2017-04-07 14:31:31 UTC</createdTime>
+<ownerDesignName>ERD1</ownerDesignName>
+<engineerTo>
+<item key="E2BAA996-536A-0088-CDB5-CB07080B35FC" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>B3DF3C75-C8A3-CE9F-682E-FB913E9DD7C5</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>
