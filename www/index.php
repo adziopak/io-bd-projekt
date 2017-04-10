@@ -35,24 +35,32 @@ if (isset($_GET['path']))
 	else if ($_GET['path'] == 'buildingMap')
 	{
 		$dbconn = new DatabaseConnect;
-		$sql = "select * from maps where name ='V_0'";
-		$result = $dbconn->getConnection()->query($sql);
-		$result = $result->fetch_assoc();
-
 		$view = new BuildingMapView;
-		$view->currentMap = "media/" . $result['image'];
-		$view->mapWidth = $result['map_width'];
-		$view->mapHeight = $result['map_height'];
 
-		$sql = "select * from pins";
-		$resultFetch = $dbconn->getConnection()->query($sql);
-
-		for ($pin = $resultFetch->fetch_assoc(); $pin != null; $pin = $resultFetch->fetch_assoc())
+		$sql = "select `name` from maps";
+		$result = $dbconn->getConnection()->query($sql);
+		$view->maps = $result->fetch_all();
+		
+		if (isset($_GET['map']))
 		{
-			$pos = new Point2D;
-			$pos->x = $pin['pos_x'];
-			$pos->y = $pin['pos_y'];
-			array_push($view->position, $pos);
+			$sql = "select * from maps where name ='" . $_GET['map'] . "'";
+			$result = $dbconn->getConnection()->query($sql);
+			$result = $result->fetch_assoc();
+
+			$view->currentMap = "media/" . $result['image'];
+			$view->mapWidth = $result['map_width'];
+			$view->mapHeight = $result['map_height'];
+
+			$sql = "select * from pins where map_id =" . $result['id'];
+			$resultFetch = $dbconn->getConnection()->query($sql);
+
+			for ($pin = $resultFetch->fetch_assoc(); $pin != null; $pin = $resultFetch->fetch_assoc())
+			{
+				$pos = new Point2D;
+				$pos->x = $pin['pos_x'];
+				$pos->y = $pin['pos_y'];
+				array_push($view->positions, $pos);
+			}
 		}
 
 		echo $view->render();		

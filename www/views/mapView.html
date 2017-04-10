@@ -11,22 +11,24 @@
 				background-color: gray;
 			}
 		</style>
-		<script src="https://maps.googleapis.com/maps/api/js?key=::apiKey::&callback=initMap">
-		</script>
+		
 	</head>
 	<body>
-		<div id="map">Map should go there</div>
+    	<div id="map">Map should go there</div>
 		<script>
-			function initMap()
-			{
-				var mapOptions = {
-				center: new google.maps.LatLng(51.5, -0.12),
-				zoom: 10,
-				mapTypeId: google.maps.MapTypeId.HYBRID
-				}
-				
-				var map = new google.maps.Map(document.getElementById("map"), mapOptions);
-			};
+			function initMap() {
+		        var uluru = {lat: 50.0188232, lng: 21.9887356};
+		        var map = new google.maps.Map(document.getElementById('map'), {
+		            zoom: 15,
+		            center: uluru
+		        });
+		        var marker = new google.maps.Marker({
+		            position: uluru,
+		            map: map
+		        });
+		    }
+		</script>
+		<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBcwERVsQ9-u3vGi93armuqOI4lts5qqt4&callback=initMap">
 		</script>
 	</body>
 </html>

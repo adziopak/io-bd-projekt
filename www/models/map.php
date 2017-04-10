@@ -16,6 +16,11 @@ class Map
 		// Zwracanie mapki z bazy danych
 	}
 
+	public static function GetMapsNames()
+	{
+		// Zwracanie wszystkich nazw map z bazy danych
+	}
+
 	public function getAllPins()
 	{
 		// Zwracanie wszyskich pinów z bazy danych na danej mapce
