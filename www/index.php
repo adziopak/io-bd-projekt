@@ -4,6 +4,7 @@ require_once 'views/exampleView.php';
 require_once 'views/mapView.php';
 require_once 'views/phpInfoView.php';
 require_once 'views/buildingMapView.php';
+require_once 'views/pinSearchView.php';
 require_once 'utils/databaseConnect.php';
 require_once 'utils/point2D.php';
 
@@ -51,7 +52,19 @@ if (isset($_GET['path']))
 			$view->mapWidth = $result['map_width'];
 			$view->mapHeight = $result['map_height'];
 
-			$sql = "select * from pins where map_id =" . $result['id'];
+			$sql = "select * from pins where map_id = " . $result['id'];	
+
+			if (isset($_GET['roomOnly']))
+			{
+				$sql = $sql . " and not (name is null or name = '')";
+			}
+			
+			if (isset($_GET['pinId']))
+			{
+				$sql = $sql . " and id = " . $_GET['pinId'];
+			}			
+			
+			
 			$resultFetch = $dbconn->getConnection()->query($sql);
 
 			for ($pin = $resultFetch->fetch_assoc(); $pin != null; $pin = $resultFetch->fetch_assoc())
@@ -64,6 +77,29 @@ if (isset($_GET['path']))
 		}
 
 		echo $view->render();		
+	}
+	else if ($_GET['path'] == 'pinSearch')
+	{
+		if (isset($_GET['roomName']))
+		{
+			$dbconn = new DatabaseConnect;
+			$sql = "select * from pins where name ='" . $_GET['roomName'] . "'";
+			$resultPin = $dbconn->getConnection()->query($sql);
+			$resultPin = $resultPin->fetch_assoc();
+			
+			if (!is_null($resultPin))
+			{
+				$sql = "select * from maps where id = " . $resultPin['map_id'];
+				$resultMap = $dbconn->getConnection()->query($sql);
+				$resultMap = $resultMap->fetch_assoc();
+
+				header("Location: buildingMap&map=" . $resultMap['name'] . "?pinId=" . $resultPin['id']);
+				die();
+			}
+		}
+
+		$view = new PinSearchView;
+		echo $view->render();
 	}
 	else if ($_GET['path'] == 'databaseTest')
 	{
