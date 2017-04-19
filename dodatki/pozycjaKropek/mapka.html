@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<title>Mapka Prz</title>
+<meta charset="utf-8" />
+
+<link href="https://fonts.googleapis.com/css?family=Acme" rel="stylesheet">
+
+<style>
+
+body {
+margin: 50px 0 0 0;
+width: 100%;
+}
+
+#page {
+	width: 1000px;
+	margin: 0 auto;
+	min-height: 800px;
+	max-width: 100%;
+}
+
+#mapka {
+	position: relative;
+	margin-bottom: 0;
+	padding-bottom: 0;
+}
+
+#infoBox {
+	position: fixed;
+	top: 0;
+	left: 0;
+	background: #70b3ff;
+	opacity: 0.8;
+	padding: 10px;
+	min-width: 200px;
+}
+
+#infoBox p{
+	font-family: 'Acme', sans-serif;
+}
+
+
+#infoBox img {
+	width: 20px;
+	height: 20px;
+}
+
+#minimalizuj {
+	padding: 0;
+	margin: 0;
+	float: right;
+	line-height: 12px;
+}
+
+#maksymalizuj {
+	display: none;
+	padding: 0;
+	margin: 0;
+	float: right;
+	line-height: 12px;
+}
+
+#arrowRight {
+	padding: 0 5px 0 0;
+	margin: 0;
+	float: right;
+	line-height: 12px;
+}
+
+#arrowLeft {
+	display: none;
+	padding: 0 5px 0 0;
+	margin: 0;
+	float: right;
+	line-height: 12px;
+}
+
+div.zdjecieMapki {
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+div.sciezka {
+	position: absolute;
+	left: 0;
+	top: 0;
+	height: 100%;
+	width: 100%;	
+}
+
+#kropka {
+	position: absolute;
+	left: 0;
+	top: 0;
+	height: 100%;
+	width: 100%;	
+}
+
+#drukujKropke {
+	position: absolute;
+	left: 0;
+	top: 0;
+	height: 100%;
+	width: 100%;	
+}
+
+div.sciezka .parametryLinii {
+	stroke:rgb(255,0,0);
+	stroke-width:4;
+}
+</style>
+
+<script src="jquery-3.2.0.min.js"></script>
+
+<script>
+function showCoords(event) {
+	var width = parseInt($("#mapka").css('width'));
+	var height = parseInt($("#mapka").css('height'));
+	var szerokoscOkna = (parseInt($(window).width()) - width)/2;
+	var x = event.clientX - szerokoscOkna;
+    var y = event.clientY - 50 + $(window).scrollTop();
+	var xProc = parseFloat((x/width)*100).toFixed(2);
+	if(xProc >= 99.90) { xProc = 100; }
+	var yProc = parseFloat((y/height)*100).toFixed(2);
+	if(yProc>100) { yProc = 100; }
+    var kordyPiks = "X w pikselach: " + x + ", Y w pikselach: " + y;
+	var kordyProc = "Punkt: x: <b>" + xProc + "</b>%, y: <b>" + yProc + "</b>%";
+	var rysujKropke = "<svg height=\"99.8%\" width=\"100%\"> <circle cx=\"" + xProc + "%\" cy=\"" + yProc + "%\" r=\"8\" stroke=\"black\" stroke-width=\"2\" fill=\"red\" /></svg>"
+    //document.getElementById("piksele").innerHTML = kordyPiks;
+	document.getElementById("procenty").innerHTML = kordyProc;
+	document.getElementById("kropka").innerHTML = rysujKropke;
+	document.getElementById("punktyFormularz").innerHTML = "<form action=\"mapka.html\" method=\"GET\"><input type=\"hidden\" value=\"" + xProc + "\" name=\"xBaza\"/><input type=\"hidden\" value=\"" + yProc + "\" name=\"yBaza\"/><button type=\"submit\" id=\"button\">Dodaj punkt</button></form>";
+}
+
+function pozycjaKursora(event) {
+	var width = parseInt($("#mapka").css('width'));
+	var height = parseInt($("#mapka").css('height'));
+	var szerokoscOkna = (parseInt($(window).width()) - width)/2;
+	var x = event.clientX - szerokoscOkna;
+    var y = event.clientY - 50 + $(window).scrollTop();
+	var xProc = parseFloat((x/width)*100).toFixed(2);
+	if(xProc >= 99.90) { xProc = 100; }
+	var yProc = parseFloat((y/height)*100).toFixed(2);
+	if(yProc>100) { yProc = 100; }
+    var kordyProc = "Kursor: x: <b>" + xProc + "</b>%, y: <b>" + yProc + "</b>%";
+	var rysujKropke = "<svg height=\"99.8%\" width=\"100%\"> <circle cx=\"" + xProc + "%\" cy=\"" + yProc + "%\" r=\"4\" stroke=\"black\" stroke-width=\"2\" fill=\"yellow\" /></svg>"
+    document.getElementById("pozycjaKursora").innerHTML = kordyProc;
+	document.getElementById("drukujKropke").innerHTML = rysujKropke;
+	
+}
+</script>
+
+<script>
+function minimalizuj() {
+	document.getElementById("infoBox").style.height = "20px";
+	document.getElementById("procenty").style.display = "none";
+	document.getElementById("pozycjaKursora").style.display = "none";
+	document.getElementById("rozmiary").style.display = "none";
+	document.getElementById("minimalizuj").style.display = "none";
+	document.getElementById("maksymalizuj").style.display = "initial";
+	document.getElementById("button").style.display = "none";
+}
+
+function maksymalizuj() {
+	document.getElementById("infoBox").style.height = "initial";
+	document.getElementById("procenty").style.display = "block";
+	document.getElementById("pozycjaKursora").style.display = "block";
+	document.getElementById("rozmiary").style.display = "block";
+	document.getElementById("minimalizuj").style.display = "block";
+	document.getElementById("maksymalizuj").style.display = "none";
+	document.getElementById("button").style.display = "block";
+}
+
+function wPrawo() {
+	document.getElementById("infoBox").style.left = "auto";
+	document.getElementById("infoBox").style.right = "0";
+	document.getElementById("arrowRight").style.display = "none";
+	document.getElementById("arrowLeft").style.display = "initial";
+}
+
+function wLewo() {
+	document.getElementById("infoBox").style.left = "0";
+	document.getElementById("infoBox").style.right = "auto";
+	document.getElementById("arrowRight").style.display = "initial";
+	document.getElementById("arrowLeft").style.display = "none";
+}
+
+function rozmiaryMapki() {
+	var width = parseInt($("#mapka").css('width'));
+	var height = parseInt($("#mapka").css('height'));
+	var rozmiaryMapki = "Wymiary mapy: <b>" + width + "</b>x<b>" + height + "</b> px";
+	document.getElementById("rozmiary").innerHTML = rozmiaryMapki;
+}
+</script>
+
+</head>
+
+<body onload="rozmiaryMapki()">
+<div id="page">
+
+	<div id="mapka" onclick="showCoords(event)" onmousemove="pozycjaKursora(event)">
+		<!-- /* PONIZEJ RYSOWANIE LINII (ROBOCZO) */
+		<div class="sciezka">
+			<svg height="100%" width="100%">
+			<line x1="44%" y1="78%" x2="54%" y2="36%" class="parametryLinii" />
+			<line x1="54%" y1="36%" x2="60%" y2="35.5%" class="parametryLinii" />
+			<line x1="40.7%" y1="52.5%" x2="10.9%" y2="30.6%" class="parametryLinii" />
+			</svg>
+		</div>
+		-->
+		
+		<div id="kropka"></div>
+		<div id="drukujKropke"></div>
+			<div>
+				<!-- 
+					Ponizej zmienia sie sciezke do mapy
+				-->
+				<img src="../www/media/s0.png" width="100%" class="zdjecieMapki" /> <!-- *** tutaj zmieniacie sciezke do przycietej mapy -->
+			</div>
+	</div>
+
+<div id="infoBox">
+<!-- <p id="piksele">aaa</p> -->
+<p id="minimalizuj" onclick="minimalizuj()"><img src="gfx/minimize.gif" /></p>
+<p id="maksymalizuj" onclick="maksymalizuj()"><img src="gfx/maximize.gif" /></p>
+<p id="arrowRight" onclick="wPrawo()"><img src="gfx/arrow_right.gif" /></p>
+<p id="arrowLeft" onclick="wLewo()"><img src="gfx/arrow_left.gif" /></p>
+<div style="clear: right;"></div>
+<p id="pozycjaKursora">Kursor: x: <b>&#8660;</b> %, y: <b>&#8661;</b> %</p>
+<p id="procenty">Punkt: x: <b>&#8660;</b> %, y: <b>&#8661;</b> %</p>
+<p id="rozmiary">Wymiary mapy: <b>&#8660;</b> x <b>&#8661;</b></p>
+	<div id="punktyFormularz"></div>
+</div>
+
+</div>
+</body>
+
+</html>
