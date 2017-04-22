@@ -1,65 +1,133 @@
-<!DOCTYPE html>
-<html lang="pl">
-<head>
-<title>Mapka Prz</title>
-<meta charset="utf-8" />
-<style>
-#page {
-	width: 1200px;
-	margin: 0 auto;
-	min-height: 800px;
-}
+<!DOCTYPE HTML>
 
-div.mapka {
-	position: relative;
-}
+<html>
+	<head>
+		<title>Nawigacja PRZ</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link rel="stylesheet" href="/media/assets/css/main.css" />
+		<style>
+		#page {
+			width: 600px;
+			margin: 0 auto;
+			min-height: 800px;
+		}
 
-div.zdjecieMapki {
-	position: absolute;
-	top: 0;
-	left: 0;	
-}
+		div.mapka {
+			position: relative;
+		}
 
-div.sciezka {
-	position: absolute;
-	left: 0;
-	top: 0;
-	height: 100%;
-	width: 100%;	
-}
+		div.zdjecieMapki {
+			position: absolute;
+			top: 0;
+			left: 0;	
+		}
 
-div.sciezka .parametryLinii {
-	stroke:rgb(255,0,0);
-	stroke-width:4;
-}
-</style>
+		div.sciezka {
+			position: absolute;
+			left: 0;
+			top: 0;
+			height: 100%;
+			width: 100%;	
+		}
 
-</head>
+		div.sciezka .parametryLinii {
+			stroke:rgb(255,0,0);
+			stroke-width:4;
+		}
+		</style>
+		</head>
+	<body>
 
-<body>
-<div id="page">
-	<form action="" method="get">
-		<select name="map">
-			::MapOptions::
-		</select>
-		<input type="checkbox" name="roomOnly" value="true">Tylko sale<br>
-		<input type="submit">
-	</form>
-	<div class="mapka">
-		<div class="sciezka">
-			<svg height="100%" width="100%">
-			<!--<line x1="::xPosition::%" y1="::yPosition::%" x2="54%" y2="36%" class="parametryLinii" />  tutaj rysujemy linie kodem -->
-			<!--<line x1="54%" y1="36%" x2="60%" y2="35.5%" class="parametryLinii" /> tutaj rysujemy linie kodem --> 
-			<!-- ::Lines:: -->
+		<!-- Content -->
+			<div id="content">
+				<div class="inner">
 
-			::Pins::
-			</svg>
-		</div>
-			<div>
-				<img src="::currentMap::" width="100%" class="zdjecieMapki" />
+					<!-- Post -->
+						<article class="box post post-excerpt">
+							<header>
+								
+							<h2>Nawigacja PRZ</h2>
+								<p>	<font color=#273758> Kieruj się do budynku, którego szukasz!</font></p>
+							</header>
+							
+							
+							<p>
+								!!!!W CZARNYM POLU JESW MIEJSCE NA BUDYNEK LUB COS INNEGO!!!!
+							</p>
+							<form action="" method="get">
+								<select name="map">
+									::MapOptions::
+								</select>
+								<input type="checkbox" name="roomOnly" value="true">Tylko sale<br>
+								<input type="submit">
+							</form>
+							<!-- Linijka ponizej usuwa czarny obrazek. WYMIARY OBRAZKA 1038x437  (437) moze byc wieksyz mniejszy px -->
+							<a  class="image featured"><div class="mapka">
+								<div class="sciezka">
+									<svg height="100%" width="100%">
+									<!--<line x1="::xPosition::%" y1="::yPosition::%" x2="54%" y2="36%" class="parametryLinii" />  tutaj rysujemy linie kodem -->
+									<!--<line x1="54%" y1="36%" x2="60%" y2="35.5%" class="parametryLinii" /> tutaj rysujemy linie kodem --> 
+									<!-- ::Lines:: -->
+
+									::Pins::
+									</svg>
+								</div>
+									<div>
+										<img src="::currentMap::" width="100%" class="zdjecieMapki" />
+									</div>
+							</div></a>
+							
+							
+							<p>
+							PRZYKLADOWY OPIS PRZ PRZYKLADOWY OPIS PRZ PRZYKLADOWY OPIS PRZ PRZYKLADOWY OPIS PRZ 
+							PRZYKLADOWY OPIS PRZ PRZYKLADOWY OPIS PRZ PRZYKLADOWY OPIS PRZ PRZYKLADOWY OPIS PRZ 
+							PRZYKLADOWY OPIS PRZ PRZYKLADOWY OPIS PRZ PRZYKLADOWY OPIS PRZ PRZYKLADOWY OPIS PRZ 
+								</p>
+						</article>
+
+					
+				
+
+				</div>
 			</div>
-	</div>
-</div>
-</body>
 
+		<!-- Sidebar -->
+			<div id="sidebar">
+
+				<!-- Logo -->
+					<h1 id="logo"><a href="/">NAWIGACJA PRZ</a></h1>
+
+				<!-- Nav -->
+					<nav id="nav">
+						<ul>
+							<li><a href="/map">Map</a></li>
+							<li class="current"><a href="/buildingMap">Building Map</a></li>
+							<li><a href="/pinSearch">Pin Search</a></li>
+						
+						</ul>
+					</nav>
+
+				
+
+				<!-- Text -->
+					<section class="box text-style1">
+						<div class="inner">
+								<p>
+							<strong>	Przykladowy tekst ktory mozna zamiescic informujacy o politechnice </strong>
+							</p>
+						</div>
+					</section>
+
+			
+			
+				
+		<!-- Scripts -->
+			<script src="/media/assets/js/jquery.min.js"></script>
+			<script src="/media/assets/js/skel.min.js"></script>
+			<script src="/media/assets/js/util.js"></script>
+			<!--[if lte IE 8]><script src="/media/assets/js/ie/respond.min.js"></script><![endif]-->
+			<script src="/media/assets/js/main.js"></script>
+
+	</body>
 </html>

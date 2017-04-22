@@ -1,11 +1,13 @@
 <?php
 require_once 'models/pin.php';
+require_once 'models/editor.php';
 
 class Path
 {
-	$id;
-	$firstPin = Pin();
-	$secondPin = Pin();
+	public $id;
+	public $firstPin;
+	public $secondPin;
+	public $editor;
 
 	public function getLength()
 	{

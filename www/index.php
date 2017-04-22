@@ -7,6 +7,9 @@ require_once 'views/buildingMapView.php';
 require_once 'views/pinSearchView.php';
 require_once 'utils/databaseConnect.php';
 require_once 'utils/point2D.php';
+require_once 'controllers/adminPanelController.php';
+
+session_start();
 
 if (isset($_GET['path']))
 {
@@ -25,7 +28,7 @@ if (isset($_GET['path']))
 	{
 		$view = new MapView;
 		// TODO: wrzucic to do jakiegos configu
-		$view->apiKey = "jakistamkluczktorydostaniemypotemiwtedypowinnodzialac";
+		$view->apiKey = "AIzaSyBcwERVsQ9-u3vGi93armuqOI4lts5qqt4";
 		echo $view->render();
 	}
 	else if ($_GET['path'] == 'phpinfo')
@@ -109,6 +112,17 @@ if (isset($_GET['path']))
 
 		header('Content-type: application/json');
 		echo json_encode($result->fetch_all(MYSQLI_ASSOC));
+	}
+	else if ($_GET['path'] == 'adminPanel')
+	{
+		$ctrl = new AdminPanelController;
+
+		echo $ctrl->index();
+	}
+	else if ($_GET['path'] == '')
+	{
+		$view = new StartView;
+		echo $view->render();
 	}
 	else 
 	{

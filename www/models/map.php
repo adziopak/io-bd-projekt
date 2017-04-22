@@ -1,15 +1,18 @@
 <?php
 require_once 'utils/databaseConnect.php';
-require_once 'utils/point2D.php';
-require_once 'models/pin.php'
+require_once 'models/building.php';
+require_once 'models/editor.php';
 
 class Map
 {
 	public $id;
-	public $name;
+	public $floor;
 	public $image;
+	public $imageMD5;
 	public $width;
 	public $height;
+	public $building;
+	public $editor;
 
 	public static function GetMapByName($mapName)
 	{
@@ -21,12 +24,12 @@ class Map
 		// Zwracanie wszystkich nazw map z bazy danych
 	}
 
-	public function getAllPins()
+	public function getPinsId()
 	{
 		// Zwracanie wszyskich pinów z bazy danych na danej mapce
 	}
 
-	public function getPinByName($pinName)
+	public function getPinIdByName($pinName)
 	{
 		// Zwracanie określonego pinu z bazy na danej mapce
 	}
