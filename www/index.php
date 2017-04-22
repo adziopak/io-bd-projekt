@@ -41,16 +41,16 @@ if (isset($_GET['path']))
 		$dbconn = new DatabaseConnect;
 		$view = new BuildingMapView;
 
-		$sql = "select `name` from maps";
+		$sql = "select buildings.name, maps.floor from maps left join buildings on maps.building_id = buildings.id";
 		$result = $dbconn->getConnection()->query($sql);
-		$view->maps = $result->fetch_all();
+		$view->maps = json_encode($result->fetch_all($resulttype = MYSQLI_ASSOC));
 		
-		if (isset($_GET['map']))
+		if (isset($_GET['building']))
 		{
-			$sql = "select * from maps where name ='" . $_GET['map'] . "'";
+
+			$sql = "select maps.id, maps.map_width, maps.map_height, maps.image from buildings inner join maps on buildings.id = maps.building_id where buildings.name ='" . $_GET['building'] . "' and maps.floor ='" . $_GET['floor'] . "'";
 			$result = $dbconn->getConnection()->query($sql);
 			$result = $result->fetch_assoc();
-
 			$view->currentMap = "media/" . $result['image'];
 			$view->mapWidth = $result['map_width'];
 			$view->mapHeight = $result['map_height'];
@@ -79,7 +79,7 @@ if (isset($_GET['path']))
 			}
 		}
 
-		echo $view->render();		
+		echo $view->render();
 	}
 	else if ($_GET['path'] == 'pinSearch')
 	{
@@ -92,11 +92,11 @@ if (isset($_GET['path']))
 			
 			if (!is_null($resultPin))
 			{
-				$sql = "select * from maps where id = " . $resultPin['map_id'];
+				$sql = "select buildings.name, maps.floor from maps inner join buildings on maps.building_id = buildings.id where maps.id = " . $resultPin['map_id'];
 				$resultMap = $dbconn->getConnection()->query($sql);
 				$resultMap = $resultMap->fetch_assoc();
 
-				header("Location: buildingMap&map=" . $resultMap['name'] . "?pinId=" . $resultPin['id']);
+				header("Location: buildingMap?building=" . $resultMap['name'] . "&floor=" . $resultMap['floor'] . "&pinId=" . $resultPin['id']);
 				die();
 			}
 		}

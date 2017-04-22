@@ -18,9 +18,14 @@ class Editor
 		$editor = new Editor;
 		$stmt->bind_result($editor->id, $editor->userName, $editor->userPassword, 
 			$editor->lastVisit);
-		$stmt->fetch();
-
-		return $editor;
+		if ($stmt->fetch())
+		{
+			return $editor;
+		}
+		else 
+		{
+			return null;
+		}
 	}
 
 	public static function GetEditorByUserName($userName)
