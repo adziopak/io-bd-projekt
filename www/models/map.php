@@ -9,10 +9,10 @@ class Map
 	public $floor;
 	public $image;
 	public $imageMD5;
-	public $width;
-	public $height;
-	public $building;
-	public $editor;
+	public $imageWidth;
+	public $imageHeight;
+	public $buildingId;
+	public $editorId;
 
 	public static function GetMapByName($mapName)
 	{
@@ -32,6 +32,11 @@ class Map
 	public function getPinIdByName($pinName)
 	{
 		// Zwracanie określonego pinu z bazy na danej mapce
+	}
+
+	public function update()
+	{
+		
 	}
 }
 ?>

@@ -26,7 +26,7 @@
 <use>1</use>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="name" id="D482EC80-728F-97C2-645E-FCAAFA3D3C88">
+<Attribute name="floor" id="D482EC80-728F-97C2-645E-FCAAFA3D3C88">
 <createdBy>Michał</createdBy>
 <createdTime>2017-04-07 14:27:44 UTC</createdTime>
 <ownerDesignName>ERD1</ownerDesignName>
@@ -48,7 +48,18 @@
 <use>1</use>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="width" id="8AD129D8-F458-C064-A0A6-F3F2DEFAB150">
+<Attribute name="imageHash" id="974F3443-79FA-4558-F734-97980A34DC8A">
+<createdBy>Krystian</createdBy>
+<createdTime>2017-04-24 16:31:33 UTC</createdTime>
+<ownerDesignName>ERD1</ownerDesignName>
+<engineerTo>
+<item key="E2BAA996-536A-0088-CDB5-CB07080B35FC" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="imageWidth" id="8AD129D8-F458-C064-A0A6-F3F2DEFAB150">
 <createdBy>Michał</createdBy>
 <createdTime>2017-04-07 14:28:49 UTC</createdTime>
 <ownerDesignName>ERD1</ownerDesignName>
@@ -60,7 +71,7 @@
 <use>1</use>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="height" id="23F71489-33E0-027A-AE85-D9A2C770B512">
+<Attribute name="imageHeight" id="23F71489-33E0-027A-AE85-D9A2C770B512">
 <createdBy>Michał</createdBy>
 <createdTime>2017-04-07 14:29:02 UTC</createdTime>
 <ownerDesignName>ERD1</ownerDesignName>
@@ -70,6 +81,30 @@
 <nullsAllowed>true</nullsAllowed>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="id1" id="E320FB6D-9CAF-FC52-7EDC-2EFE1A55F9BC">
+<createdBy>Krystian</createdBy>
+<createdTime>2017-04-24 16:45:01 UTC</createdTime>
+<generatorID>40A29311-E459-4B99-6A08-4B5ABC78EF01</generatorID>
+<ownerDesignName>ERD1</ownerDesignName>
+<engineerTo>
+<item key="E2BAA996-536A-0088-CDB5-CB07080B35FC" value="true"/>
+</engineerTo>
+<referedAttribute>9A88417D-297A-730D-0CA6-21FA68721D85</referedAttribute>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="id2" id="3877A5DD-5298-2D8A-CA80-41A5FD6188D2">
+<createdBy>Krystian</createdBy>
+<createdTime>2017-04-24 16:46:02 UTC</createdTime>
+<generatorID>C7C78275-048A-6B85-7A68-FFD2DEBE93FF</generatorID>
+<ownerDesignName>ERD1</ownerDesignName>
+<engineerTo>
+<item key="E2BAA996-536A-0088-CDB5-CB07080B35FC" value="true"/>
+</engineerTo>
+<referedAttribute>1C7E3001-7925-1C05-FDD0-CE3F5AFEBD1F</referedAttribute>
+<use>0</use>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
 </attributes>

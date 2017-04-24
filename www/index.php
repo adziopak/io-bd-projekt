@@ -38,12 +38,12 @@ function main()
 			if (isset($_GET['building']))
 			{
 
-				$sql = "select maps.id, maps.map_width, maps.map_height, maps.image from buildings inner join maps on buildings.id = maps.building_id where buildings.name ='" . $_GET['building'] . "' and maps.floor ='" . $_GET['floor'] . "'";
+				$sql = "select maps.id, maps.image_width, maps.image_height, maps.image from buildings inner join maps on buildings.id = maps.building_id where buildings.name ='" . $_GET['building'] . "' and maps.floor ='" . $_GET['floor'] . "'";
 				$result = $dbconn->getConnection()->query($sql);
 				$result = $result->fetch_assoc();
 				$view->currentMap = "media/" . $result['image'];
-				$view->mapWidth = $result['map_width'];
-				$view->mapHeight = $result['map_height'];
+				$view->mapWidth = $result['image_width'];
+				$view->mapHeight = $result['image_height'];
 
 				$sql = "select * from pins where map_id = " . $result['id'];	
 

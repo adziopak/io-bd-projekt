@@ -2,7 +2,7 @@
 
 // staramy sie unikac zapytan do bazy z poziomu kontrolera
 // w tym przypadku tak bedzie latwiej
-require_once 'utils/DatabaseConnect.php';
+require_once 'utils/databaseConnect.php';
 
 // Obsluga zapytan dla aplikacji android
 // /android

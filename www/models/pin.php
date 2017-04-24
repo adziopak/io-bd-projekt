@@ -10,9 +10,9 @@ class Pin
 	public $posX;
 	public $posY;
 	public $map;
-	public $editor;
+	public $editorId;
 
-	public function getPathsID()
+	public function getPathsId()
 	{
 		// Pobiera wszystkie sciezki z danym pinem.
 	}
@@ -20,6 +20,11 @@ class Pin
 	public function getPathIdToPin($pin)
 	{
 		// Pobiera (jezeli istnieje) sciezke do pinu z parametru.
+	}
+
+	public function update()
+	{
+		
 	}
 }
 

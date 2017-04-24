@@ -1,0 +1,111 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="13DB7B5C-2325-6BBD-8650-AEA9489084DA" name="building">
+<createdBy>Krystian</createdBy>
+<createdTime>2017-04-24 16:46:24 UTC</createdTime>
+<generatorID>51B4322C-DEEE-9235-F5D2-2DA60C176D36</generatorID>
+<ownerDesignName>ERD1</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="id" id="98A9458B-7D70-DA8D-38FA-F7237A40129F">
+<createdBy>Krystian</createdBy>
+<createdTime>2017-04-24 16:46:24 UTC</createdTime>
+<generatorID>1C7E3001-7925-1C05-FDD0-CE3F5AFEBD1F</generatorID>
+<ownerDesignName>ERD1</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="name" id="CE9D3C59-E05A-5496-7E2E-04CF2F17A952">
+<createdBy>Krystian</createdBy>
+<createdTime>2017-04-24 16:46:24 UTC</createdTime>
+<generatorID>F4CB0CB1-FED2-BB02-6E50-2EAD877B84F7</generatorID>
+<ownerDesignName>ERD1</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>45</dataTypeSize>
+<ownDataTypeParameters>45,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="lat" id="B026D10E-B7E6-9D57-678A-0FA1A2C2B81A">
+<createdBy>Krystian</createdBy>
+<createdTime>2017-04-24 16:46:24 UTC</createdTime>
+<generatorID>56D9EDEB-6D59-0FD7-2D78-83F23C74D5D7</generatorID>
+<ownerDesignName>ERD1</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT021</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="lon" id="08EC5B8F-F4B1-0C3B-4369-62B6507FF8BA">
+<createdBy>Krystian</createdBy>
+<createdTime>2017-04-24 16:46:24 UTC</createdTime>
+<generatorID>A573D43B-9D1B-392D-C841-ADE83C326210</generatorID>
+<ownerDesignName>ERD1</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT021</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="editor_id" id="8EF48EDD-AD64-89FF-25A6-416873441146">
+<createdBy>Krystian</createdBy>
+<createdTime>2017-04-24 16:46:24 UTC</createdTime>
+<generatorID>355F22FB-5DA9-020C-4F9E-0D5526D1A3C4</generatorID>
+<ownerDesignName>ERD1</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="A7D765AE-B997-1582-D4F9-70A440E2CAB0" referredColumn="1C5310C6-C2C7-27A6-23C5-20F0C8745B63"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="215D2716-B601-34A9-3EE6-F2C81680B5F9" name="BUILDING_PK">
+<createdBy>Krystian</createdBy>
+<createdTime>2017-04-24 16:46:24 UTC</createdTime>
+<generatorID>A119B556-EE78-7973-F237-5765282AA213</generatorID>
+<ownerDesignName>ERD1</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="98A9458B-7D70-DA8D-38FA-F7237A40129F"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="46620DA6-E5DF-15D6-9B86-16BFB5A915D9" name="BUILDING__IDX">
+<createdBy>Krystian</createdBy>
+<createdTime>2017-04-24 16:46:25 UTC</createdTime>
+<ownerDesignName>ERD1</ownerDesignName>
+<indexState>Unique Plain Index</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<relationGeneratorID>C0379EA9-DF83-DF14-452A-ED51DF362EAE</relationGeneratorID>
+<indexColumnUsage>
+<colUsage columnID="8EF48EDD-AD64-89FF-25A6-416873441146"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="304F4E69-7DD6-9A05-E1CE-3DBF70E4F379" name="BUILDING_EDITOR_FK">
+<createdBy>Krystian</createdBy>
+<createdTime>2017-04-24 16:46:25 UTC</createdTime>
+<generatorID>C0379EA9-DF83-DF14-452A-ED51DF362EAE</generatorID>
+<ownerDesignName>ERD1</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="8EF48EDD-AD64-89FF-25A6-416873441146"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

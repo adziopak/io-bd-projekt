@@ -42,5 +42,10 @@ class Editor
 
 		return $editor;
 	}
+
+	public function update()
+	{
+		
+	}
 }
 ?>

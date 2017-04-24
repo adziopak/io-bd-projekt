@@ -1,0 +1,75 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="E7670EE3-1F52-268D-858A-5D676710B2F0" name="editor">
+<createdBy>Krystian</createdBy>
+<createdTime>2017-04-24 16:46:24 UTC</createdTime>
+<generatorID>D90B13ED-86C5-8F04-0851-A19B7C68A4FB</generatorID>
+<ownerDesignName>ERD1</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="id" id="1C5310C6-C2C7-27A6-23C5-20F0C8745B63">
+<createdBy>Krystian</createdBy>
+<createdTime>2017-04-24 16:46:24 UTC</createdTime>
+<generatorID>9A88417D-297A-730D-0CA6-21FA68721D85</generatorID>
+<ownerDesignName>ERD1</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="user_name" id="789DE602-0363-DA75-6807-D849C8FA0838">
+<createdBy>Krystian</createdBy>
+<createdTime>2017-04-24 16:46:24 UTC</createdTime>
+<generatorID>3AE21060-FDE9-7CA8-6CEF-8DA8B84CE1BE</generatorID>
+<ownerDesignName>ERD1</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>45</dataTypeSize>
+<ownDataTypeParameters>45,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="user_password" id="656A4AC0-EBC8-BD21-CC4F-BC5A70952476">
+<createdBy>Krystian</createdBy>
+<createdTime>2017-04-24 16:46:24 UTC</createdTime>
+<generatorID>FAEDEE65-FF61-3D38-00EC-62D58BBEDF1F</generatorID>
+<ownerDesignName>ERD1</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>61</dataTypeSize>
+<ownDataTypeParameters>61,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="last_visit" id="7A602632-F9E7-16F8-CAA7-95BCA47A81AA">
+<createdBy>Krystian</createdBy>
+<createdTime>2017-04-24 16:46:24 UTC</createdTime>
+<generatorID>992F9C97-C98D-7ED5-C595-45D7913F2452</generatorID>
+<ownerDesignName>ERD1</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="20C36AFE-ACC0-23AE-6901-AB64E11E7E44" name="EDITOR_PK">
+<createdBy>Krystian</createdBy>
+<createdTime>2017-04-24 16:46:24 UTC</createdTime>
+<generatorID>3574BA2B-4A28-5497-D921-B9E35116E04B</generatorID>
+<ownerDesignName>ERD1</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="1C5310C6-C2C7-27A6-23C5-20F0C8745B63"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

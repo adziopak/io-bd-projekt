@@ -1,0 +1,136 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="46F0A4C6-C890-ED72-540C-4632027B52B4" name="pin">
+<createdBy>Krystian</createdBy>
+<createdTime>2017-04-24 16:46:24 UTC</createdTime>
+<generatorID>B85789C3-AAFF-2BDD-415E-B6E615776DE1</generatorID>
+<ownerDesignName>ERD1</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="id" id="7FD42CF4-8F24-1F3C-2751-21E8339CF7B4">
+<createdBy>Krystian</createdBy>
+<createdTime>2017-04-24 16:46:24 UTC</createdTime>
+<generatorID>B3DF3C75-C8A3-CE9F-682E-FB913E9DD7C5</generatorID>
+<ownerDesignName>ERD1</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="name" id="72035231-0ECF-52C3-8C60-D2DBF7A83C2B">
+<createdBy>Krystian</createdBy>
+<createdTime>2017-04-24 16:46:24 UTC</createdTime>
+<generatorID>DC09D12B-16B4-382D-9E7F-175110EB7384</generatorID>
+<ownerDesignName>ERD1</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>45</dataTypeSize>
+<ownDataTypeParameters>45,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="pos_x" id="3160803E-0636-2CA9-19C5-96F01BB1596B">
+<createdBy>Krystian</createdBy>
+<createdTime>2017-04-24 16:46:24 UTC</createdTime>
+<generatorID>BB08D7A1-3024-6E28-CB1A-9EB35F58127C</generatorID>
+<ownerDesignName>ERD1</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT021</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="pos_y" id="D09738F7-E372-F826-2C8D-BE9F3268E35D">
+<createdBy>Krystian</createdBy>
+<createdTime>2017-04-24 16:46:24 UTC</createdTime>
+<generatorID>807AF1B2-2D7C-9F26-B758-E5829BD02C6B</generatorID>
+<ownerDesignName>ERD1</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT021</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="map_id" id="26A23FB3-A31D-6BBD-D14F-A23B52F75E5C">
+<createdBy>Krystian</createdBy>
+<createdTime>2017-04-24 16:46:24 UTC</createdTime>
+<generatorID>C435F826-76C2-3DB9-A5E9-09C43A10D9B6</generatorID>
+<ownerDesignName>ERD1</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="60396952-78E5-858A-F6ED-020AFF8E624A" referredColumn="AFB13147-8223-5435-4F71-DA736FEE9A4C"/>
+</associations>
+</Column>
+<Column name="editor_id" id="8EBF84FC-D7C9-973C-F537-2913D96336DB">
+<createdBy>Krystian</createdBy>
+<createdTime>2017-04-24 16:46:24 UTC</createdTime>
+<generatorID>3C69DEA6-43BD-C331-B787-09294F8E3E22</generatorID>
+<ownerDesignName>ERD1</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="5E91A577-F482-F7B6-15D7-1E77052EF71D" referredColumn="1C5310C6-C2C7-27A6-23C5-20F0C8745B63"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="62AF3B51-95E1-26B9-3A23-E21CF64D379D" name="PIN_PK">
+<createdBy>Krystian</createdBy>
+<createdTime>2017-04-24 16:46:24 UTC</createdTime>
+<generatorID>EA451CFA-7BDA-6812-5559-10229BF0C71C</generatorID>
+<ownerDesignName>ERD1</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="7FD42CF4-8F24-1F3C-2751-21E8339CF7B4"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="587CCC4F-9345-0635-30FA-3ADE041C7D10" name="PIN__IDX">
+<createdBy>Krystian</createdBy>
+<createdTime>2017-04-24 16:46:24 UTC</createdTime>
+<ownerDesignName>ERD1</ownerDesignName>
+<indexState>Unique Plain Index</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<relationGeneratorID>846D13BD-9A10-5CBB-5AC5-224690F5DD5A</relationGeneratorID>
+<indexColumnUsage>
+<colUsage columnID="8EBF84FC-D7C9-973C-F537-2913D96336DB"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="A45D3E31-435F-9ECF-E655-CB0E2B9884B4" name="PIN_EDITOR_FK">
+<createdBy>Krystian</createdBy>
+<createdTime>2017-04-24 16:46:24 UTC</createdTime>
+<generatorID>846D13BD-9A10-5CBB-5AC5-224690F5DD5A</generatorID>
+<ownerDesignName>ERD1</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="8EBF84FC-D7C9-973C-F537-2913D96336DB"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="C1BE44FE-E31E-ACD1-AC3D-B696277ABD60" name="PIN_MAP_FK">
+<createdBy>Krystian</createdBy>
+<createdTime>2017-04-24 16:46:25 UTC</createdTime>
+<generatorID>1228D4BD-C97B-B0D8-71AA-3B5E2F26F9F9</generatorID>
+<ownerDesignName>ERD1</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="26A23FB3-A31D-6BBD-D14F-A23B52F75E5C"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

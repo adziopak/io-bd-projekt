@@ -1,0 +1,17 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="60396952-78E5-858A-F6ED-020AFF8E624A" containerWithKeyObject="46F0A4C6-C890-ED72-540C-4632027B52B4" localFKIndex="C1BE44FE-E31E-ACD1-AC3D-B696277ABD60" name="PIN_MAP_FK">
+<createdBy>Krystian</createdBy>
+<createdTime>2017-04-24 16:46:25 UTC</createdTime>
+<generatorID>1228D4BD-C97B-B0D8-71AA-3B5E2F26F9F9</generatorID>
+<ownerDesignName>ERD1</ownerDesignName>
+<referredTableLongName>map</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>730D9717-D6AA-5776-7165-A07551F2C5E0</referredTableID>
+<keyObject>7389AD49-CAEC-A6F2-7A16-3609F322E06D</keyObject>
+<referredKeyID>7389AD49-CAEC-A6F2-7A16-3609F322E06D</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>id</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

@@ -1,0 +1,160 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="730D9717-D6AA-5776-7165-A07551F2C5E0" name="map">
+<createdBy>Krystian</createdBy>
+<createdTime>2017-04-24 16:46:24 UTC</createdTime>
+<generatorID>3FF61571-1B5E-E696-C589-0B5F962E34D6</generatorID>
+<ownerDesignName>ERD1</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="id" id="AFB13147-8223-5435-4F71-DA736FEE9A4C">
+<createdBy>Krystian</createdBy>
+<createdTime>2017-04-24 16:46:24 UTC</createdTime>
+<generatorID>8BDD4FA1-E707-CCCA-35AA-A151DD90B83E</generatorID>
+<ownerDesignName>ERD1</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="floor" id="4AA4F552-0811-EC72-247A-B4A13C4E83C2">
+<createdBy>Krystian</createdBy>
+<createdTime>2017-04-24 16:46:24 UTC</createdTime>
+<generatorID>D482EC80-728F-97C2-645E-FCAAFA3D3C88</generatorID>
+<ownerDesignName>ERD1</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="image" id="3E1387C4-B5A5-3810-43EE-4AA669065033">
+<createdBy>Krystian</createdBy>
+<createdTime>2017-04-24 16:46:24 UTC</createdTime>
+<generatorID>0A5F2A0C-F3A0-12D7-3F44-EBD374370A9D</generatorID>
+<ownerDesignName>ERD1</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>45</dataTypeSize>
+<ownDataTypeParameters>45,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="image_md5" id="25FECF39-42C0-AF13-6308-0398AF3E097A">
+<createdBy>Krystian</createdBy>
+<createdTime>2017-04-24 16:46:24 UTC</createdTime>
+<generatorID>974F3443-79FA-4558-F734-97980A34DC8A</generatorID>
+<ownerDesignName>ERD1</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>33</dataTypeSize>
+<ownDataTypeParameters>33,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="image_width" id="7C35B8D3-DE5D-7F30-4056-2FAA820BB054">
+<createdBy>Krystian</createdBy>
+<createdTime>2017-04-24 16:46:24 UTC</createdTime>
+<generatorID>8AD129D8-F458-C064-A0A6-F3F2DEFAB150</generatorID>
+<ownerDesignName>ERD1</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="image_height" id="E0E01827-9F67-8C9C-F340-8719A81813B7">
+<createdBy>Krystian</createdBy>
+<createdTime>2017-04-24 16:46:24 UTC</createdTime>
+<generatorID>23F71489-33E0-027A-AE85-D9A2C770B512</generatorID>
+<ownerDesignName>ERD1</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="building_id" id="3D97EAD4-8B9C-22BB-B159-9F47AAA4759E">
+<createdBy>Krystian</createdBy>
+<createdTime>2017-04-24 16:46:24 UTC</createdTime>
+<generatorID>3877A5DD-5298-2D8A-CA80-41A5FD6188D2</generatorID>
+<ownerDesignName>ERD1</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="E93AFEBF-8435-A907-680E-AF06AFAC9109" referredColumn="98A9458B-7D70-DA8D-38FA-F7237A40129F"/>
+</associations>
+</Column>
+<Column name="editor_id" id="5CCC2DC1-5CE7-03DD-A794-7A84E3AD414B">
+<createdBy>Krystian</createdBy>
+<createdTime>2017-04-24 16:46:24 UTC</createdTime>
+<generatorID>E320FB6D-9CAF-FC52-7EDC-2EFE1A55F9BC</generatorID>
+<ownerDesignName>ERD1</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="AF641E72-4B42-3BDD-5559-54591E50BED2" referredColumn="1C5310C6-C2C7-27A6-23C5-20F0C8745B63"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="7389AD49-CAEC-A6F2-7A16-3609F322E06D" name="MAP_PK">
+<createdBy>Krystian</createdBy>
+<createdTime>2017-04-24 16:46:24 UTC</createdTime>
+<generatorID>EB5837B9-B77A-42C5-AEFF-E2F545578CE0</generatorID>
+<ownerDesignName>ERD1</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="AFB13147-8223-5435-4F71-DA736FEE9A4C"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="04795CF7-B1B8-79BE-44FC-C9F9158FD1BF" name="MAP__IDX">
+<createdBy>Krystian</createdBy>
+<createdTime>2017-04-24 16:46:25 UTC</createdTime>
+<ownerDesignName>ERD1</ownerDesignName>
+<indexState>Unique Plain Index</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<relationGeneratorID>40A29311-E459-4B99-6A08-4B5ABC78EF01</relationGeneratorID>
+<indexColumnUsage>
+<colUsage columnID="5CCC2DC1-5CE7-03DD-A794-7A84E3AD414B"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="C3E9742A-437E-8A8A-1042-D3C883A6745C" name="MAP_BUILDING_FK">
+<createdBy>Krystian</createdBy>
+<createdTime>2017-04-24 16:46:24 UTC</createdTime>
+<generatorID>C7C78275-048A-6B85-7A68-FFD2DEBE93FF</generatorID>
+<ownerDesignName>ERD1</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="3D97EAD4-8B9C-22BB-B159-9F47AAA4759E"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="651E8E11-4FC7-43D3-DB2E-4A53EAFAE735" name="MAP_EDITOR_FK">
+<createdBy>Krystian</createdBy>
+<createdTime>2017-04-24 16:46:24 UTC</createdTime>
+<generatorID>40A29311-E459-4B99-6A08-4B5ABC78EF01</generatorID>
+<ownerDesignName>ERD1</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="5CCC2DC1-5CE7-03DD-A794-7A84E3AD414B"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

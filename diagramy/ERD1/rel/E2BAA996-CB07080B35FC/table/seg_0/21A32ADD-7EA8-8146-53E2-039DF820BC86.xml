@@ -1,0 +1,125 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="21A32ADD-7EA8-8146-53E2-039DF820BC86" name="path">
+<createdBy>Krystian</createdBy>
+<createdTime>2017-04-24 16:46:24 UTC</createdTime>
+<generatorID>13E60DEA-0109-E039-F00E-E4060D3FEC17</generatorID>
+<ownerDesignName>ERD1</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="id" id="137C0572-859C-7E24-C157-AA844F43D52F">
+<createdBy>Krystian</createdBy>
+<createdTime>2017-04-24 16:46:24 UTC</createdTime>
+<generatorID>4EC47DA0-F10D-640C-8949-DC79596D53B3</generatorID>
+<ownerDesignName>ERD1</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="first_pin_id" id="DD845485-6C66-08FC-ABA5-97C846175E52">
+<createdBy>Krystian</createdBy>
+<createdTime>2017-04-24 16:46:24 UTC</createdTime>
+<generatorID>2ADAE1E4-3199-C774-5B89-0A8A8764FAF6</generatorID>
+<ownerDesignName>ERD1</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="48F046F1-BF89-7C8D-F9F9-ADD47D9F6FF2" referredColumn="7FD42CF4-8F24-1F3C-2751-21E8339CF7B4"/>
+</associations>
+</Column>
+<Column name="second_pin_id" id="832FFEB2-8CBF-5AA0-31AE-76D0E60E36F7">
+<createdBy>Krystian</createdBy>
+<createdTime>2017-04-24 16:46:24 UTC</createdTime>
+<generatorID>03585083-87E9-3405-BF3C-DD7914FD3C64</generatorID>
+<ownerDesignName>ERD1</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="3DA9ADBB-03A4-9506-0DB9-19F22158F101" referredColumn="7FD42CF4-8F24-1F3C-2751-21E8339CF7B4"/>
+</associations>
+</Column>
+<Column name="editor_id" id="537B7986-3E89-1588-831E-61D042246B0B">
+<createdBy>Krystian</createdBy>
+<createdTime>2017-04-24 16:46:24 UTC</createdTime>
+<generatorID>B0B58ECA-51F7-EABD-F99A-136D8CF74568</generatorID>
+<ownerDesignName>ERD1</ownerDesignName>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="4856FB1B-4750-D97B-2331-E42AD2848B56" referredColumn="1C5310C6-C2C7-27A6-23C5-20F0C8745B63"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="53D3B81A-8A85-C5EA-7B59-45FD7B95E452" name="PATH_PK">
+<createdBy>Krystian</createdBy>
+<createdTime>2017-04-24 16:46:24 UTC</createdTime>
+<generatorID>5CD46811-6FDF-C9D7-ECB8-7FD8BA567263</generatorID>
+<ownerDesignName>ERD1</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="137C0572-859C-7E24-C157-AA844F43D52F"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="AB792F3D-AB28-96E1-FC39-442ADF6030BD" name="PATH__IDX">
+<createdBy>Krystian</createdBy>
+<createdTime>2017-04-24 16:46:24 UTC</createdTime>
+<ownerDesignName>ERD1</ownerDesignName>
+<indexState>Unique Plain Index</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<relationGeneratorID>60E0BC08-9F01-F64F-16C9-52BFD585FAFD</relationGeneratorID>
+<indexColumnUsage>
+<colUsage columnID="537B7986-3E89-1588-831E-61D042246B0B"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="95651FA7-EFF9-32F7-1C89-B07F3278E4F3" name="PATH_PIN_FK">
+<createdBy>Krystian</createdBy>
+<createdTime>2017-04-24 16:46:24 UTC</createdTime>
+<generatorID>66EC23D1-0D18-5269-F35D-EB4E94C4C8D5</generatorID>
+<ownerDesignName>ERD1</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="DD845485-6C66-08FC-ABA5-97C846175E52"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="CE437481-E0BD-CF84-471C-D8E77F7E35F5" name="PATH_PIN_FKv2">
+<createdBy>Krystian</createdBy>
+<createdTime>2017-04-24 16:46:24 UTC</createdTime>
+<generatorID>CB69DE71-E157-DB18-419D-1151681B5685</generatorID>
+<ownerDesignName>ERD1</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="832FFEB2-8CBF-5AA0-31AE-76D0E60E36F7"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="B68DD8FC-4475-015A-BDBD-574244DEF450" name="PATH_EDITOR_FK">
+<createdBy>Krystian</createdBy>
+<createdTime>2017-04-24 16:46:24 UTC</createdTime>
+<generatorID>60E0BC08-9F01-F64F-16C9-52BFD585FAFD</generatorID>
+<ownerDesignName>ERD1</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="537B7986-3E89-1588-831E-61D042246B0B"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

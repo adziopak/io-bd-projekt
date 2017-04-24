@@ -6,9 +6,9 @@ class Building
 {
 	public $id;
 	public $name;
-	public $posX;
-	public $posY;
-	public $editor;
+	public $lat;
+	public $lon;
+	public $editorId;
 
 	public static function GetBuildingById($id)
 	{
@@ -20,9 +20,14 @@ class Building
 
 	}
 
-	function getMapsId()
+	public function getMapsId()
 	{
 		
+	}
+
+	public function update()
+	{
+
 	}
 }
 

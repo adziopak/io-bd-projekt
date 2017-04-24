@@ -1,0 +1,17 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="3DA9ADBB-03A4-9506-0DB9-19F22158F101" containerWithKeyObject="21A32ADD-7EA8-8146-53E2-039DF820BC86" localFKIndex="CE437481-E0BD-CF84-471C-D8E77F7E35F5" name="PATH_PIN_FKv2">
+<createdBy>Krystian</createdBy>
+<createdTime>2017-04-24 16:46:24 UTC</createdTime>
+<generatorID>CB69DE71-E157-DB18-419D-1151681B5685</generatorID>
+<ownerDesignName>ERD1</ownerDesignName>
+<referredTableLongName>pin</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>46F0A4C6-C890-ED72-540C-4632027B52B4</referredTableID>
+<keyObject>62AF3B51-95E1-26B9-3A23-E21CF64D379D</keyObject>
+<referredKeyID>62AF3B51-95E1-26B9-3A23-E21CF64D379D</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>id</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>
