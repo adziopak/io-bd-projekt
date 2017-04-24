@@ -1,6 +1,7 @@
 <?php
+require_once 'views/home/indexView.php';
 
-// Obsluga strony startowej
+// obsluga strony startowej
 // /
 // /home
 class HomeController
@@ -8,8 +9,19 @@ class HomeController
 	// /home
 	public function index()
 	{
-		// tu zrobimy przekierowania na jakies aktywnosci w zaleznosci od sciezki
-		// np. /home/about powinno wywolac funkcje about kontrolera home
+		// przekierowania do akcji kontrolera
+		if (isset($_GET['action']))
+		{
+			switch($_GET['action'])
+			{
+				case 'about':
+					return $this->about();
+			}
+		}
+
+		// kod /home/index
+		$view = new HomeIndexView;
+		return $view->render();
 	}	
 
 	// /home/about

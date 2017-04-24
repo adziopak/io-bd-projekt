@@ -11,7 +11,7 @@ class Editor
 	public static function GetEditorById($id)
 	{
 		$dbconn = new DatabaseConnect;
-		$stmt = $dbconn->prepare("select * from `editors` where id = ?");
+		$stmt = $dbconn->prepare("select * from editors where id = ?");
 		$stmt->bind_param("i", $id);
 		$stmt->execute();
 
@@ -31,7 +31,7 @@ class Editor
 	public static function GetEditorByUserName($userName)
 	{
 		$dbconn = new DatabaseConnect;
-		$stmt = $dbconn->prepare("select * from `editors` where user_name = ?");
+		$stmt = $dbconn->prepare("select * from editors where user_name = ?");
 		$stmt->bind_param("s", $userName);
 		$stmt->execute();
 

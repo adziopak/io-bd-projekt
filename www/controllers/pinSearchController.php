@@ -1,10 +1,11 @@
 <?php
 
-// Obsluga strony z widokiem budynku, pinow i sciezek
-// /building
-class BuildingController
+// obsluga wyszukiwarki 
+// /
+// /home
+class PinSearchController
 {
-	// /building
+	// /pinSearch
 	public function index()
 	{
 		// przekierowania do akcji kontrolera
@@ -17,11 +18,11 @@ class BuildingController
 			}
 		}
 
-		// kod /building/index
+		// kod /pinSearch/index
 		// ...
 	}	
 
-	// /building/about
+	// /pinSearch/about
 	public function about()
 	{
 

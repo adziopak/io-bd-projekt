@@ -2,7 +2,7 @@
 
 require_once 'utils/point2D.php';
 
-class BuildingMapView
+class BuildingView
 {
 	public $currentMap;
 	public $mapWidth;
