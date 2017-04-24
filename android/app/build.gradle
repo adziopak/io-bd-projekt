@@ -34,5 +34,9 @@ dependencies {
     compile 'com.android.support:design:25.3.0'
     compile 'com.google.android.gms:play-services:10.2.1'
     testCompile 'junit:junit:4.12'
+
+
     compile 'com.github.chrisbanes:PhotoView:1.2.6'
+    compile 'com.davemorrissey.labs:subsampling-scale-image-view:3.6.0'
+    compile 'com.github.manuelpeinado.imagelayout:imagelayout:1.1.0'
 }
