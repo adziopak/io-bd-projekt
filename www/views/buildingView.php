@@ -18,7 +18,7 @@ class BuildingView
 		foreach ($this->positions as $p)
 			$pins = $pins . str_replace(["::x::", "::y::"], [$p->x, $p->y], $pin);
 
-		$content = file_get_contents('views/buildingMapView.html');
+		$content = file_get_contents('views/buildingView.html');
 		$content = str_replace([
 			"::currentMap::",
 			"::mapWidth::",

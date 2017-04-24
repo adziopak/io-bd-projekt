@@ -35,10 +35,10 @@ function main()
 			$result = $dbconn->getConnection()->query($sql);
 			$view->maps = json_encode($result->fetch_all($resulttype = MYSQLI_ASSOC));
 			
-			if (isset($_GET['building']))
+			if (isset($_GET['name']))
 			{
 
-				$sql = "select maps.id, maps.image_width, maps.image_height, maps.image from buildings inner join maps on buildings.id = maps.building_id where buildings.name ='" . $_GET['building'] . "' and maps.floor ='" . $_GET['floor'] . "'";
+				$sql = "select maps.id, maps.image_width, maps.image_height, maps.image from buildings inner join maps on buildings.id = maps.building_id where buildings.name ='" . $_GET['name'] . "' and maps.floor ='" . $_GET['floor'] . "'";
 				$result = $dbconn->getConnection()->query($sql);
 				$result = $result->fetch_assoc();
 				$view->currentMap = "media/" . $result['image'];
@@ -86,7 +86,7 @@ function main()
 					$resultMap = $dbconn->getConnection()->query($sql);
 					$resultMap = $resultMap->fetch_assoc();
 
-					header("Location: buildingMap?building=" . $resultMap['name'] . "&floor=" . $resultMap['floor'] . "&pinId=" . $resultPin['id']);
+					header("Location: building?name=" . $resultMap['name'] . "&floor=" . $resultMap['floor'] . "&pinId=" . $resultPin['id']);
 					die();
 				}
 			}
