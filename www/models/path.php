@@ -1,6 +1,6 @@
 <?php
+require_once 'utils/databaseConnect.php';
 require_once 'models/pin.php';
-require_once 'models/editor.php';
 
 class Path
 {

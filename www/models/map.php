@@ -1,7 +1,6 @@
 <?php
 require_once 'utils/databaseConnect.php';
-require_once 'models/building.php';
-require_once 'models/editor.php';
+require_once 'models/pin.php';
 
 class Map
 {
@@ -24,12 +23,12 @@ class Map
 		// Zwracanie wszystkich nazw map z bazy danych
 	}
 
-	public function getPinsId()
+	public function getPins()
 	{
 		// Zwracanie wszyskich pinów z bazy danych na danej mapce
 	}
 
-	public function getPinIdByName($pinName)
+	public function getPinByName($pinName)
 	{
 		// Zwracanie określonego pinu z bazy na danej mapce
 	}

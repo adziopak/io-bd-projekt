@@ -1,7 +1,6 @@
 <?php
 require_once 'utils/databaseConnect.php';
-require_once 'models/map.php';
-require_once 'models/editor.php';
+require_once 'models/path.php';
 
 class Pin
 {
@@ -12,12 +11,12 @@ class Pin
 	public $map;
 	public $editorId;
 
-	public function getPathsId()
+	public function getPaths()
 	{
 		// Pobiera wszystkie sciezki z danym pinem.
 	}
 
-	public function getPathIdToPin($pin)
+	public function getPathToPin($pin)
 	{
 		// Pobiera (jezeli istnieje) sciezke do pinu z parametru.
 	}

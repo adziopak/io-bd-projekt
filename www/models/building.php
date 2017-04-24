@@ -1,6 +1,6 @@
 <?php
 require_once 'utils/databaseConnect.php';
-require_once 'models/editor.php';
+require_once 'models/map.php';
 
 class Building
 {
@@ -20,7 +20,7 @@ class Building
 
 	}
 
-	public function getMapsId()
+	public function getMaps()
 	{
 		
 	}
