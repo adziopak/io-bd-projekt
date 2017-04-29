@@ -21,6 +21,7 @@
         android:textColor="@color/colorPrimaryDark" />
 
     <SearchView
+        android:id="@+id/searchViewNav"
         android:layout_width="match_parent"
         android:background="#e7e7e7"
         android:layout_height="40dp" />

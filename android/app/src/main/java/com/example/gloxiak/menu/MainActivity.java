@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
+import android.widget.SearchView;
 import android.view.View;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
@@ -14,12 +15,17 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Button;
+import android.widget.TextView;
 import android.widget.Toast;
+
+import org.w3c.dom.Text;
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
     Button button1;
+    Button button2;
+    TextView textView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,10 +42,7 @@ public class MainActivity extends AppCompatActivity
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
 
-
         button1 = (Button) findViewById(R.id.button3);
-
-
         button1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -47,6 +50,16 @@ public class MainActivity extends AppCompatActivity
                 startActivity(newAct);
             }
         });
+
+        button2 = (Button)findViewById(R.id.button4);
+        button2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent newAct = new Intent(MainActivity.this, JsonActivity.class);
+                startActivity(newAct);
+            }
+        });
+
     }
 
     @Override
@@ -63,6 +76,19 @@ public class MainActivity extends AppCompatActivity
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
         getMenuInflater().inflate(R.menu.main, menu);
+
+        SearchView sv = (SearchView) findViewById(R.id.searchViewNav);
+        sv.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
+            public boolean onQueryTextSubmit(String query) {
+                Intent newAct = new Intent(MainActivity.this, SearchActivity.class);
+                startActivity(newAct);
+                return true;
+            }
+
+            public boolean onQueryTextChange(String newText) {
+                return false;
+            }
+        });
         return true;
     }
 
@@ -75,12 +101,10 @@ public class MainActivity extends AppCompatActivity
         if (id == R.id.nav_buildings) {
             Intent op1 = new Intent(MainActivity.this, SearchActivity.class);
             startActivity(op1);
-        }
-        else if (id == R.id.nav_navigation) {
+        } else if (id == R.id.nav_navigation) {
             Intent op2 = new Intent(MainActivity.this, MapsActivity.class);
             startActivity(op2);
-        }
-        else if (id == R.id.nav_map) {
+        } else if (id == R.id.nav_map) {
             Intent op3 = new Intent(MainActivity.this, MapActivity.class);
             startActivity(op3);
 
