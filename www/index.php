@@ -8,6 +8,8 @@ require_once 'controllers/adminPanelController.php';
 require_once 'controllers/androidController.php';
 require_once 'controllers/homeController.php';
 
+require_once 'models/editor.php';
+
 function main()
 {
 	session_start();

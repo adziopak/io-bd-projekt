@@ -3,12 +3,12 @@ require_once 'utils/databaseConnect.php';
 
 class Editor
 {
-	public $id;
+	public $id = null;
 	public $userName;
 	public $userPassword;
 	public $lastVisit;
 
-	public static function GetEditorById($id)
+	public static function GetById($id)
 	{
 		$dbconn = new DatabaseConnect;
 		$stmt = $dbconn->prepare("select * from editors where id = ?");
@@ -18,6 +18,7 @@ class Editor
 		$editor = new Editor;
 		$stmt->bind_result($editor->id, $editor->userName, $editor->userPassword, 
 			$editor->lastVisit);
+
 		if ($stmt->fetch())
 		{
 			return $editor;
@@ -28,7 +29,7 @@ class Editor
 		}
 	}
 
-	public static function GetEditorByUserName($userName)
+	public static function GetByUserName($userName)
 	{
 		$dbconn = new DatabaseConnect;
 		$stmt = $dbconn->prepare("select * from editors where user_name = ?");
@@ -38,14 +39,38 @@ class Editor
 		$editor = new Editor;
 		$stmt->bind_result($editor->id, $editor->userName, $editor->userPassword, 
 			$editor->lastVisit);
-		$stmt->fetch();
-
-		return $editor;
+		
+		if ($stmt->fetch())
+		{
+			return $editor;
+		}
+		else 
+		{
+			return null;
+		}
 	}
 
 	public function update()
 	{
-		
+		$dbconn = new DatabaseConnect;
+
+		if ($this->id === null)
+		{	
+			$stmt = $dbconn->prepare("insert into editors (user_name, user_password,
+				last_visit) values (?, ?, ?)");
+			$stmt->bind_param("sss", $this->userName, $this->userPassword, $this->lastVisit);
+
+			return $stmt->execute();
+		}
+		else
+		{
+			$stmt = $dbconn->prepare("update editors set user_name = ?, user_password = ?, 
+				last_visit = ? where id = ?");
+			$stmt->bind_param("sssi", $this->userName, $this->userPassword, $this->lastVisit, 
+				$this->id);
+
+			return $stmt->execute();
+		}
 	}
 }
 ?>

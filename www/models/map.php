@@ -13,29 +13,91 @@ class Map
 	public $buildingId;
 	public $editorId;
 
-	public static function GetMapByName($mapName)
+	public static function GetById($id)
 	{
-		// Zwracanie mapki z bazy danych
-	}
+		$map = new Map;
+		$dbconn = new DatabaseConnect;
+		$stmt = $dbconn->prepare("select * from maps where id = ?");
+		$stmt->bind_param("i", $id);
+		$stmt->execute();
 
-	public static function GetMapsNames()
-	{
-		// Zwracanie wszystkich nazw map z bazy danych
+		$stmt->bind_result($map->id, $map->floor, $map->image, $map->imageMD5, $map->imageWidth,
+			$map->imageHeight, $map->buildingId, $map->editorId);
+
+		if ($stmt->fetch())
+		{
+			return $map;
+		}
+		else 
+		{
+			return null;
+		}
 	}
 
 	public function getPins()
 	{
-		// Zwracanie wszyskich pinów z bazy danych na danej mapce
+		$pins = array();
+		$pin = new Pin;
+		$dbconn = new DatabaseConnect;
+		$stmt = $dbconn->prepare("select * from pins where map_id = ?");
+		$stmt->bind_param("i", $this->id);
+		$stmt->execute();
+
+		$stmt->bind_result($pin->id, $pin->name, $pin->posX, $pin->posY, $pin->mapId, 
+			$pin->editorId);
+
+		while ($stmt->fetch())
+		{
+			array_push($pins, $pin);
+		}
+
+		return $pins;
 	}
 
 	public function getPinByName($pinName)
 	{
-		// Zwracanie określonego pinu z bazy na danej mapce
+		$pin = new Pin;
+		$dbconn = new DatabaseConnect;
+		$stmt = $dbconn->prepare("select * from pins where map_id = ? and name = ?");
+		$stmt->bind_param("is", $this->id, $pinName);
+		$stmt->execute();
+
+		$stmt->bind_result($pin->id, $pin->name, $pin->posX, $pin->posY, $pin->mapId, 
+			$pin->editorId);
+
+		if ($stmt->fetch())
+		{
+			return $pin;
+		}
+		else 
+		{
+			return null;
+		}
 	}
 
 	public function update()
 	{
-		
+		$dbconn = new DatabaseConnect;
+
+		if ($this->id === null)
+		{	
+			$stmt = $dbconn->prepare("insert into maps (floor, image, image_md5, image_width,
+				image_height, building_id, editor_id) values (?, ?, ?, ?, ?, ?, ?)");
+			$stmt->bind_param("issiiii", $this->floor, $this->image, $this->imageMD5, 
+				$this->imageWidth, $this->imageHeight, $this->buildingId, $this->editor_id);
+
+			return $stmt->execute();
+		}
+		else
+		{
+			$stmt = $dbconn->prepare("update maps set floor = ?, image = ?, image_md5 = ?, 
+				image_width = ?, image_height = ?, buidling_id = ?, editor_id = ? where id = ?");
+			$stmt->bind_param("issiiiii", $this->floor, $this->image, $this->imageMD5, 
+				$this->imageWidth, $this->imageHeight, $this->buildingId, $this->editor_id,
+				$this->id);
+
+			return $stmt->execute();
+		}
 	}
 }
 ?>

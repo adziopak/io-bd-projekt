@@ -67,7 +67,7 @@ class AdminPanelController
 		
 		if (isset($_POST['userName']))
 		{
-			$editor = Editor::GetEditorByUserName($_POST['userName']);
+			$editor = Editor::GetByUserName($_POST['userName']);
 
 			if (password_verify($_POST['userPassword'], $editor->userPassword))
 			{
