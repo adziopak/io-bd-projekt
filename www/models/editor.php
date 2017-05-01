@@ -7,15 +7,7 @@ class Editor
 	public $userName;
 	public $userPassword;
 	public $lastVisit;
-
-	function __clone()
-	{
-		$this->id = clone $this->id;
-		$this->userName = clone $this->userName;
-		$this->userPassword = clone $this->userPassword;
-		$this->lastVisit = clone $this->lastVisit;
-	}
-
+	
 	public static function GetById($id)
 	{
 		$dbconn = new DatabaseConnect;

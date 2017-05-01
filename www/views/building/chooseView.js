@@ -1,4 +1,4 @@
-var maps = ::JSMaps::;
+var maps = ::jsMaps::;
 
 function fillBuildingSelect()
 {

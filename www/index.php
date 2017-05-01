@@ -92,7 +92,7 @@ function main()
 					$resultMap = $dbconn->getConnection()->query($sql);
 					$resultMap = $resultMap->fetch_assoc();
 
-					header("Location: building?name=" . $resultMap['name'] . "&floor=" . $resultMap['floor'] . "&pinId=" . $resultPin['id']);
+					header("Location: building/show?name=" . $resultMap['name'] . "&floor=" . $resultMap['floor'] . "&pinId=" . $resultPin['id']);
 					die();
 				}
 			}

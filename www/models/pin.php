@@ -44,7 +44,12 @@ class Pin
 
 		while ($stmt->fetch())
 		{
-			$paths[] =  clone $path;
+			$pathCloned = new Path;
+			$pathCloned->id = $path->id;
+			$pathCloned->firstPinId = $path->firstPinId;
+			$pathCloned->secondPinId = $path->secondPinId;
+			$pathCloned->editorId = $path->editorId;
+			$paths[] =  $pathCloned;
 		}
 
 		return $paths;

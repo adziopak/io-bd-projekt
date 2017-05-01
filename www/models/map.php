@@ -13,18 +13,6 @@ class Map
 	public $buildingId;
 	public $editorId;
 
-	function __clone()
-	{
-		$this->id = clone $this->id;
-		$this->floor = clone $this->floor;
-		$this->image = clone $this->image;
-		$this->imageMD5 = clone $this->imageMD5;
-		$this->imageWidth = clone $this->imageWidth;
-		$this->imageHeight = clone $this->imageHeight;
-		$this->buildingId = clone $this->buildingId;
-		$this->editorId = clone $this->editorId;
-	}
-
 	public static function GetById($id)
 	{
 		$map = new Map;
@@ -60,10 +48,57 @@ class Map
 
 		while ($stmt->fetch())
 		{			
-			$pins[] = clone $pin;
+			// Not so pretty
+			$pinCloned = new Pin;
+			$pinCloned->id = $pin->id;
+			$pinCloned->name = $pin->name;
+			$pinCloned->posX = $pin->posX;
+			$pinCloned->posY = $pin->posY;
+			$pinCloned->mapId = $pin->mapId;
+			$pinCloned->editorId = $pin->editorId;
+			$pins[] = $pinCloned;
 		}
 
 		return $pins;
+	}
+
+	public function getPinsWithName()
+	{
+		$pins = array();
+		$pin = new Pin;
+		$dbconn = new DatabaseConnect;
+		$stmt = $dbconn->prepare("select * from pins where map_id = ? 
+			and not (name is null or name = '')");
+		$stmt->bind_param("i", $this->id);
+		$stmt->execute();
+
+		$stmt->bind_result($pin->id, $pin->name, $pin->posX, $pin->posY, $pin->mapId, 
+			$pin->editorId);
+
+		while ($stmt->fetch())
+		{			
+			// Not so pretty
+			$pinCloned = new Pin;
+			$pinCloned->id = $pin->id;
+			$pinCloned->name = $pin->name;
+			$pinCloned->posX = $pin->posX;
+			$pinCloned->posY = $pin->posY;
+			$pinCloned->mapId = $pin->mapId;
+			$pinCloned->editorId = $pin->editorId;
+			$pins[] = $pinCloned;
+		}
+
+		return $pins;
+	}
+
+	public function isPinIdOnMap($id)
+	{
+		$dbconn = new DatabaseConnect;
+		$stmt = $dbconn->prepare("select id from pins where id = ? and map_id = ?");
+		$stmt->bind_param("ii", $id, $this->id);
+		$stmt->execute();
+
+		return !($stmt->fetch() === null);
 	}
 
 	public function getPinByName($pinName)

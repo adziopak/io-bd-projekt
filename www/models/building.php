@@ -10,15 +10,6 @@ class Building
 	public $lon;
 	public $editorId;
 
-	function __clone()
-	{
-		$this->id = clone $this->id;
-		$this->name = clone $this->name;
-		$this->lat = clone $this->lat;
-		$this->lon = clone $this->lon;
-		$this->editorId = clone $this->editorId;
-	}
-
 	public static function GetById($id)
 	{
 		$dbconn = new DatabaseConnect;
@@ -59,26 +50,6 @@ class Building
 		{
 			return null;
 		}
-	}
-
-	public function getMaps()
-	{
-		$maps = array();
-		$map = new Map;
-		$dbconn = new DatabaseConnect;
-		$stmt = $dbconn->prepare("select * from maps where building_id = ?");
-		$stmt->bind_param("i", $this->id);
-		$stmt->execute();
-
-		$stmt->bind_result($map->id, $map->floor, $map->image, $map->imageMD5, $map->imageWidth,
-			$map->imageHeight, $map->buildingId, $map->editorId);
-
-		while ($stmt->fetch())
-		{
-			$maps[] = clone $map;
-		}
-
-		return $maps;
 	}
 
 	public function getMap($floor)

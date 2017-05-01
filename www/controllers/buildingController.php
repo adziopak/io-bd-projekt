@@ -2,7 +2,10 @@
 require_once 'models/building.php';
 require_once 'models/map.php';
 require_once 'models/pin.php';
+require_once 'models/buildingFloor.php';
+require_once 'models/pathCoords.php';
 require_once 'views/building/showView.php';
+require_once 'views/building/chooseView.php';
 
 // Obsluga strony z widokiem budynku, pinow i sciezek
 // /building
@@ -28,7 +31,8 @@ class BuildingController
 		}
 
 		// kod /building/index
-		// ...
+		header("Location: building/choose");
+		die();
 	}	
 
 	// /building/about
@@ -44,7 +48,22 @@ class BuildingController
 		$map = $building->getMap($_GET['floor']);
 		$view = new BuildingShowView;
 		$view->map = $map;
-		$view->pins = $map->getPins();
+
+		if (isset($_GET['pinId']))
+		{
+			if (!$map->isPinIdOnMap($_GET['pinId']))
+			{
+				header("Location: choose");
+				die();
+			}
+
+			$view->pins[] = Pin::GetById($_GET['pinId']);
+		}
+		else
+		{
+			$view->pins = $map->getPinsWithName();
+			$view->paths = PathCoords::GetAllFromMapId($map->id);
+		}
 
 		return $view->render();
 	}
@@ -58,7 +77,9 @@ class BuildingController
 	// /building/choose
 	public function choose()
 	{
-
+		$view = new BuildingChooseView;
+		$view->floors = BuildingFloor::GetAll();
+		return $view->render();
 	}
 }
 
