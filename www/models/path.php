@@ -4,10 +4,18 @@ require_once 'models/pin.php';
 
 class Path
 {
-	public $id;
+	public $id = null;
 	public $firstPinId;
 	public $secondPinId;
 	public $editorId;
+
+	function __clone()
+	{
+		$this->id = clone $this->id;
+		$this->firstPinId = clone $this->firstPinId;
+		$this->secondPinId = clone $this->secondPinId;
+		$this->editorId = clone $this->editorId;
+	}
 
 	public function getLength()
 	{

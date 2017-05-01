@@ -1,0 +1,24 @@
+#page {
+	height: 600px;
+	margin: 0 auto;
+	max-height: 800px;
+}
+div.mapka {
+	position: relative;
+}
+div.zdjecieMapki {
+	position: absolute;
+	top: 0;
+	left: 0;	
+}
+div.sciezka {
+	position: absolute;
+	left: 0;
+	top: 0;
+	height: 100%;
+	width: 100%;	
+}
+div.sciezka .parametryLinii {
+	stroke:rgb(255,0,0);
+	stroke-width:4;
+}

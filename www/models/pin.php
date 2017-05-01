@@ -4,7 +4,7 @@ require_once 'models/path.php';
 
 class Pin
 {
-	public $id;
+	public $id = null;
 	public $name;
 	public $posX;
 	public $posY;
@@ -44,7 +44,7 @@ class Pin
 
 		while ($stmt->fetch())
 		{
-			array_push($paths, $path);
+			$paths[] =  clone $path;
 		}
 
 		return $paths;

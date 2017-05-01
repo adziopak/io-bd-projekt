@@ -4,7 +4,7 @@ require_once 'models/pin.php';
 
 class Map
 {
-	public $id;
+	public $id = null;
 	public $floor;
 	public $image;
 	public $imageMD5;
@@ -12,6 +12,18 @@ class Map
 	public $imageHeight;
 	public $buildingId;
 	public $editorId;
+
+	function __clone()
+	{
+		$this->id = clone $this->id;
+		$this->floor = clone $this->floor;
+		$this->image = clone $this->image;
+		$this->imageMD5 = clone $this->imageMD5;
+		$this->imageWidth = clone $this->imageWidth;
+		$this->imageHeight = clone $this->imageHeight;
+		$this->buildingId = clone $this->buildingId;
+		$this->editorId = clone $this->editorId;
+	}
 
 	public static function GetById($id)
 	{
@@ -47,8 +59,8 @@ class Map
 			$pin->editorId);
 
 		while ($stmt->fetch())
-		{
-			array_push($pins, $pin);
+		{			
+			$pins[] = clone $pin;
 		}
 
 		return $pins;

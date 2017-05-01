@@ -4,11 +4,20 @@ require_once 'models/map.php';
 
 class Building
 {
-	public $id;
+	public $id = null;
 	public $name;
 	public $lat;
 	public $lon;
 	public $editorId;
+
+	function __clone()
+	{
+		$this->id = clone $this->id;
+		$this->name = clone $this->name;
+		$this->lat = clone $this->lat;
+		$this->lon = clone $this->lon;
+		$this->editorId = clone $this->editorId;
+	}
 
 	public static function GetById($id)
 	{
@@ -66,7 +75,7 @@ class Building
 
 		while ($stmt->fetch())
 		{
-			array_push($maps, $map);
+			$maps[] = clone $map;
 		}
 
 		return $maps;

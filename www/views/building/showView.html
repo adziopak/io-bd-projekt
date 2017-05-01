@@ -1,0 +1,27 @@
+<!-- Linijka ponizej usuwa czarny obrazek. WYMIARY OBRAZKA 1038x437  (437) moze byc wieksyz mniejszy px -->
+<a  class="image featured">
+	<div class="mapka">
+		<div class="sciezka">
+			<svg height="100%" width="100%">
+			<!--<line x1="::xPosition::%" y1="::yPosition::%" x2="54%" y2="36%" class="parametryLinii" />  tutaj rysujemy linie kodem -->
+			<!--<line x1="54%" y1="36%" x2="60%" y2="35.5%" class="parametryLinii" /> tutaj rysujemy linie kodem --> 
+			<!-- ::Lines:: -->
+
+			::pins::
+			</svg>
+		</div>
+		
+		<div>
+			<img src="/media/::image::" width="100%" class="zdjecieMapki" />
+		</div>
+	</div>
+</a>
+
+<form action="" method="get">
+	<p>Budynek</p>
+	<select id="buildingSelect" name="name" onchange="onBuildingSelectChange()"></select><br>
+	<p>Piętro</p>
+	<select id="floorSelect" name="floor"></select><br>
+	<input type="checkbox" name="roomOnly" value="true">Tylko sale<br>
+	<input type="submit">
+</form>

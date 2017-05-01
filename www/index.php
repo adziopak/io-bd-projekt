@@ -7,6 +7,7 @@ require_once 'utils/point2D.php';
 require_once 'controllers/adminPanelController.php';
 require_once 'controllers/androidController.php';
 require_once 'controllers/homeController.php';
+require_once 'controllers/buildingController.php';
 
 require_once 'models/editor.php';
 
@@ -30,6 +31,9 @@ function main()
 			break;
 
 		case 'building':
+			$ctrl = new BuildingController;
+			echo $ctrl->index();
+			break;
 			$dbconn = new DatabaseConnect;
 			$view = new BuildingView;
 

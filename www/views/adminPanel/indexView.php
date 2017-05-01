@@ -5,7 +5,11 @@ class AdminPanelIndexView
 
 	function render()
 	{
-		$content = file_get_contents('views/adminPanel/indexView.html');
+		$layout = file_get_contents('views/_layoutView.html');
+		$body = file_get_contents('views/adminPanel/indexView.html');
+		$content = str_replace(['::RenderStyles::', '::RenderBody::', '::RenderScripts::'],
+			['', $body, ''], $layout);
+
 		return $content;
 	}
 }
