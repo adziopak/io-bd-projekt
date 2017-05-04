@@ -129,18 +129,12 @@ class AdminPanelController
 			die();
 		}
 		
-	$edit=new Editor;
-	while(1)
-	{		
+	$edit=new Editor;		
 	$this->userName=$_GET['userName'];
 	if($_GET['userPassword']==$_GET['userPassword2']
-	{
-	 $this->userPassword=$_GET['userPassword]
-	 break;
-	 }
-	 else
-	   continue;
-	 }
+		$this->userPassword=$_GET['userPassword]
+	
+
 		
 
 
