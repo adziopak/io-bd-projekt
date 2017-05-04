@@ -128,6 +128,21 @@ class AdminPanelController
 			header("Location: /adminPanel/login");
 			die();
 		}
+		
+	$edit=new Editor;
+	while(1)
+	{		
+	$this->userName=$_GET['userName'];
+	if($_GET['userPassword']==$_GET['userPassword2']
+	{
+	 $this->userPassword=$_GET['userPassword]
+	 break;
+	 }
+	 else
+	   continue;
+	 }
+		
+
 
 		// Funkcjonalnosc dodawania edytorow
 	}
