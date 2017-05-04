@@ -72,6 +72,17 @@ class Building
 			return null;
 		}
 	}
+	
+	public function addBuilding($name, $posX, $posY, $editorId)
+	{
+		$dbconn = new DatabaseConnect;
+		$stmt = $dbconn->prepare('insert into buildings values(null, ?, ?, ?, ?)');
+		$stmt->bind_param('siii', $name, $posX, $posY, $editorId);
+		if ($stmt->execute())
+			return $dbconn->getInsertId();
+		else
+			return false; 
+	}
 
 	public function update()
 	{
