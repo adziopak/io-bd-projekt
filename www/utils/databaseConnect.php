@@ -31,7 +31,16 @@ class DatabaseConnect
 
 	public function prepare($query)
 	{
-		return $this->connection->prepare($query);
+		$s = $this->connection->prepare($query);
+		if (!$s) {
+			die($this->connection->error);
+		}
+		return $s;
+	}
+	
+	public function getInsertID()
+	{
+		return $this->connection->insert_id;
 	}
 }
 
