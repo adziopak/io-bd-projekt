@@ -64,16 +64,21 @@ class Pin
 			$stmt = $dbconn->prepare("insert into pins (name, pos_x, pos_y, map_id, editor_id)
 				values (?, ?, ?, ?, ?)");
 			$stmt->bind_param("sddii", $this->name, $this->posX, $this->posY, $this->mapId,
-				$this->editor_id);
+				$this->editorId);
 
-			return $stmt->execute();
+			if ($stmt->execute())
+			{
+				$this->id = $stmt->insert_id;
+				return TRUE;
+			}
+			return FALSE;
 		}
 		else
 		{
 			$stmt = $dbconn->prepare("update maps set name = ?, pos_x = ?, pos_y = ?,
 				map_id = ?, editor_id = ? where id = ?");
 			$stmt->bind_param("sddii", $this->name, $this->posX, $this->posY, $this->mapId,
-				$this->editor_id, $this->id);
+				$this->editorId, $this->id);
 			return $stmt->execute();
 		}
 	}

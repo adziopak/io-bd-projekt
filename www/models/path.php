@@ -27,15 +27,20 @@ class Path
 		{	
 			$stmt = $dbconn->prepare("insert into paths (first_pin_id, second_pin_id, editor_id)
 				values (?, ?, ?)");
-			$stmt->bind_param("iii", $this->firstPinId, $this->secondPinId, $this->editor_id);
+			$stmt->bind_param("iii", $this->firstPinId, $this->secondPinId, $this->editorId);
 
-			return $stmt->execute();
+			if ($stmt->execute())
+			{
+				$this->id = $stmt->insert_id;
+				return TRUE;
+			}
+			return FALSE;
 		}
 		else
 		{
 			$stmt = $dbconn->prepare("update maps set first_pin_id = ?, second_pin_id = ?, 
 				editor_id = ? where id = ?");
-			$stmt->bind_param("iiii", $this->firstPinId, $this->secondPinId, $this->editor_id,
+			$stmt->bind_param("iiii", $this->firstPinId, $this->secondPinId, $this->editorId,
 				$this->id);
 
 			return $stmt->execute();

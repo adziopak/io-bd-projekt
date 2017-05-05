@@ -33,7 +33,7 @@ class DatabaseConnect
 	{
 		$s = $this->connection->prepare($query);
 		if (!$s) {
-			die($this->connection->error);
+			die("SQL error: " . $this->connection->error);
 		}
 		return $s;
 	}

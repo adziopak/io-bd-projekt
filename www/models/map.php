@@ -131,16 +131,22 @@ class Map
 			$stmt = $dbconn->prepare("insert into maps (floor, image, image_md5, image_width,
 				image_height, building_id, editor_id) values (?, ?, ?, ?, ?, ?, ?)");
 			$stmt->bind_param("issiiii", $this->floor, $this->image, $this->imageMD5, 
-				$this->imageWidth, $this->imageHeight, $this->buildingId, $this->editor_id);
+				$this->imageWidth, $this->imageHeight, $this->buildingId, $this->editorId);
 
-			return $stmt->execute();
+			if ($stmt->execute())
+			{
+				$this->id = $stmt->insert_id;
+				return TRUE;
+			}
+			
+			return FALSE;
 		}
 		else
 		{
 			$stmt = $dbconn->prepare("update maps set floor = ?, image = ?, image_md5 = ?, 
 				image_width = ?, image_height = ?, buidling_id = ?, editor_id = ? where id = ?");
 			$stmt->bind_param("issiiiii", $this->floor, $this->image, $this->imageMD5, 
-				$this->imageWidth, $this->imageHeight, $this->buildingId, $this->editor_id,
+				$this->imageWidth, $this->imageHeight, $this->buildingId, $this->editorId,
 				$this->id);
 
 			return $stmt->execute();

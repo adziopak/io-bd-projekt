@@ -72,17 +72,6 @@ class Building
 			return null;
 		}
 	}
-	
-	public function addBuilding($name, $posX, $posY, $editorId)
-	{
-		$dbconn = new DatabaseConnect;
-		$stmt = $dbconn->prepare('insert into buildings values(null, ?, ?, ?, ?)');
-		$stmt->bind_param('siii', $name, $posX, $posY, $editorId);
-		if ($stmt->execute())
-			return $dbconn->getInsertId();
-		else
-			return false; 
-	}
 
 	public function update()
 	{
@@ -92,15 +81,20 @@ class Building
 		{	
 			$stmt = $dbconn->prepare("insert into buildings (name, lat, lon, editor_id) 
 				values (?, ?, ?, ?)");
-			$stmt->bind_param("sss", $this->name, $this->lat, $this->lon, $this->editor_id);
+			$stmt->bind_param("sssi", $this->name, $this->lat, $this->lon, $this->editorId);
 
-			return $stmt->execute();
+			if ($stmt->execute())
+			{
+				$this->id = $stmt->insert_id;
+				return TRUE;
+			}
+			return FALSE;
 		}
 		else
 		{
 			$stmt = $dbconn->prepare("update buildings set name = ?, lat = ?, 
 				lon = ?, editor_id = ? where id = ?");
-			$stmt->bind_param("sssi", $this->name, $this->lat, $this->lon, $this->editor_id, 
+			$stmt->bind_param("sssii", $this->name, $this->lat, $this->lon, $this->editorId, 
 				$this->id);
 
 			return $stmt->execute();

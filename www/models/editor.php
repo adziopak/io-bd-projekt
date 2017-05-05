@@ -60,7 +60,12 @@ class Editor
 				last_visit) values (?, ?, ?)");
 			$stmt->bind_param("sss", $this->userName, $this->userPassword, $this->lastVisit);
 
-			return $stmt->execute();
+			if ($stmt->execute())
+			{
+				$this->id = $stmt->insert_id;
+				return TRUE;
+			}
+			return FALSE;
 		}
 		else
 		{

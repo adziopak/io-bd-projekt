@@ -31,7 +31,7 @@ class BuildingController
 		}
 
 		// kod /building/index
-		header("Location: building/choose");
+		header("Location: choose");
 		die();
 	}	
 
@@ -40,7 +40,7 @@ class BuildingController
 	{
 		if (!isset($_GET['name']) || !isset($_GET['floor']))
 		{
-			header("Location: building/choose");
+			header("Location: choose");
 			die();
 		}
 

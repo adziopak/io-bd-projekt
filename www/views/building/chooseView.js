@@ -3,27 +3,31 @@ var maps = ::jsMaps::;
 function fillBuildingSelect()
 {
 	var buildings = [];
-		for (var key in maps)
+	
+	for (var key in maps)
 	{
 		if (jQuery.inArray(maps[key].name, buildings) < 0)
 		{
 			buildings.push(maps[key].name);
 		}
 	}
-		for (var key in buildings)
+	
+	for (var key in buildings)
 	{
 		$('#buildingSelect').append('<option value="' + buildings[key] + 
 			'">Budynek ' + buildings[key] + '</option>');
 	
 	}
-		onBuildingSelectChange();
+	
+	onBuildingSelectChange();
 }
 
 function onBuildingSelectChange()
 {
 	$('#floorSelect').empty();
 	var value = $('#buildingSelect').val();
-		for (var key in maps)
+	
+	for (var key in maps)
 	{
 		if (maps[key].name == value)
 		{
