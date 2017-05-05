@@ -31,6 +31,34 @@ class Pin
 		}
 	}
 
+	public static function GetByName($name)
+	{
+		$pins = array();
+		$pin = new Pin;
+		$dbconn = new DatabaseConnect;
+		$stmt = $dbconn->prepare("select * from pins where name = ?");
+		$stmt->bind_param("s", $this->id);
+		$stmt->execute();
+
+		$stmt->bind_result($pin->id, $pin->name, $pin->posX, $pin->posY, $pin->mapId, 
+			$pin->editorId);
+
+		while ($stmt->fetch())
+		{			
+			// Not so pretty
+			$pinCloned = new Pin;
+			$pinCloned->id = $pin->id;
+			$pinCloned->name = $pin->name;
+			$pinCloned->posX = $pin->posX;
+			$pinCloned->posY = $pin->posY;
+			$pinCloned->mapId = $pin->mapId;
+			$pinCloned->editorId = $pin->editorId;
+			$pins[] = $pinCloned;
+		}
+
+		return $pins;
+	}
+
 	public function getPaths()
 	{
 		$paths = array();
