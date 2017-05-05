@@ -31,7 +31,7 @@ class BuildingController
 		}
 
 		// kod /building/index
-		header("Location: choose");
+		header("Location: /building/choose");
 		die();
 	}	
 
@@ -40,7 +40,7 @@ class BuildingController
 	{
 		if (!isset($_GET['name']) || !isset($_GET['floor']))
 		{
-			header("Location: choose");
+			header("Location: /building/choose");
 			die();
 		}
 
@@ -53,7 +53,7 @@ class BuildingController
 		{
 			if (!$map->isPinIdOnMap($_GET['pinId']))
 			{
-				header("Location: choose");
+				header("Location: /building/choose");
 				die();
 			}
 
