@@ -1,4 +1,6 @@
 <?php
+require_once 'views/map/showView.php';
+require_once 'models/building.php';
 
 // Obsluga wyswietlania mapy wszystkich budynkow (google map i/albo nasz mapa)
 // /map
@@ -12,19 +14,22 @@ class MapController
 		{
 			switch($_GET['action'])
 			{
-				case 'about':
-					return $this->about();
+				case 'show':
+					return $this->show();
 			}
 		}
 
-		// kod /map/index
-		// ...
+		header("Location: /map/show");
+		die();
 	}	
 
-	// /map/about
-	public function about()
+	// /map/show
+	public function show()
 	{
+		$view = new MapShowView;
+		$view->buildings = Building::GetAll();
 
+		return $view->render();
 	}
 }
 

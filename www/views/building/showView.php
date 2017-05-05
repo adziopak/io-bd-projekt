@@ -18,8 +18,9 @@ class BuildingShowView
 		$pins = '';
 		$paths = '';
 		
-		$content = str_replace(['::RenderStyles::', '::RenderBody::', '::RenderScripts::'],
-			[$css, $body, ''], $layout);
+		$content = str_replace(['::RenderStyles::', '::RenderBody::', '::RenderScripts::', 
+			'::RenderScriptsInclude::'],
+			[$css, $body, '', ''], $layout);
 
 		foreach ($this->pins as $p)
 			$pins = $pins . str_replace(["::id::", "::x::", "::y::"], 

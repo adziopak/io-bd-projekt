@@ -52,6 +52,32 @@ class Building
 		}
 	}
 
+	public static function GetAll()
+	{
+		$buildings = array();
+		$building = new Building;
+		$dbconn = new DatabaseConnect;
+		$stmt = $dbconn->prepare("select * from buildings");
+		$stmt->execute();
+
+		$stmt->bind_result($building->id, $building->name, $building->lat, $building->lon, 
+			$building->editorId);
+
+		while ($stmt->fetch())
+		{			
+			// Not so pretty
+			$bCloned= new Building;
+			$bCloned->id = $building->id;
+			$bCloned->name = $building->name;
+			$bCloned->lat = $building->lat;
+			$bCloned->lon = $building->lon;
+			$bCloned->editorId = $building->editorId;
+			$buildings[] = $bCloned;
+		}
+
+		return $buildings;
+	}
+
 	public function getMap($floor)
 	{
 		$map = new Map;

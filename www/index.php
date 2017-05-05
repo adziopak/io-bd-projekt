@@ -1,5 +1,4 @@
 <?php
-require_once 'views/mapView.php';
 require_once 'views/pinSearchView.php';
 require_once 'utils/databaseConnect.php';
 require_once 'utils/point2D.php';
@@ -7,6 +6,7 @@ require_once 'controllers/adminPanelController.php';
 require_once 'controllers/androidController.php';
 require_once 'controllers/homeController.php';
 require_once 'controllers/buildingController.php';
+require_once 'controllers/mapController.php';
 
 require_once 'models/editor.php';
 
@@ -23,10 +23,9 @@ function main()
 	{
 		// Kod ktory trzeba przeniesc do kontrolerow
 		case 'map':
-			$view = new MapView;
-			// TODO: wrzucic to do jakiegos configu
-			$view->apiKey = "AIzaSyBcwERVsQ9-u3vGi93armuqOI4lts5qqt4";
-			echo $view->render();
+			$ctrl = new MapController;
+
+			echo $ctrl->index();
 			break;
 
 		case 'building':
