@@ -47,10 +47,10 @@ class AndroidController
         $floor = NULL;  
         
         //sprawdza czy podano name i floor i zwraca potrzebne dane
-        if(isset($_POST['name']) && isset($_POST['floor']))
+        if(isset($_GET['name']) && isset($_GET['floor']))
         {
-            $name = $_POST['name'];
-            $floor = $_POST['floor'];
+            $name = $_GET['name'];
+            $floor = $_GET['floor'];
             
             $dbconn = new DatabaseConnect;
             $stmt = $dbconn->prepare("select m.id, b.name, m.floor, m.image, m.image_width, m.image_height, m.image_md5 from maps m left join buildings b on m.building_id = b.id where b.name=? and m.floor=?");
@@ -62,9 +62,9 @@ class AndroidController
         }
         
         //jesli nie podano floor zwraca wszystkie mapki
-        if(isset($_POST['name']))
+        if(isset($_GET['name']))
         {
-            $name = $_POST['name'];
+            $name = $_GET['name'];
             
             $dbconn = new DatabaseConnect;
             $stmt = $dbconn->prepare("select * from maps left join buildings on maps.building_id = buildings.id where buildings.name=?" );
