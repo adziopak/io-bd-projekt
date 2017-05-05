@@ -1,73 +1,133 @@
 package com.example.gloxiak.menu;
 
-import android.support.v4.app.FragmentActivity;
+import android.app.Dialog;
+import android.content.pm.PackageManager;
+import android.location.Geocoder;
+import android.os.Build;
+import android.support.annotation.NonNull;
+import android.support.annotation.Nullable;
+import android.support.v4.app.ActivityCompat;
+import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuItem;
+import android.view.View;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.TextView;
+import android.widget.Toast;
 
+import com.google.android.gms.common.ConnectionResult;
+import com.google.android.gms.common.GoogleApiAvailability;
+import com.google.android.gms.common.api.GoogleApiClient;
+import com.google.android.gms.identity.intents.Address;
+import com.google.android.gms.location.LocationRequest;
+import com.google.android.gms.location.LocationServices;
+import com.google.android.gms.maps.CameraUpdate;
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
+import com.google.android.gms.maps.MapFragment;
 import com.google.android.gms.maps.OnMapReadyCallback;
-import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.model.LatLng;
+import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
 
-public class MapsActivity extends FragmentActivity implements OnMapReadyCallback {
+import java.io.IOException;
+import java.util.List;
 
-    private GoogleMap mMap;
+public class MapsActivity extends AppCompatActivity implements OnMapReadyCallback {
+
+    GoogleMap mMap;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_maps);
-        // Obtain the SupportMapFragment and get notified when the map is ready to be used.
-        SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager()
-                .findFragmentById(R.id.map);
+        if (googleServicesAvailable()) { //zeby nie crashowalo
+            setContentView(R.layout.activity_maps);
+            initMap();
+        } else {
+            //brak layoutu
+        }
+    }
+
+    public void initMap() {
+        MapFragment mapFragment = (MapFragment) getFragmentManager().findFragmentById(R.id.mapFragment);
         mapFragment.getMapAsync(this);
     }
 
+    public boolean googleServicesAvailable() {
+        GoogleApiAvailability api = GoogleApiAvailability.getInstance();
+        int isAvailable = api.isGooglePlayServicesAvailable(this);
+        if (isAvailable == ConnectionResult.SUCCESS) {
+            return true;
+        } else if (api.isUserResolvableError(isAvailable)) {
+            Dialog dialog = api.getErrorDialog(this, isAvailable, 0);
+            dialog.show();
+            return false;
+        } else {
+            return false;
+        }
+    }
 
-    /**
-     * Manipulates the map once available.
-     * This callback is triggered when the map is ready to be used.
-     * This is where we can add markers or lines, add listeners or move the camera. In this case,
-     * we just add a marker near Sydney, Australia.
-     * If Google Play services is not installed on the device, the user will be prompted to install
-     * it inside the SupportMapFragment. This method will only be triggered once the user has
-     * installed Google Play services and returned to the app.
-     */
     @Override
     public void onMapReady(GoogleMap googleMap) {
         mMap = googleMap;
+        mMap.setInfoWindowAdapter(new GoogleMap.InfoWindowAdapter(){
 
-        LatLng budV = new LatLng(50.0188232, 21.9887356);
-        LatLng budL = new LatLng(50.0181278, 21.9867635);
-        LatLng budP = new LatLng(50.0190398,21.9814866);
-        LatLng budH = new LatLng(50.019798, 21.985601);
-        LatLng budK = new LatLng(50.019431, 21.985633);
-        LatLng budS = new LatLng(50.019204, 21.987532);
-        LatLng akad = new LatLng(50.020100, 21.982500);
-        LatLng sport = new LatLng(50.018356, 21.980386);
-        LatLng budJ = new LatLng(50.019831, 21.980622);
-        LatLng budA = new LatLng(50.026934, 21.985086);
-        LatLng budB = new LatLng(50.026686, 21.984260);
-        LatLng budC = new LatLng(50.026383, 21.983884);
-        LatLng budF = new LatLng(50.026031, 21.983348);
-        LatLng budD = new LatLng(50.025845, 21.983487);
-        LatLng budE = new LatLng(50.026362, 21.984656);
-        mMap.addMarker(new MarkerOptions().position(budP).title("Budynek P"));
-        mMap.addMarker(new MarkerOptions().position(budL).title("Budynek L"));
-        mMap.addMarker(new MarkerOptions().position(budV).title("Budynek V"));
-        mMap.addMarker(new MarkerOptions().position(budH).title("Budynek H"));
-        mMap.addMarker(new MarkerOptions().position(budK).title("Budynek K"));
-        mMap.addMarker(new MarkerOptions().position(budS).title("Budynek S"));
-        mMap.addMarker(new MarkerOptions().position(akad).title("Akademiki"));
-        mMap.addMarker(new MarkerOptions().position(sport).title("Hala sportowa"));
-        mMap.addMarker(new MarkerOptions().position(budJ).title("Budynek J"));
-        mMap.addMarker(new MarkerOptions().position(budA).title("Budynek A"));
-        mMap.addMarker(new MarkerOptions().position(budB).title("Budynek B"));
-        mMap.addMarker(new MarkerOptions().position(budC).title("Budynek C"));
-        mMap.addMarker(new MarkerOptions().position(budD).title("Budynek D"));
-        mMap.addMarker(new MarkerOptions().position(budE).title("Budynek E"));
-        mMap.addMarker(new MarkerOptions().position(budF).title("Budynek F"));
-        mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(budV,14));
+            @Override
+            public View getInfoWindow(Marker marker) {
+                return null;
+            }
+
+            @Override
+            public View getInfoContents(Marker marker) {
+                View view = getLayoutInflater().inflate(R.layout.info_window, null);
+                TextView textView = (TextView) view.findViewById(R.id.nameInfo);
+                textView.setText(marker.getTitle());
+                return view;
+            }
+        });
+
+        MarkerOptions options = new MarkerOptions()
+                .title("Budynek V")
+                .snippet("test");
+        mMap.addMarker(options);
+
+        mMap.setOnMarkerClickListener(new GoogleMap.OnMarkerClickListener() {
+            @Override
+            public boolean onMarkerClick(Marker marker) {
+                return false;
+            }
+        });
     }
+
+
+    private void goToLocation(double lat, double lng) {
+        LatLng latLng = new LatLng(lat, lng);
+        CameraUpdate update = CameraUpdateFactory.newLatLngZoom(latLng, 14);
+        mMap.moveCamera(update);
+    }
+
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.menu, menu);
+        return super.onCreateOptionsMenu(menu);
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+
+        switch(item.getItemId()) {
+            case R.id.mapTypeNormal:
+                mMap.setMapType(GoogleMap.MAP_TYPE_NORMAL);
+                break;
+            case R.id.mapTypeHybrid:
+                mMap.setMapType(GoogleMap.MAP_TYPE_HYBRID);
+            default:
+                break;
+        }
+        return super.onOptionsItemSelected(item);
+    }
+
 }

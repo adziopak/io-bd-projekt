@@ -6,4 +6,9 @@
 
     <string name="action_settings">Settings</string>
     <string name="title_activity_maps">Map</string>
+
+
+    <string name="app_name2">Nawigacja</string>
+    <string name="map_type_normal">Zwykła</string>
+    <string name="map_type_hybrid">Hybryda</string>
 </resources>
