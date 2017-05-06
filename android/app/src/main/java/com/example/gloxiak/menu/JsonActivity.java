@@ -28,7 +28,7 @@ public class JsonActivity extends AppCompatActivity {
     private ListView lv;
 
     // URL : stąd pobieramy dane
-    private static String url = "http://skkshowcase.cba.pl/android/map?name=P";
+    private static String url = "http://skkshowcase.cba.pl/android/map?name=V";
 
     ArrayList<HashMap<String, String>> dataList;
 
