@@ -1,5 +1,6 @@
 package com.example.gloxiak.menu;
 
+import android.net.Uri;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.app.ProgressDialog;
@@ -28,7 +29,7 @@ public class JsonActivity extends AppCompatActivity {
     private ListView lv;
 
     // URL : stąd pobieramy dane
-    private static String url = "http://skkshowcase.cba.pl/android/map?name=V";
+    private static String url = "http://skkshowcase.cba.pl/android/map?name=";
 
     ArrayList<HashMap<String, String>> dataList;
 
@@ -38,16 +39,15 @@ public class JsonActivity extends AppCompatActivity {
         setContentView(R.layout.activity_json);
 
         dataList = new ArrayList<>();
-
         lv = (ListView) findViewById(R.id.list);
 
-        new GetData().execute();
+        new GetData().execute(getIntent().getExtras().getString("query"));
     }
 
     /**
      * Async task class to get json by making HTTP call
      */
-    private class GetData extends AsyncTask<Void, Void, Void> {
+    private class GetData extends AsyncTask<String, Void, Void> {
 
         @Override
         protected void onPreExecute() {
@@ -61,10 +61,10 @@ public class JsonActivity extends AppCompatActivity {
         }
 
         @Override
-        protected Void doInBackground(Void... arg0) {
+        protected Void doInBackground(String... query) {
             HttpHandler sh = new HttpHandler();
 
-            String jsonStr = sh.makeServiceCall(url);
+            String jsonStr = sh.makeServiceCall(url + Uri.encode(query[0], "@#&=*+-_.,:!?()/~'%"));
             Log.e(TAG, "Response from url: " + jsonStr);
 
             if (jsonStr != null) {
