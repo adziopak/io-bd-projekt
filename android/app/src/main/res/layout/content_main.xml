@@ -39,13 +39,4 @@
         android:elevation="0dp"
         android:textStyle="normal|bold" />
 
-    <Button
-        android:text="JSON"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/button2"
-        android:layout_toEndOf="@+id/button2"
-        android:layout_marginTop="99dp"
-        android:id="@+id/button4" />
-
 </RelativeLayout>

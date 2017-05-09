@@ -26,6 +26,7 @@ public class BuildingActivity extends AppCompatActivity {
         PhotoViewAttacher photoView4= new PhotoViewAttacher(imageView4);
         imageView5 = (ImageView)findViewById(R.id.imageView5);
         PhotoViewAttacher photoView5= new PhotoViewAttacher(imageView5);
+
         photoView.update();
         photoView2.update();
         photoView3.update();

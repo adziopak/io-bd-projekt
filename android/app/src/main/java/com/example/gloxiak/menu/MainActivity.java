@@ -24,8 +24,6 @@ public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
     Button button1;
-    Button button2;
-    TextView textView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -50,16 +48,6 @@ public class MainActivity extends AppCompatActivity
                 startActivity(newAct);
             }
         });
-
-        button2 = (Button)findViewById(R.id.button4);
-        button2.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent newAct = new Intent(MainActivity.this, JsonActivity.class);
-                startActivity(newAct);
-            }
-        });
-
     }
 
     @Override
