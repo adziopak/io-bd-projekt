@@ -1,5 +1,6 @@
 package com.example.gloxiak.menu;
 
+import android.content.Intent;
 import android.net.Uri;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -22,7 +23,7 @@ import java.util.HashMap;
 
 public class JsonActivity extends AppCompatActivity {
 
-
+    String imgname;
     private String TAG = JsonActivity.class.getSimpleName();
 
     private ProgressDialog pDialog;
@@ -75,12 +76,12 @@ public class JsonActivity extends AppCompatActivity {
                     for (int i = 0; i < dataArray.length(); i++) {
                         JSONObject jsonObj = dataArray.getJSONObject(i);
 
-                        String name = jsonObj.getString("name");
+                        String name = jsonObj.getString("image");
 
                         HashMap<String, String> data_tmp = new HashMap<>();
 
-                        data_tmp.put("name", name);
-
+                        data_tmp.put("image", name);
+                        imgname=name;
                         dataList.add(data_tmp);
                     }
                 } catch (final JSONException e) {
@@ -124,9 +125,14 @@ public class JsonActivity extends AppCompatActivity {
              * */
             ListAdapter adapter = new SimpleAdapter(
                     JsonActivity.this, dataList,
-                    R.layout.list_item, new String[]{"name"}, new int[]{R.id.name});
+                    R.layout.list_item, new String[]{"image"}, new int[]{R.id.name});
 
             lv.setAdapter(adapter);
+
+            Intent intent=new Intent(getBaseContext(), SearchActivity.class);
+            intent.putExtra("img", imgname);
+            startActivity(intent);
+            finish();
         }
 
     }
