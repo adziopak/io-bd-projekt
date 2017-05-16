@@ -94,10 +94,9 @@
 <colAssociation fkAssociation="E93AFEBF-8435-A907-680E-AF06AFAC9109" referredColumn="98A9458B-7D70-DA8D-38FA-F7237A40129F"/>
 </associations>
 </Column>
-<Column name="editor_id" id="5CCC2DC1-5CE7-03DD-A794-7A84E3AD414B">
+<Column name="editor_id" id="1C69402D-D56E-BE16-F023-AD89292D9ACB">
 <createdBy>Krystian</createdBy>
-<createdTime>2017-04-24 16:46:24 UTC</createdTime>
-<generatorID>E320FB6D-9CAF-FC52-7EDC-2EFE1A55F9BC</generatorID>
+<createdTime>2017-05-16 18:28:50 UTC</createdTime>
 <ownerDesignName>ERD1</ownerDesignName>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
@@ -106,7 +105,7 @@
 <previousColumn>false</previousColumn>
 <autoIncrementCycle>false</autoIncrementCycle>
 <associations>
-<colAssociation fkAssociation="AF641E72-4B42-3BDD-5559-54591E50BED2" referredColumn="1C5310C6-C2C7-27A6-23C5-20F0C8745B63"/>
+<colAssociation fkAssociation="914BEE80-7412-0D32-F32A-4050260AD61C" referredColumn="1C5310C6-C2C7-27A6-23C5-20F0C8745B63"/>
 </associations>
 </Column>
 </columns>
@@ -130,9 +129,6 @@
 <indexState>Unique Plain Index</indexState>
 <isSurrogateKey>false</isSurrogateKey>
 <relationGeneratorID>40A29311-E459-4B99-6A08-4B5ABC78EF01</relationGeneratorID>
-<indexColumnUsage>
-<colUsage columnID="5CCC2DC1-5CE7-03DD-A794-7A84E3AD414B"/>
-</indexColumnUsage>
 </ind_PK_UK>
 <ind_PK_UK id="C3E9742A-437E-8A8A-1042-D3C883A6745C" name="MAP_BUILDING_FK">
 <createdBy>Krystian</createdBy>
@@ -145,15 +141,15 @@
 <colUsage columnID="3D97EAD4-8B9C-22BB-B159-9F47AAA4759E"/>
 </indexColumnUsage>
 </ind_PK_UK>
-<ind_PK_UK id="651E8E11-4FC7-43D3-DB2E-4A53EAFAE735" name="MAP_EDITOR_FK">
+<ind_PK_UK id="DE20EAE9-98D3-6980-B477-482304A7DB58" name="map_editor_FK">
 <createdBy>Krystian</createdBy>
-<createdTime>2017-04-24 16:46:24 UTC</createdTime>
-<generatorID>40A29311-E459-4B99-6A08-4B5ABC78EF01</generatorID>
+<createdTime>2017-05-16 18:28:50 UTC</createdTime>
+<generatorID>3574BA2B-4A28-5497-D921-B9E35116E04B</generatorID>
 <ownerDesignName>ERD1</ownerDesignName>
 <indexState>Foreign Key</indexState>
 <isSurrogateKey>false</isSurrogateKey>
 <indexColumnUsage>
-<colUsage columnID="5CCC2DC1-5CE7-03DD-A794-7A84E3AD414B"/>
+<colUsage columnID="1C69402D-D56E-BE16-F023-AD89292D9ACB"/>
 </indexColumnUsage>
 </ind_PK_UK>
 </indexes>

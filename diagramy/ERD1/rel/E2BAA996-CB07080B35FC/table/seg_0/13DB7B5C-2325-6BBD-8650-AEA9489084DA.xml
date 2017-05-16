@@ -56,10 +56,9 @@
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
 </Column>
-<Column name="editor_id" id="8EF48EDD-AD64-89FF-25A6-416873441146">
+<Column name="editor_id" id="64564B86-9D05-5C20-0DEA-BCE5A63EA77C">
 <createdBy>Krystian</createdBy>
-<createdTime>2017-04-24 16:46:24 UTC</createdTime>
-<generatorID>355F22FB-5DA9-020C-4F9E-0D5526D1A3C4</generatorID>
+<createdTime>2017-05-16 18:28:39 UTC</createdTime>
 <ownerDesignName>ERD1</ownerDesignName>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
@@ -68,7 +67,7 @@
 <previousColumn>false</previousColumn>
 <autoIncrementCycle>false</autoIncrementCycle>
 <associations>
-<colAssociation fkAssociation="A7D765AE-B997-1582-D4F9-70A440E2CAB0" referredColumn="1C5310C6-C2C7-27A6-23C5-20F0C8745B63"/>
+<colAssociation fkAssociation="1C9F6577-29AF-A5B3-3BA8-DCBA14466124" referredColumn="1C5310C6-C2C7-27A6-23C5-20F0C8745B63"/>
 </associations>
 </Column>
 </columns>
@@ -92,19 +91,16 @@
 <indexState>Unique Plain Index</indexState>
 <isSurrogateKey>false</isSurrogateKey>
 <relationGeneratorID>C0379EA9-DF83-DF14-452A-ED51DF362EAE</relationGeneratorID>
-<indexColumnUsage>
-<colUsage columnID="8EF48EDD-AD64-89FF-25A6-416873441146"/>
-</indexColumnUsage>
 </ind_PK_UK>
-<ind_PK_UK id="304F4E69-7DD6-9A05-E1CE-3DBF70E4F379" name="BUILDING_EDITOR_FK">
+<ind_PK_UK id="406221C2-2F6C-CB67-314C-7FC950989C0D" name="building_editor_FK">
 <createdBy>Krystian</createdBy>
-<createdTime>2017-04-24 16:46:25 UTC</createdTime>
-<generatorID>C0379EA9-DF83-DF14-452A-ED51DF362EAE</generatorID>
+<createdTime>2017-05-16 18:28:39 UTC</createdTime>
+<generatorID>3574BA2B-4A28-5497-D921-B9E35116E04B</generatorID>
 <ownerDesignName>ERD1</ownerDesignName>
 <indexState>Foreign Key</indexState>
 <isSurrogateKey>false</isSurrogateKey>
 <indexColumnUsage>
-<colUsage columnID="8EF48EDD-AD64-89FF-25A6-416873441146"/>
+<colUsage columnID="64564B86-9D05-5C20-0DEA-BCE5A63EA77C"/>
 </indexColumnUsage>
 </ind_PK_UK>
 </indexes>

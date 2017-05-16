@@ -1,8 +1,8 @@
 <?xml version = '1.0' encoding = 'UTF-8'?>
-<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="A7D765AE-B997-1582-D4F9-70A440E2CAB0" containerWithKeyObject="13DB7B5C-2325-6BBD-8650-AEA9489084DA" localFKIndex="304F4E69-7DD6-9A05-E1CE-3DBF70E4F379" name="BUILDING_EDITOR_FK">
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="CB59C6C4-81C8-BC73-EBD5-A024CCA1D148" containerWithKeyObject="21A32ADD-7EA8-8146-53E2-039DF820BC86" localFKIndex="86F7C740-8396-8993-6A87-79C912AF39CD" name="path_editor_FK">
 <createdBy>Krystian</createdBy>
-<createdTime>2017-04-24 16:46:25 UTC</createdTime>
-<generatorID>C0379EA9-DF83-DF14-452A-ED51DF362EAE</generatorID>
+<createdTime>2017-05-16 18:29:06 UTC</createdTime>
+<generatorID>3574BA2B-4A28-5497-D921-B9E35116E04B</generatorID>
 <ownerDesignName>ERD1</ownerDesignName>
 <referredTableLongName>editor</referredTableLongName>
 <deleteRule>NO ACTION</deleteRule>

@@ -70,10 +70,9 @@
 <colAssociation fkAssociation="60396952-78E5-858A-F6ED-020AFF8E624A" referredColumn="AFB13147-8223-5435-4F71-DA736FEE9A4C"/>
 </associations>
 </Column>
-<Column name="editor_id" id="8EBF84FC-D7C9-973C-F537-2913D96336DB">
+<Column name="editor_id" id="A523D055-C225-CFF4-3B40-EC8E42936AEA">
 <createdBy>Krystian</createdBy>
-<createdTime>2017-04-24 16:46:24 UTC</createdTime>
-<generatorID>3C69DEA6-43BD-C331-B787-09294F8E3E22</generatorID>
+<createdTime>2017-05-16 18:29:01 UTC</createdTime>
 <ownerDesignName>ERD1</ownerDesignName>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
@@ -82,7 +81,7 @@
 <previousColumn>false</previousColumn>
 <autoIncrementCycle>false</autoIncrementCycle>
 <associations>
-<colAssociation fkAssociation="5E91A577-F482-F7B6-15D7-1E77052EF71D" referredColumn="1C5310C6-C2C7-27A6-23C5-20F0C8745B63"/>
+<colAssociation fkAssociation="540B7C37-FEE2-0EB5-2893-B64BC4CC201E" referredColumn="1C5310C6-C2C7-27A6-23C5-20F0C8745B63"/>
 </associations>
 </Column>
 </columns>
@@ -106,20 +105,6 @@
 <indexState>Unique Plain Index</indexState>
 <isSurrogateKey>false</isSurrogateKey>
 <relationGeneratorID>846D13BD-9A10-5CBB-5AC5-224690F5DD5A</relationGeneratorID>
-<indexColumnUsage>
-<colUsage columnID="8EBF84FC-D7C9-973C-F537-2913D96336DB"/>
-</indexColumnUsage>
-</ind_PK_UK>
-<ind_PK_UK id="A45D3E31-435F-9ECF-E655-CB0E2B9884B4" name="PIN_EDITOR_FK">
-<createdBy>Krystian</createdBy>
-<createdTime>2017-04-24 16:46:24 UTC</createdTime>
-<generatorID>846D13BD-9A10-5CBB-5AC5-224690F5DD5A</generatorID>
-<ownerDesignName>ERD1</ownerDesignName>
-<indexState>Foreign Key</indexState>
-<isSurrogateKey>false</isSurrogateKey>
-<indexColumnUsage>
-<colUsage columnID="8EBF84FC-D7C9-973C-F537-2913D96336DB"/>
-</indexColumnUsage>
 </ind_PK_UK>
 <ind_PK_UK id="C1BE44FE-E31E-ACD1-AC3D-B696277ABD60" name="PIN_MAP_FK">
 <createdBy>Krystian</createdBy>
@@ -130,6 +115,17 @@
 <isSurrogateKey>false</isSurrogateKey>
 <indexColumnUsage>
 <colUsage columnID="26A23FB3-A31D-6BBD-D14F-A23B52F75E5C"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="66855BF3-B6DA-1B68-A264-1D036F8DB4C0" name="pin_editor_FK">
+<createdBy>Krystian</createdBy>
+<createdTime>2017-05-16 18:29:01 UTC</createdTime>
+<generatorID>3574BA2B-4A28-5497-D921-B9E35116E04B</generatorID>
+<ownerDesignName>ERD1</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="A523D055-C225-CFF4-3B40-EC8E42936AEA"/>
 </indexColumnUsage>
 </ind_PK_UK>
 </indexes>
