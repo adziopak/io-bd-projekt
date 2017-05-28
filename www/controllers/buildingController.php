@@ -6,6 +6,7 @@ require_once 'models/buildingFloor.php';
 require_once 'models/pathCoords.php';
 require_once 'views/building/showView.php';
 require_once 'views/building/chooseView.php';
+require_once 'views/building/PinListView.php';
 
 // Obsluga strony z widokiem budynku, pinow i sciezek
 // /building
@@ -71,7 +72,27 @@ class BuildingController
 	// /building/search
 	public function search()
 	{
-
+		if (isset($_GET['roomName']))
+		{
+			$resultPin = Pin::GetByName($_GET['roomName']);
+			
+			if (!is_null($resultPin))
+			{
+				if(count($resultPin) > 1)
+				{
+					$list = new PinListView;
+					$list->pins = $resultPin;
+					return $list->render();
+				}
+				
+				$resultMap = Map::GetById($resultPin[0]['id']);
+				
+				header("Location: building/show?name=" . $resultMap['name'] . "&floor=" . $resultMap['floor'] . "&pinId=" . $resultPin['id']);
+					die();
+			}
+		}
+		$view = new PinSearchView;
+		return $view->render();
 	}
 
 	// /building/choose
