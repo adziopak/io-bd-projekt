@@ -85,10 +85,12 @@ class BuildingController
 					return $list->render();
 				}
 				
-				$resultMap = Map::GetById($resultPin[0]['id']);
+				$resultMap = Map::GetById($resultPin[0]->mapId);
+				$building = Building::GetById($resultMap->buildingId);
 				
-				header("Location: building/show?name=" . $resultMap['name'] . "&floor=" . $resultMap['floor'] . "&pinId=" . $resultPin['id']);
-					die();
+				header("Location: show?name=" . $building->name . "&floor=" . $resultMap->floor . 
+					"&pinId=" . $resultPin[0]->id);
+				die();
 			}
 		}
 		$view = new PinSearchView;

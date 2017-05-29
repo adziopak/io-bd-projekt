@@ -37,7 +37,7 @@ class Pin
 		$pin = new Pin;
 		$dbconn = new DatabaseConnect;
 		$stmt = $dbconn->prepare("select * from pins where name = ?");
-		$stmt->bind_param("s", $this->id);
+		$stmt->bind_param("s", $name);
 		$stmt->execute();
 
 		$stmt->bind_result($pin->id, $pin->name, $pin->posX, $pin->posY, $pin->mapId, 
