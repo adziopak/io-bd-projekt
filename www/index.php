@@ -33,29 +33,6 @@ function main()
 			
 			echo $ctrl->index();
 			break;
-
-		case 'pinSearch':
-			if (isset($_GET['roomName']))
-			{
-				$dbconn = new DatabaseConnect;
-				$sql = "select * from pins where name ='" . $_GET['roomName'] . "'";
-				$resultPin = $dbconn->getConnection()->query($sql);
-				$resultPin = $resultPin->fetch_assoc();
-				
-				if (!is_null($resultPin))
-				{
-					$sql = "select buildings.name, maps.floor from maps inner join buildings on maps.building_id = buildings.id where maps.id = " . $resultPin['map_id'];
-					$resultMap = $dbconn->getConnection()->query($sql);
-					$resultMap = $resultMap->fetch_assoc();
-
-					header("Location: building/show?name=" . $resultMap['name'] . "&floor=" . $resultMap['floor'] . "&pinId=" . $resultPin['id']);
-					die();
-				}
-			}
-
-			$view = new PinSearchView;
-			echo $view->render();
-			break;
 		
 		// Tak ma to wygladac w przyszlosci
 		case 'android':
