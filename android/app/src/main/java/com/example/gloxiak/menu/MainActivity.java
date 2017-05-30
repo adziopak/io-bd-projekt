@@ -23,7 +23,7 @@ import org.w3c.dom.Text;
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
-    Button button1;
+     Button[] buttons = new Button[10];
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -39,9 +39,32 @@ public class MainActivity extends AppCompatActivity
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
+        
+        
+        buttons[3]= (Button) findViewById(R.id.button3);
+        buttons[2] = (Button) findViewById(R.id.button2);
+          Context mContext = this;
+        int checkExistence = mContext.getResources().getIdentifier("v1" , "drawable", mContext.getPackageName());
+        if ( checkExistence != 0 ) 
+        {  // the resouce exists...
+            buttons[3].setVisibility(View.VISIBLE);
+        }
+        else 
+        { 
+            buttons[3].setVisibility(View.INVISIBLE);
+        }
+        checkExistence = mContext.getResources().getIdentifier("p", "drawable", mContext.getPackageName());
+        if ( checkExistence != 0 )
+        {  // the resouce exists...
+            buttons[2].setVisibility(View.VISIBLE);
+        }
+        else 
+        {
+            buttons[2].setVisibility(View.INVISIBLE);
 
-        button1 = (Button) findViewById(R.id.button3);
-        button1.setOnClickListener(new View.OnClickListener() {
+        }
+        
+        buttons[3].setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent newAct = new Intent(MainActivity.this, BuildingActivity.class);
