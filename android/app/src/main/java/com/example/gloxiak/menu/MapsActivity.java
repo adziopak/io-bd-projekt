@@ -1,28 +1,28 @@
 package com.example.gloxiak.menu;
 
 import android.app.Dialog;
-import android.content.Intent;
 import android.content.pm.PackageManager;
-import android.location.Location;
-
 import android.os.Build;
-import android.support.annotation.NonNull;
-import android.support.annotation.Nullable;
+import android.os.Bundle;
 import android.support.v4.app.ActivityCompat;
 import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.android.volley.Request;
+import com.android.volley.RequestQueue;
+import com.android.volley.Response;
+import com.android.volley.VolleyError;
+import com.android.volley.toolbox.JsonObjectRequest;
+import com.android.volley.toolbox.Volley;
 import com.google.android.gms.common.ConnectionResult;
 import com.google.android.gms.common.GoogleApiAvailability;
 import com.google.android.gms.common.api.GoogleApiClient;
-import com.google.android.gms.location.LocationListener;
 import com.google.android.gms.location.LocationRequest;
-import com.google.android.gms.location.LocationServices;
 import com.google.android.gms.maps.CameraUpdate;
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
@@ -32,27 +32,90 @@ import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
 
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
+
 
 public class MapsActivity extends AppCompatActivity implements OnMapReadyCallback {
 
     GoogleMap mMap;
     GoogleApiClient googleApiClient;
     LocationRequest locationRequest;
+    RequestQueue requestQueue;
 
     //pobrac z jsona zamiast w taki sposob
-    String[] buildingNames = new String[]{"Budynek V", "Budynek K"};
-    String[] buildingSnipps = new String[]{"Biblioteka", "Chemia"};
-    Double[] buildingLat = new Double[]{50.0188232, 51.0188232};
-    Double[] buildingLng = new Double[]{21.9887356, 22.9887356};
+
+
+    String[] buildingNames;
+    String[] buildingLatx;
+    String[] buildingLngx;
+
+    Double[] buildingLat;
+    Double[] buildingLng;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        requestQueue = Volley.newRequestQueue(this);
+
+        JsonObjectRequest jsonObjectRequest = new JsonObjectRequest(Request.Method.GET, "http://skkshowcase.cba.pl/android/buildingList",
+                new Response.Listener<JSONObject>() {
+                    @Override
+                    public void onResponse(JSONObject response) {
+                        try {
+                            JSONArray jsonArray = response.getJSONArray("buildingList");
+                            buildingNames= new String[jsonArray.length()];
+                            buildingLatx = new String[jsonArray.length()];
+                            buildingLngx = new String[jsonArray.length()];
+
+
+                            for (int i = 0; i < jsonArray.length(); i ++){
+                                JSONObject building = jsonArray.getJSONObject(i);
+                                String lat = building.getString("lat");
+                                buildingLatx[i] = lat;
+                            }
+                            for (int i = 0; i < jsonArray.length(); i ++){
+                                JSONObject building = jsonArray.getJSONObject(i);
+                                String name = building.getString("name");
+                                buildingNames[i] = "Budynek" + " " + name;
+                            }
+                            for (int i = 0; i < jsonArray.length(); i ++){
+                                JSONObject building = jsonArray.getJSONObject(i);
+                                String lng = building.getString("lon");
+                                buildingLngx[i] = lng;
+                            }
+                            buildingLat = new Double[buildingLatx.length];
+                            buildingLng = new Double[buildingLngx.length];
+
+                            for (int i = 0 ; i < buildingLatx.length; i ++){
+                                buildingLat[i] = Double.parseDouble(buildingLatx[i]);
+                            }
+                            for (int i = 0 ; i < buildingLngx.length; i ++){
+                                buildingLng[i] = Double.parseDouble(buildingLngx[i]);
+                            }
+
+                        } catch (JSONException e) {
+                            e.printStackTrace();
+                        }
+                    }
+                },
+                new Response.ErrorListener() {
+                    @Override
+                    public void onErrorResponse(VolleyError error) {
+                        Log.d("JSONBUILDINGLIST","error");
+                    }
+                }
+        );
+        requestQueue.add(jsonObjectRequest);
+
         if (googleServicesAvailable()) {
             setContentView(R.layout.activity_maps);
             initMap();
         }
+
+
     }
 
     public boolean googleServicesAvailable() {
@@ -119,8 +182,7 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
             @Override
             public void onInfoWindowClick(Marker marker) {
                 if (marker.getTitle().equals(buildingNames[0])) {
-                    Intent op1 = new Intent(MapsActivity.this, BuildingActivity.class);
-                    startActivity(op1);
+                 //dodac onclicklistenera
                 }
             }
         });
@@ -128,14 +190,14 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
     }
 
     private void putMarkers() {
-        //jakis loop
-        putMarker(buildingNames[0], buildingSnipps[0], buildingLat[0], buildingLng[0]);
+        for (int i = 0; i < buildingNames.length ; i++) {
+            putMarker(buildingNames[i], buildingLat[i], buildingLng[i]);
+        }
     }
 
-    private void putMarker(String title, String snippet, double lat, double lng) {
+    private void putMarker(String title, double lat, double lng) {
         MarkerOptions options = new MarkerOptions()
                 .title(title)
-                .snippet(snippet)
                 .position(new LatLng(lat, lng));
         mMap.addMarker(options);
     }
@@ -162,3 +224,8 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
     }
 
 }
+
+
+
+
+

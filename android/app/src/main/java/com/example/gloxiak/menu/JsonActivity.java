@@ -24,6 +24,7 @@ import java.util.HashMap;
 public class JsonActivity extends AppCompatActivity {
 
     String imgname;
+
     private String TAG = JsonActivity.class.getSimpleName();
 
     private ProgressDialog pDialog;
@@ -77,6 +78,7 @@ public class JsonActivity extends AppCompatActivity {
                         JSONObject jsonObj = dataArray.getJSONObject(i);
 
                         String name = jsonObj.getString("image");
+
 
                         HashMap<String, String> data_tmp = new HashMap<>();
 

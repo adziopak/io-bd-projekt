@@ -46,7 +46,7 @@ public class SearchActivity extends AppCompatActivity {
             ImageLayout.LayoutParams layoutParams = new ImageLayout.LayoutParams();
             layoutParams.right = (int)(mapWidth * posX);
             layoutParams.centerY = (int)(mapHeight * posY);
-            imgVwv.setImageResource(R.drawable.marker);
+           // imgVwv.setImageResource(R.drawable.marker);
             PhotoViewAttacher photoView= new PhotoViewAttacher(imgVwv);
             photoView.update();
             imageLayout.addView(imgVwv, layoutParams);
