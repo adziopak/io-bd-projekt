@@ -37,7 +37,7 @@ class AndroidController
 
 
 		header('Content-Type: application/json');
-		return json_encode($stmt->get_result()->fetch_all(MYSQLI_ASSOC));
+		return json_encode(array('buildingList' => $stmt->get_result()->fetch_all(MYSQLI_ASSOC)));
 	}
 
 	// /android/map
