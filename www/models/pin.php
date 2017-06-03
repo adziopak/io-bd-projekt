@@ -9,7 +9,7 @@ class Pin
 	public $posX;
 	public $posY;
 	public $mapId;
-	public $editorId;
+	public $adminId;
 
 	public static function GetById($id)
 	{
@@ -19,7 +19,7 @@ class Pin
 		$stmt->bind_param("i", $id);
 		$stmt->execute();
 
-		$stmt->bind_result($pin->id, $pin->name, $pin->posX, $pin->posY, $pin->mapId, $pin->editorId);
+		$stmt->bind_result($pin->id, $pin->name, $pin->posX, $pin->posY, $pin->mapId, $pin->adminId);
 
 		if ($stmt->fetch())
 		{
@@ -41,7 +41,7 @@ class Pin
 		$stmt->execute();
 
 		$stmt->bind_result($pin->id, $pin->name, $pin->posX, $pin->posY, $pin->mapId, 
-			$pin->editorId);
+			$pin->adminId);
 
 		while ($stmt->fetch())
 		{			
@@ -52,7 +52,7 @@ class Pin
 			$pinCloned->posX = $pin->posX;
 			$pinCloned->posY = $pin->posY;
 			$pinCloned->mapId = $pin->mapId;
-			$pinCloned->editorId = $pin->editorId;
+			$pinCloned->adminId = $pin->adminId;
 			$pins[] = $pinCloned;
 		}
 
@@ -68,7 +68,7 @@ class Pin
 		$stmt->bind_param("ii", $this->id, $this->id);
 		$stmt->execute();
 
-		$stmt->bind_result($path->id, $path->firstPinId, $path->secondPinId, $path->editorId);
+		$stmt->bind_result($path->id, $path->firstPinId, $path->secondPinId, $path->adminId);
 
 		while ($stmt->fetch())
 		{
@@ -76,7 +76,7 @@ class Pin
 			$pathCloned->id = $path->id;
 			$pathCloned->firstPinId = $path->firstPinId;
 			$pathCloned->secondPinId = $path->secondPinId;
-			$pathCloned->editorId = $path->editorId;
+			$pathCloned->adminId = $path->adminId;
 			$paths[] =  $pathCloned;
 		}
 
@@ -89,10 +89,10 @@ class Pin
 
 		if ($this->id === null)
 		{	
-			$stmt = $dbconn->prepare("insert into pins (name, pos_x, pos_y, map_id, editor_id)
+			$stmt = $dbconn->prepare("insert into pins (name, pos_x, pos_y, map_id, admin_id)
 				values (?, ?, ?, ?, ?)");
 			$stmt->bind_param("sddii", $this->name, $this->posX, $this->posY, $this->mapId,
-				$this->editorId);
+				$this->adminId);
 
 			if ($stmt->execute())
 			{
@@ -104,9 +104,9 @@ class Pin
 		else
 		{
 			$stmt = $dbconn->prepare("update maps set name = ?, pos_x = ?, pos_y = ?,
-				map_id = ?, editor_id = ? where id = ?");
+				map_id = ?, admin_id = ? where id = ?");
 			$stmt->bind_param("sddii", $this->name, $this->posX, $this->posY, $this->mapId,
-				$this->editorId, $this->id);
+				$this->adminId, $this->id);
 			return $stmt->execute();
 		}
 	}

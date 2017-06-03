@@ -11,7 +11,7 @@ class Map
 	public $imageWidth;
 	public $imageHeight;
 	public $buildingId;
-	public $editorId;
+	public $adminId;
 
 	public static function GetById($id)
 	{
@@ -22,7 +22,7 @@ class Map
 		$stmt->execute();
 
 		$stmt->bind_result($map->id, $map->floor, $map->image, $map->imageMD5, $map->imageWidth,
-			$map->imageHeight, $map->buildingId, $map->editorId);
+			$map->imageHeight, $map->buildingId, $map->adminId);
 
 		if ($stmt->fetch())
 		{
@@ -44,7 +44,7 @@ class Map
 		$stmt->execute();
 
 		$stmt->bind_result($pin->id, $pin->name, $pin->posX, $pin->posY, $pin->mapId, 
-			$pin->editorId);
+			$pin->adminId);
 
 		while ($stmt->fetch())
 		{			
@@ -55,7 +55,7 @@ class Map
 			$pinCloned->posX = $pin->posX;
 			$pinCloned->posY = $pin->posY;
 			$pinCloned->mapId = $pin->mapId;
-			$pinCloned->editorId = $pin->editorId;
+			$pinCloned->adminId = $pin->adminId;
 			$pins[] = $pinCloned;
 		}
 
@@ -73,7 +73,7 @@ class Map
 		$stmt->execute();
 
 		$stmt->bind_result($pin->id, $pin->name, $pin->posX, $pin->posY, $pin->mapId, 
-			$pin->editorId);
+			$pin->adminId);
 
 		while ($stmt->fetch())
 		{			
@@ -84,7 +84,7 @@ class Map
 			$pinCloned->posX = $pin->posX;
 			$pinCloned->posY = $pin->posY;
 			$pinCloned->mapId = $pin->mapId;
-			$pinCloned->editorId = $pin->editorId;
+			$pinCloned->adminId = $pin->adminId;
 			$pins[] = $pinCloned;
 		}
 
@@ -110,7 +110,7 @@ class Map
 		$stmt->execute();
 
 		$stmt->bind_result($pin->id, $pin->name, $pin->posX, $pin->posY, $pin->mapId, 
-			$pin->editorId);
+			$pin->adminId);
 
 		if ($stmt->fetch())
 		{
@@ -129,9 +129,9 @@ class Map
 		if ($this->id === null)
 		{	
 			$stmt = $dbconn->prepare("insert into maps (floor, image, image_md5, image_width,
-				image_height, building_id, editor_id) values (?, ?, ?, ?, ?, ?, ?)");
+				image_height, building_id, admin_id) values (?, ?, ?, ?, ?, ?, ?)");
 			$stmt->bind_param("issiiii", $this->floor, $this->image, $this->imageMD5, 
-				$this->imageWidth, $this->imageHeight, $this->buildingId, $this->editorId);
+				$this->imageWidth, $this->imageHeight, $this->buildingId, $this->adminId);
 
 			if ($stmt->execute())
 			{
@@ -144,9 +144,9 @@ class Map
 		else
 		{
 			$stmt = $dbconn->prepare("update maps set floor = ?, image = ?, image_md5 = ?, 
-				image_width = ?, image_height = ?, buidling_id = ?, editor_id = ? where id = ?");
+				image_width = ?, image_height = ?, buidling_id = ?, admin_id = ? where id = ?");
 			$stmt->bind_param("issiiiii", $this->floor, $this->image, $this->imageMD5, 
-				$this->imageWidth, $this->imageHeight, $this->buildingId, $this->editorId,
+				$this->imageWidth, $this->imageHeight, $this->buildingId, $this->adminId,
 				$this->id);
 
 			return $stmt->execute();

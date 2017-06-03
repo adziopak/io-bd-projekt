@@ -8,7 +8,7 @@ require_once 'controllers/homeController.php';
 require_once 'controllers/buildingController.php';
 require_once 'controllers/mapController.php';
 
-require_once 'models/editor.php';
+require_once 'models/admin.php';
 
 function main()
 {

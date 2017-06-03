@@ -1,7 +1,7 @@
 <?php
 require_once 'utils/databaseConnect.php';
 
-class Editor
+class Admin
 {
 	public $id = null;
 	public $userName;
@@ -11,17 +11,17 @@ class Editor
 	public static function GetById($id)
 	{
 		$dbconn = new DatabaseConnect;
-		$stmt = $dbconn->prepare("select * from editors where id = ?");
+		$stmt = $dbconn->prepare("select * from admins where id = ?");
 		$stmt->bind_param("i", $id);
 		$stmt->execute();
 
-		$editor = new Editor;
-		$stmt->bind_result($editor->id, $editor->userName, $editor->userPassword, 
-			$editor->lastVisit);
+		$admin = new Admin;
+		$stmt->bind_result($admin->id, $admin->userName, $admin->userPassword, 
+			$admin->lastVisit);
 
 		if ($stmt->fetch())
 		{
-			return $editor;
+			return $admin;
 		}
 		else 
 		{
@@ -32,17 +32,17 @@ class Editor
 	public static function GetByUserName($userName)
 	{
 		$dbconn = new DatabaseConnect;
-		$stmt = $dbconn->prepare("select * from editors where user_name = ?");
+		$stmt = $dbconn->prepare("select * from admins where user_name = ?");
 		$stmt->bind_param("s", $userName);
 		$stmt->execute();
 
-		$editor = new Editor;
-		$stmt->bind_result($editor->id, $editor->userName, $editor->userPassword, 
-			$editor->lastVisit);
+		$admin = new Admin;
+		$stmt->bind_result($admin->id, $admin->userName, $admin->userPassword, 
+			$admin->lastVisit);
 		
 		if ($stmt->fetch())
 		{
-			return $editor;
+			return $admin;
 		}
 		else 
 		{
@@ -56,7 +56,7 @@ class Editor
 
 		if ($this->id === null)
 		{	
-			$stmt = $dbconn->prepare("insert into editors (user_name, user_password,
+			$stmt = $dbconn->prepare("insert into admins (user_name, user_password,
 				last_visit) values (?, ?, ?)");
 			$stmt->bind_param("sss", $this->userName, $this->userPassword, $this->lastVisit);
 
@@ -69,7 +69,7 @@ class Editor
 		}
 		else
 		{
-			$stmt = $dbconn->prepare("update editors set user_name = ?, user_password = ?, 
+			$stmt = $dbconn->prepare("update admins set user_name = ?, user_password = ?, 
 				last_visit = ? where id = ?");
 			$stmt->bind_param("sssi", $this->userName, $this->userPassword, $this->lastVisit, 
 				$this->id);

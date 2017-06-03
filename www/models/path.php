@@ -7,7 +7,7 @@ class Path
 	public $id = null;
 	public $firstPinId;
 	public $secondPinId;
-	public $editorId;
+	public $adminId;
 
 	public function getLength()
 	{
@@ -25,9 +25,9 @@ class Path
 
 		if ($this->id === null)
 		{	
-			$stmt = $dbconn->prepare("insert into paths (first_pin_id, second_pin_id, editor_id)
+			$stmt = $dbconn->prepare("insert into paths (first_pin_id, second_pin_id, admin_id)
 				values (?, ?, ?)");
-			$stmt->bind_param("iii", $this->firstPinId, $this->secondPinId, $this->editorId);
+			$stmt->bind_param("iii", $this->firstPinId, $this->secondPinId, $this->adminId);
 
 			if ($stmt->execute())
 			{
@@ -39,8 +39,8 @@ class Path
 		else
 		{
 			$stmt = $dbconn->prepare("update maps set first_pin_id = ?, second_pin_id = ?, 
-				editor_id = ? where id = ?");
-			$stmt->bind_param("iiii", $this->firstPinId, $this->secondPinId, $this->editorId,
+				admin_id = ? where id = ?");
+			$stmt->bind_param("iiii", $this->firstPinId, $this->secondPinId, $this->adminId,
 				$this->id);
 
 			return $stmt->execute();

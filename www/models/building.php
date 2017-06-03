@@ -8,7 +8,7 @@ class Building
 	public $name;
 	public $lat;
 	public $lon;
-	public $editorId;
+	public $adminId;
 
 	public static function GetById($id)
 	{
@@ -19,7 +19,7 @@ class Building
 
 		$building = new Building;
 		$stmt->bind_result($building->id, $building->name, $building->lat, $building->lon,
-			$building->editorId);
+			$building->adminId);
 
 		if ($stmt->fetch())
 		{
@@ -40,7 +40,7 @@ class Building
 
 		$building = new Building;
 		$stmt->bind_result($building->id, $building->name, $building->lat, $building->lon,
-			$building->editorId);
+			$building->adminId);
 
 		if ($stmt->fetch())
 		{
@@ -61,7 +61,7 @@ class Building
 		$stmt->execute();
 
 		$stmt->bind_result($building->id, $building->name, $building->lat, $building->lon, 
-			$building->editorId);
+			$building->adminId);
 
 		while ($stmt->fetch())
 		{			
@@ -71,7 +71,7 @@ class Building
 			$bCloned->name = $building->name;
 			$bCloned->lat = $building->lat;
 			$bCloned->lon = $building->lon;
-			$bCloned->editorId = $building->editorId;
+			$bCloned->adminId = $building->adminId;
 			$buildings[] = $bCloned;
 		}
 
@@ -87,7 +87,7 @@ class Building
 		$stmt->execute();
 
 		$stmt->bind_result($map->id, $map->floor, $map->image, $map->imageMD5, $map->imageWidth,
-			$map->imageHeight, $map->buildingId, $map->editorId);
+			$map->imageHeight, $map->buildingId, $map->adminId);
 
 		if ($stmt->fetch())
 		{
@@ -105,9 +105,9 @@ class Building
 
 		if ($this->id === null)
 		{	
-			$stmt = $dbconn->prepare("insert into buildings (name, lat, lon, editor_id) 
+			$stmt = $dbconn->prepare("insert into buildings (name, lat, lon, admin_id) 
 				values (?, ?, ?, ?)");
-			$stmt->bind_param("sssi", $this->name, $this->lat, $this->lon, $this->editorId);
+			$stmt->bind_param("sssi", $this->name, $this->lat, $this->lon, $this->adminId);
 
 			if ($stmt->execute())
 			{
@@ -119,8 +119,8 @@ class Building
 		else
 		{
 			$stmt = $dbconn->prepare("update buildings set name = ?, lat = ?, 
-				lon = ?, editor_id = ? where id = ?");
-			$stmt->bind_param("sssii", $this->name, $this->lat, $this->lon, $this->editorId, 
+				lon = ?, admin_id = ? where id = ?");
+			$stmt->bind_param("sssii", $this->name, $this->lat, $this->lon, $this->adminId, 
 				$this->id);
 
 			return $stmt->execute();

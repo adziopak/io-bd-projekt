@@ -1,5 +1,5 @@
 <?php
-require_once 'models/editor.php';
+require_once 'models/admin.php';
 require_once 'models/map.php';
 require_once 'views/adminPanel/indexView.php';
 require_once 'views/adminPanel/loginView.php';
@@ -32,8 +32,8 @@ class AdminPanelController
 				case 'addPath':
 					return $this->addPath();
 
-				case 'addEditor':
-					return $this->addEditor();
+				case 'addAdmin':
+					return $this->addAdmin();
 			}
 		}
 
@@ -70,11 +70,11 @@ class AdminPanelController
 		
 		if (isset($_POST['userName']))
 		{
-			$editor = Editor::GetByUserName($_POST['userName']);
+			$admin = Admin::GetByUserName($_POST['userName']);
 
-			if (password_verify($_POST['userPassword'], $editor->userPassword))
+			if (password_verify($_POST['userPassword'], $admin->userPassword))
 			{
-				$_SESSION['loginUserId'] = $editor->id;
+				$_SESSION['loginUserId'] = $admin->id;
 				header("Location: /adminPanel");
 				die();
 			}
@@ -106,7 +106,7 @@ class AdminPanelController
 			$building->name = $name;
 			$building->lat = $posX;
 			$building->lon = $posY;
-			$building->editorId = $_SESSION['loginUserId'];
+			$building->adminId = $_SESSION['loginUserId'];
 			
 			if (!$building->update())
 			{
@@ -134,7 +134,7 @@ class AdminPanelController
 					$map->imageWidth = $size[0];
 					$map->imageHeight = $size[1];
 					$map->buildingId = $bid;
-					$map->editorId = $_SESSION['loginUserId'];
+					$map->adminId = $_SESSION['loginUserId'];
 					$map->update();
 				}
 			}
@@ -170,8 +170,8 @@ class AdminPanelController
 		// Funkcjonalnosc dodawania sciezek
 	}
 
-	// /adminPanel/addEditor
-	public function addEditor()
+	// /adminPanel/addAdmin
+	public function addAdmin()
 	{
 		if (!isset($_SESSION['loginUserId']))
 		{
@@ -179,7 +179,7 @@ class AdminPanelController
 			die();
 		}
 		
-	// $edit=new Editor;		
+	// $edit=new Admin;		
 	// $this->userName=$_GET['userName'];
 	// if($_GET['userPassword']==$_GET['userPassword2']
 	//	$this->userPassword=$_GET['userPassword]'];
