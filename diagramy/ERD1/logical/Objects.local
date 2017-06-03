@@ -1,7 +1,7 @@
 <?xml version = '1.0' encoding = 'UTF-8'?>
 <oracle.dbtools.crest.model.design.logical.LogicalDesign>
+   <object objectType="Entity" objectID="D90B13ED-86C5-8F04-0851-A19B7C68A4FB" name="ADMIN" seqName="seg_0" propertyClassName="oracle.dbtools.crest.model.design.logical.Entity" propertyParentId="A4C1F9AE-4F36-B25E-D61E-24513FE554F9" propertySourceId="" propertyTargetId=""/>
    <object objectType="Entity" objectID="51B4322C-DEEE-9235-F5D2-2DA60C176D36" name="BUILDING" seqName="seg_0" propertyClassName="oracle.dbtools.crest.model.design.logical.Entity" propertyParentId="A4C1F9AE-4F36-B25E-D61E-24513FE554F9" propertySourceId="" propertyTargetId=""/>
-   <object objectType="Entity" objectID="D90B13ED-86C5-8F04-0851-A19B7C68A4FB" name="EDITOR" seqName="seg_0" propertyClassName="oracle.dbtools.crest.model.design.logical.Entity" propertyParentId="A4C1F9AE-4F36-B25E-D61E-24513FE554F9" propertySourceId="" propertyTargetId=""/>
    <object objectType="Entity" objectID="3FF61571-1B5E-E696-C589-0B5F962E34D6" name="MAP" seqName="seg_0" propertyClassName="oracle.dbtools.crest.model.design.logical.Entity" propertyParentId="A4C1F9AE-4F36-B25E-D61E-24513FE554F9" propertySourceId="" propertyTargetId=""/>
    <object objectType="Entity" objectID="13E60DEA-0109-E039-F00E-E4060D3FEC17" name="PATH" seqName="seg_0" propertyClassName="oracle.dbtools.crest.model.design.logical.Entity" propertyParentId="A4C1F9AE-4F36-B25E-D61E-24513FE554F9" propertySourceId="" propertyTargetId=""/>
    <object objectType="Entity" objectID="B85789C3-AAFF-2BDD-415E-B6E615776DE1" name="PIN" seqName="seg_0" propertyClassName="oracle.dbtools.crest.model.design.logical.Entity" propertyParentId="A4C1F9AE-4F36-B25E-D61E-24513FE554F9" propertySourceId="" propertyTargetId=""/>
