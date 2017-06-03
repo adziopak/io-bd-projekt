@@ -59,7 +59,6 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         getBuildingsData();
-
         if (googleServicesAvailable()) {
             setContentView(R.layout.activity_maps);
             initMap();
@@ -164,7 +163,7 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
     public void onMapReady(GoogleMap googleMap) {
         mMap = googleMap;
         showCurrentLocation();
-        goToLocation(buildingLat[0], buildingLng[0]); //trzeba zaczynac od budynku V
+        goToLocation(buildingLat[0], buildingLng[0]);
         putMarkers();
 
         mMap.setInfoWindowAdapter(new GoogleMap.InfoWindowAdapter() {
