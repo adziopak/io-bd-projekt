@@ -1,5 +1,6 @@
 www/config/databaseConfig.json
 www/config/googleApiConfig.json
+admins.sql
 *.iml
 android/.gradle
 android/local.properties

@@ -1,458 +1,458 @@
-INSERT INTO `pins` (`name`, `pos_x`, `pos_y`, `map_id`) VALUES ('V1', '25.874999999999996', '72.6108374', '1');
-INSERT INTO `pins` (`name`, `pos_x`, `pos_y`, `map_id`) VALUES ('', '26.79166666666666', '63.25123152', '1');
-INSERT INTO `pins` (`name`, `pos_x`, `pos_y`, `map_id`) VALUES ('V2', '8.958333333333334', '45.91133004926108', '1');
-INSERT INTO `pins` (`name`, `pos_x`, `pos_y`, `map_id`) VALUES ('', '14.70833333333333', '41.280788177339', '1');
-INSERT INTO `pins` (`name`, `pos_x`, `pos_y`, `map_id`) VALUES ('', '12.375', '62.6600985221', '1');
-INSERT INTO `pins` (`name`, `pos_x`, `pos_y`, `map_id`) VALUES ('', '17.04166666666666', '24.137931034482758', '1');
-INSERT INTO `pins` (`name`, `pos_x`, `pos_y`, `map_id`) VALUES ('', '11.291666666666666', '23.15270935960591', '1');
-INSERT INTO `pins` (`name`, `pos_x`, `pos_y`, `map_id`) VALUES ('', '16.208333333333332', '31.527093596059114', '1');
-INSERT INTO `pins` (`name`, `pos_x`, `pos_y`, `map_id`) VALUES ('', '10.958333333333334', '30.541871921182267', '1');
-INSERT INTO `pins` (`name`, `pos_x`, `pos_y`, `map_id`) VALUES ('V3', '8.875', '27.389162561576352', '1');
-INSERT INTO `pins` (`name`, `pos_x`, `pos_y`, `map_id`) VALUES ('V4', '11.29166666666', '15.960591133', '1');
-INSERT INTO `pins` (`name`, `pos_x`, `pos_y`, `map_id`) VALUES ('', '17.541666666666668', '16.84729064039409', '1');
-INSERT INTO `pins` (`name`, `pos_x`, `pos_y`, `map_id`) VALUES ('V5', '38.45833333333', '32.41379', '1');
-INSERT INTO `pins` (`name`, `pos_x`, `pos_y`, `map_id`) VALUES ('', '37.958333333333', '45.8128078817', '1');
-INSERT INTO `pins` (`name`, `pos_x`, `pos_y`, `map_id`) VALUES ('', '37.79166666666', '52.1182266009', '1');
-INSERT INTO `pins` (`name`, `pos_x`, `pos_y`, `map_id`) VALUES ('', '38.79166666', '21.08374', '1');
-INSERT INTO `pins` (`name`, `pos_x`, `pos_y`, `map_id`) VALUES ('', '39.125', '16.9458128', '1');
-INSERT INTO `pins` (`name`, `pos_x`, `pos_y`, `map_id`) VALUES ('V6', '33.2916666666', '31.3300492', '1');
-INSERT INTO `pins` (`name`, `pos_x`, `pos_y`, `map_id`) VALUES ('', '32.291666666', '46.009852216748', '1');
-INSERT INTO `pins` (`name`, `pos_x`, `pos_y`, `map_id`) VALUES ('', '31.70833333', '51.82266009', '1');
-INSERT INTO `pins` (`name`, `pos_x`, `pos_y`, `map_id`) VALUES ('', '34.125', '21.28078', '1');
-INSERT INTO `pins` (`name`, `pos_x`, `pos_y`, `map_id`) VALUES ('', '34.458333333', '16.55172413', '1');
-INSERT INTO `pins` (`name`, `pos_x`, `pos_y`, `map_id`) VALUES ('V7', '27.625', '30.64039408', '1');
-INSERT INTO `pins` (`name`, `pos_x`, `pos_y`, `map_id`) VALUES ('', '26.125', '45.41871921182', '1');
-INSERT INTO `pins` (`name`, `pos_x`, `pos_y`, `map_id`) VALUES ('', '25.624999999', '51.33004926', '1');
-INSERT INTO `pins` (`name`, `pos_x`, `pos_y`, `map_id`) VALUES ('', '28.125', '20.3940886', '1');
-INSERT INTO `pins` (`name`, `pos_x`, `pos_y`, `map_id`) VALUES ('', '28.4583333333', '15.862068965', '1');
-INSERT INTO `pins` (`name`, `pos_x`, `pos_y`, `map_id`) VALUES ('D20', '16.70833333333', '84.532019', '1');
-INSERT INTO `pins` (`name`, `pos_x`, `pos_y`, `map_id`) VALUES ('', '13.541666666', '84.334975369', '1');
-INSERT INTO `pins` (`name`, `pos_x`, `pos_y`, `map_id`) VALUES ('D24', '10.875', '86.108374', '1');
-INSERT INTO `pins` (`name`, `pos_x`, `pos_y`, `map_id`) VALUES ('', '13.4583333', '86.305418', '1');
-INSERT INTO `pins` (`name`, `pos_x`, `pos_y`, `map_id`) VALUES ('D25', '11.125', '82.561576', '1');
-INSERT INTO `pins` (`name`, `pos_x`, `pos_y`, `map_id`) VALUES ('', '13.791666666', '82.75862068', '1');
-INSERT INTO `pins` (`name`, `pos_x`, `pos_y`, `map_id`) VALUES ('D26', '11.54166666', '78.620689', '1');
-INSERT INTO `pins` (`name`, `pos_x`, `pos_y`, `map_id`) VALUES ('', '14.12499999', '79.1133', '1');
-INSERT INTO `pins` (`name`, `pos_x`, `pos_y`, `map_id`) VALUES ('D27', '12.04166666', '75.07389162', '1');
-INSERT INTO `pins` (`name`, `pos_x`, `pos_y`, `map_id`) VALUES ('', '14.625', '75.3694581', '1');
-INSERT INTO `pins` (`name`, `pos_x`, `pos_y`, `map_id`) VALUES ('D29', '13.0416666666', '69.359605911', '1');
-INSERT INTO `pins` (`name`, `pos_x`, `pos_y`, `map_id`) VALUES ('', '15.20833333', '69.556650', '1');
-INSERT INTO `pins` (`name`, `pos_x`, `pos_y`, `map_id`) VALUES ('D35', '21.875', '12.21674', '1');
-INSERT INTO `pins` (`name`, `pos_x`, `pos_y`, `map_id`) VALUES ('', '21.7916666666', '15.07389162', '1');
-INSERT INTO `pins` (`name`, `pos_x`, `pos_y`, `map_id`) VALUES ('D37', '24.79166666666', '12.709359', '1');
-INSERT INTO `pins` (`name`, `pos_x`, `pos_y`, `map_id`) VALUES ('', '24.375', '15.46798', '1');
-INSERT INTO `pins` (`name`, `pos_x`, `pos_y`, `map_id`) VALUES ('D38', '26.70833333333', '12.807881', '1');
-INSERT INTO `pins` (`name`, `pos_x`, `pos_y`, `map_id`) VALUES ('', '26.375', '15.36945', '1');
-INSERT INTO `pins` (`name`, `pos_x`, `pos_y`, `map_id`) VALUES ('D39', '28.45833', '12.9064039', '1');
-INSERT INTO `pins` (`name`, `pos_x`, `pos_y`, `map_id`) VALUES ('', '28.125', '15.46798', '1');
-INSERT INTO `pins` (`name`, `pos_x`, `pos_y`, `map_id`) VALUES ('D40', '30.041666666', '13.2019704433', '1');
-INSERT INTO `pins` (`name`, `pos_x`, `pos_y`, `map_id`) VALUES ('', '29.7916666666', '15.66502463', '1');
-INSERT INTO `pins` (`name`, `pos_x`, `pos_y`, `map_id`) VALUES ('D41', '31.708333333333', '13.399014778', '1');
-INSERT INTO `pins` (`name`, `pos_x`, `pos_y`, `map_id`) VALUES ('', '31.45833333', '15.9605911', '1');
-INSERT INTO `pins` (`name`, `pos_x`, `pos_y`, `map_id`) VALUES ('D42', '33.291666666', '13.3990147', '1');
-INSERT INTO `pins` (`name`, `pos_x`, `pos_y`, `map_id`) VALUES ('', '33.125', '16.256157', '1');
-INSERT INTO `pins` (`name`, `pos_x`, `pos_y`, `map_id`) VALUES ('D43', '35.125', '13.694581', '1');
-INSERT INTO `pins` (`name`, `pos_x`, `pos_y`, `map_id`) VALUES ('', '34.79166666', '16.4532019', '1');
-INSERT INTO `pins` (`name`, `pos_x`, `pos_y`, `map_id`) VALUES ('D44', '37.291666666', '13.793103', '1');
-INSERT INTO `pins` (`name`, `pos_x`, `pos_y`, `map_id`) VALUES ('', '36.875', '16.7487684', '1');
-INSERT INTO `pins` (`name`, `pos_x`, `pos_y`, `map_id`) VALUES ('D45', '39.875', '13.990147783', '1');
-INSERT INTO `pins` (`name`, `pos_x`, `pos_y`, `map_id`) VALUES ('', '39.54166666', '16.650246305', '1');
-INSERT INTO `pins` (`name`, `pos_x`, `pos_y`, `map_id`) VALUES ('', '18.875', '34.18719', '1');
-INSERT INTO `pins` (`name`, `pos_x`, `pos_y`, `map_id`) VALUES ('', '14.79166666666', '72.906403', '1');
-INSERT INTO `pins` (`name`, `pos_x`, `pos_y`, `map_id`) VALUES ('', '39.958333333', '56.0591133', '1');
-INSERT INTO `pins` (`name`, `pos_x`, `pos_y`, `map_id`) VALUES ('', ' 33.958333333', '55.76354679', '1');
-INSERT INTO `pins` (`name`, `pos_x`, `pos_y`, `map_id`) VALUES ('', '16.7916666666', '55.2709359', '1');
-INSERT INTO `pins` (`name`, `pos_x`, `pos_y`, `map_id`) VALUES ('', '22.375', '55.172413793', '1');
-INSERT INTO `pins` (`name`, `pos_x`, `pos_y`, `map_id`) VALUES ('', '49.75', '53.85', '1');
-INSERT INTO `pins` (`name`, `pos_x`, `pos_y`, `map_id`) VALUES ('B', '72.95', '50.06', '1');
-INSERT INTO `pins` (`name`, `pos_x`, `pos_y`, `map_id`) VALUES ('', '61.15', '55.62', '1');
-INSERT INTO `pins` (`name`, `pos_x`, `pos_y`, `map_id`) VALUES ('', '83.55', '29.35', '1');
-INSERT INTO `pins` (`name`, `pos_x`, `pos_y`, `map_id`) VALUES ('', '53.45', '38.11', '1');
-INSERT INTO `pins` (`name`, `pos_x`, `pos_y`, `map_id`) VALUES ('', '55.55', '28.99', '1');
-INSERT INTO `pins` (`name`, `pos_x`, `pos_y`, `map_id`) VALUES ('', '56.65', '22.13', '1');
-INSERT INTO `pins` (`name`, `pos_x`, `pos_y`, `map_id`) VALUES ('', '62.15', '6.75', '1');
-INSERT INTO `pins` (`name`, `pos_x`, `pos_y`, `map_id`) VALUES ('', '75.65', '12.43', '1');
-INSERT INTO `pins` (`name`, `pos_x`, `pos_y`, `map_id`) VALUES ('B14', '77.05', '7.34', '1');
-INSERT INTO `pins` (`name`, `pos_x`, `pos_y`, `map_id`) VALUES ('B11', '74.45', '16.69', '1');
-INSERT INTO `pins` (`name`, `pos_x`, `pos_y`, `map_id`) VALUES ('B13', '80.35', '14.20', '1');
-INSERT INTO `pins` (`name`, `pos_x`, `pos_y`, `map_id`) VALUES ('B11', '74.45', '16.69', '1');
-INSERT INTO `pins` (`name`, `pos_x`, `pos_y`, `map_id`) VALUES ('', '63.15', '35.74', '1');
-INSERT INTO `pins` (`name`, `pos_x`, `pos_y`, `map_id`) VALUES ('', '44.65', '73.25', '1');
-INSERT INTO `pins` (`name`, `pos_x`, `pos_y`, `map_id`) VALUES ('', '68.35', '10.65', '1');
+INSERT INTO `pins` (`name`, `pos_x`, `pos_y`, `map_id`, `editor_id`) VALUES ('V1', '25.874999999999996', '72.6108374', '1', 1),
+('', '26.79166666666666', '63.25123152', '1', 1),
+('V2', '8.958333333333334', '45.91133004926108', '1', 1),
+('', '14.70833333333333', '41.280788177339', '1', 1),
+('', '12.375', '62.6600985221', '1', 1),
+('', '17.04166666666666', '24.137931034482758', '1', 1),
+('', '11.291666666666666', '23.15270935960591', '1', 1),
+('', '16.208333333333332', '31.527093596059114', '1', 1),
+('', '10.958333333333334', '30.541871921182267', '1', 1),
+('V3', '8.875', '27.389162561576352', '1', 1),
+('V4', '11.29166666666', '15.960591133', '1', 1),
+('', '17.541666666666668', '16.84729064039409', '1', 1),
+('V5', '38.45833333333', '32.41379', '1', 1),
+('', '37.958333333333', '45.8128078817', '1', 1),
+('', '37.79166666666', '52.1182266009', '1', 1),
+('', '38.79166666', '21.08374', '1', 1),
+('', '39.125', '16.9458128', '1', 1),
+('V6', '33.2916666666', '31.3300492', '1', 1),
+('', '32.291666666', '46.009852216748', '1', 1),
+('', '31.70833333', '51.82266009', '1', 1),
+('', '34.125', '21.28078', '1', 1),
+('', '34.458333333', '16.55172413', '1', 1),
+('V7', '27.625', '30.64039408', '1', 1),
+('', '26.125', '45.41871921182', '1', 1),
+('', '25.624999999', '51.33004926', '1', 1),
+('', '28.125', '20.3940886', '1', 1),
+('', '28.4583333333', '15.862068965', '1', 1),
+('D20', '16.70833333333', '84.532019', '1', 1),
+('', '13.541666666', '84.334975369', '1', 1),
+('D24', '10.875', '86.108374', '1', 1),
+('', '13.4583333', '86.305418', '1', 1),
+('D25', '11.125', '82.561576', '1', 1),
+('', '13.791666666', '82.75862068', '1', 1),
+('D26', '11.54166666', '78.620689', '1', 1),
+('', '14.12499999', '79.1133', '1', 1),
+('D27', '12.04166666', '75.07389162', '1', 1),
+('', '14.625', '75.3694581', '1', 1),
+('D29', '13.0416666666', '69.359605911', '1', 1),
+('', '15.20833333', '69.556650', '1', 1),
+('D35', '21.875', '12.21674', '1', 1),
+('', '21.7916666666', '15.07389162', '1', 1),
+('D37', '24.79166666666', '12.709359', '1', 1),
+('', '24.375', '15.46798', '1', 1),
+('D38', '26.70833333333', '12.807881', '1', 1),
+('', '26.375', '15.36945', '1', 1),
+('D39', '28.45833', '12.9064039', '1', 1),
+('', '28.125', '15.46798', '1', 1),
+('D40', '30.041666666', '13.2019704433', '1', 1),
+('', '29.7916666666', '15.66502463', '1', 1),
+('D41', '31.708333333333', '13.399014778', '1', 1),
+('', '31.45833333', '15.9605911', '1', 1),
+('D42', '33.291666666', '13.3990147', '1', 1),
+('', '33.125', '16.256157', '1', 1),
+('D43', '35.125', '13.694581', '1', 1),
+('', '34.79166666', '16.4532019', '1', 1),
+('D44', '37.291666666', '13.793103', '1', 1),
+('', '36.875', '16.7487684', '1', 1),
+('D45', '39.875', '13.990147783', '1', 1),
+('', '39.54166666', '16.650246305', '1', 1),
+('', '18.875', '34.18719', '1', 1),
+('', '14.79166666666', '72.906403', '1', 1),
+('', '39.958333333', '56.0591133', '1', 1),
+('', ' 33.958333333', '55.76354679', '1', 1),
+('', '16.7916666666', '55.2709359', '1', 1),
+('', '22.375', '55.172413793', '1', 1),
+('', '49.75', '53.85', '1', 1),
+('B', '72.95', '50.06', '1', 1),
+('', '61.15', '55.62', '1', 1),
+('', '83.55', '29.35', '1', 1),
+('', '53.45', '38.11', '1', 1),
+('', '55.55', '28.99', '1', 1),
+('', '56.65', '22.13', '1', 1),
+('', '62.15', '6.75', '1', 1),
+('', '75.65', '12.43', '1', 1),
+('B14', '77.05', '7.34', '1', 1),
+('B11', '74.45', '16.69', '1', 1),
+('B13', '80.35', '14.20', '1', 1),
+('B11', '74.45', '16.69', '1', 1),
+('', '63.15', '35.74', '1', 1),
+('', '44.65', '73.25', '1', 1),
+('', '68.35', '10.65', '1', 1),
 
-INSERT INTO `pins` (`name`, `pos_x`, `pos_y`, `map_id`) VALUES ('', '63.25', '36.73', '2');
-INSERT INTO `pins` (`name`, `pos_x`, `pos_y`, `map_id`) VALUES ('', '59.74', '36.94', '2');
-INSERT INTO `pins` (`name`, `pos_x`, `pos_y`, `map_id`) VALUES ('', '59.19', '31.66', '2');
-INSERT INTO `pins` (`name`, `pos_x`, `pos_y`, `map_id`) VALUES ('', '42.66', '31.79', '2');
-INSERT INTO `pins` (`name`, `pos_x`, `pos_y`, `map_id`) VALUES ('', '43.20', '18.21', '2');
-INSERT INTO `pins` (`name`, `pos_x`, `pos_y`, `map_id`) VALUES ('D131', '47.44', '19.13', '2');
-INSERT INTO `pins` (`name`, `pos_x`, `pos_y`, `map_id`) VALUES ('V19', '43.63', '13.98', '2');
-INSERT INTO `pins` (`name`, `pos_x`, `pos_y`, `map_id`) VALUES ('', '38.30', '17.81', '2');
-INSERT INTO `pins` (`name`, `pos_x`, `pos_y`, `map_id`) VALUES ('D127', '38.96', '13.19', '2');
-INSERT INTO `pins` (`name`, `pos_x`, `pos_y`, `map_id`) VALUES ('', '37.00', '24.41', '2');
-INSERT INTO `pins` (`name`, `pos_x`, `pos_y`, `map_id`) VALUES ('V18', '36.78', '35.62', '2');
-INSERT INTO `pins` (`name`, `pos_x`, `pos_y`, `map_id`) VALUES ('', '36.24', '46.97', '2');
-INSERT INTO `pins` (`name`, `pos_x`, `pos_y`, `map_id`) VALUES ('', '35.69', '17.28', '2');
-INSERT INTO `pins` (`name`, `pos_x`, `pos_y`, `map_id`) VALUES ('D126', '36.02', '12.80', '2');
-INSERT INTO `pins` (`name`, `pos_x`, `pos_y`, `map_id`) VALUES ('', '32.10', '16.89', '2');
-INSERT INTO `pins` (`name`, `pos_x`, `pos_y`, `map_id`) VALUES ('D125', '32.43', '13.06', '2');
-INSERT INTO `pins` (`name`, `pos_x`, `pos_y`, `map_id`) VALUES ('', '29.27', '16.49', '2');
-INSERT INTO `pins` (`name`, `pos_x`, `pos_y`, `map_id`) VALUES ('', '29.16', '22.56', '2');
-INSERT INTO `pins` (`name`, `pos_x`, `pos_y`, `map_id`) VALUES ('V17', '29.16', '34.83', '2');
-INSERT INTO `pins` (`name`, `pos_x`, `pos_y`, `map_id`) VALUES ('', '27.86', '46.97', '2');
-INSERT INTO `pins` (`name`, `pos_x`, `pos_y`, `map_id`) VALUES ('D124', '29.71', '12.40', '2');
-INSERT INTO `pins` (`name`, `pos_x`, `pos_y`, `map_id`) VALUES ('', '26.99', '16.49', '2');
-INSERT INTO `pins` (`name`, `pos_x`, `pos_y`, `map_id`) VALUES ('D123', '27.31', '11.87', '2');
-INSERT INTO `pins` (`name`, `pos_x`, `pos_y`, `map_id`) VALUES ('', '25.03', '16.36', '2');
-INSERT INTO `pins` (`name`, `pos_x`, `pos_y`, `map_id`) VALUES ('D122', '25.24', '11.48', '2');
-INSERT INTO `pins` (`name`, `pos_x`, `pos_y`, `map_id`) VALUES ('', '22.85', '15.83', '2');
-INSERT INTO `pins` (`name`, `pos_x`, `pos_y`, `map_id`) VALUES ('D121', '23.07', '11.61', '2');
-INSERT INTO `pins` (`name`, `pos_x`, `pos_y`, `map_id`) VALUES ('', '20.78', '15.44', '2');
-INSERT INTO `pins` (`name`, `pos_x`, `pos_y`, `map_id`) VALUES ('D120', '21.33', '11.35', '2');
-INSERT INTO `pins` (`name`, `pos_x`, `pos_y`, `map_id`) VALUES ('', '18.39', '17.02', '2');
-INSERT INTO `pins` (`name`, `pos_x`, `pos_y`, `map_id`) VALUES ('D119', '19.04', '10.82', '2');
-INSERT INTO `pins` (`name`, `pos_x`, `pos_y`, `map_id`) VALUES ('V16', '10.88', '16.62', '2');
-INSERT INTO `pins` (`name`, `pos_x`, `pos_y`, `map_id`) VALUES ('', '18.06', '34.17', '2');
-INSERT INTO `pins` (`name`, `pos_x`, `pos_y`, `map_id`) VALUES ('V15', '9.36', '31.79', '2');
-INSERT INTO `pins` (`name`, `pos_x`, `pos_y`, `map_id`) VALUES ('', '19.06', '44.99', '2');
-INSERT INTO `pins` (`name`, `pos_x`, `pos_y`, `map_id`) VALUES ('V14', '9.68', '44.59', '2');
-INSERT INTO `pins` (`name`, `pos_x`, `pos_y`, `map_id`) VALUES ('', '17.30', '52.77', '2');
-INSERT INTO `pins` (`name`, `pos_x`, `pos_y`, `map_id`) VALUES ('V13', '12.30', '52.11', '2');
-INSERT INTO `pins` (`name`, `pos_x`, `pos_y`, `map_id`) VALUES ('', '16.21', '65.70', '2');
-INSERT INTO `pins` (`name`, `pos_x`, `pos_y`, `map_id`) VALUES ('V12', '11.64', '65.17', '2');
-INSERT INTO `pins` (`name`, `pos_x`, `pos_y`, `map_id`) VALUES ('', '21.55', '67.15', '2');
-INSERT INTO `pins` (`name`, `pos_x`, `pos_y`, `map_id`) VALUES ('', '20.67', '73.22', '2');
-INSERT INTO `pins` (`name`, `pos_x`, `pos_y`, `map_id`) VALUES ('', '33.84', '68.21', '2');
-INSERT INTO `pins` (`name`, `pos_x`, `pos_y`, `map_id`) VALUES ('', '33.30', '73.22', '2');
-INSERT INTO `pins` (`name`, `pos_x`, `pos_y`, `map_id`) VALUES ('V1', '26.01', '82.45', '2');
-INSERT INTO `pins` (`name`, `pos_x`, `pos_y`, `map_id`) VALUES ('', '15.34', '72.56', '2');
-INSERT INTO `pins` (`name`, `pos_x`, `pos_y`, `map_id`) VALUES ('', '15.23', '75.46', '2');
-INSERT INTO `pins` (`name`, `pos_x`, `pos_y`, `map_id`) VALUES ('', '14.80', '77.97', '2');
-INSERT INTO `pins` (`name`, `pos_x`, `pos_y`, `map_id`) VALUES ('', '14.47', '81.00', '2');
-INSERT INTO `pins` (`name`, `pos_x`, `pos_y`, `map_id`) VALUES ('', '14.46', '83.91', '2');
-INSERT INTO `pins` (`name`, `pos_x`, `pos_y`, `map_id`) VALUES ('', '14.04', '86.41', '2');
-INSERT INTO `pins` (`name`, `pos_x`, `pos_y`, `map_id`) VALUES ('', '13.82', '88.92', '2');
-INSERT INTO `pins` (`name`, `pos_x`, `pos_y`, `map_id`) VALUES ('D110', '10.99', '72.30', '2');
-INSERT INTO `pins` (`name`, `pos_x`, `pos_y`, `map_id`) VALUES ('D109', '10.88', '74.67', '2');
-INSERT INTO `pins` (`name`, `pos_x`, `pos_y`, `map_id`) VALUES ('D108', '10.88', '77.97', '2');
-INSERT INTO `pins` (`name`, `pos_x`, `pos_y`, `map_id`) VALUES ('D107', '10.45', '80.08', '2');
-INSERT INTO `pins` (`name`, `pos_x`, `pos_y`, `map_id`) VALUES ('V9', '9.90', '83.38', '2');
-INSERT INTO `pins` (`name`, `pos_x`, `pos_y`, `map_id`) VALUES ('D105', '9.90', '85.88', '2');
-INSERT INTO `pins` (`name`, `pos_x`, `pos_y`, `map_id`) VALUES ('V8', '9.58', '88.52', '2');
-INSERT INTO `pins` (`name`, `pos_x`, `pos_y`, `map_id`) VALUES ('', '27.75', '52.11', '2');
-INSERT INTO `pins` (`name`, `pos_x`, `pos_y`, `map_id`) VALUES ('', '35.69', '52.24', '2');
-INSERT INTO `pins` (`name`, `pos_x`, `pos_y`, `map_id`) VALUES ('', '41.35', '52.90', '2');
-INSERT INTO `pins` (`name`, `pos_x`, `pos_y`, `map_id`) VALUES ('', '40.04', '58.71', '2');
-INSERT INTO `pins` (`name`, `pos_x`, `pos_y`, `map_id`) VALUES ('', '34.71', '58.05', '2');
-INSERT INTO `pins` (`name`, `pos_x`, `pos_y`, `map_id`) VALUES ('', '16.97', '57.39', '2');
-INSERT INTO `pins` (`name`, `pos_x`, `pos_y`, `map_id`) VALUES ('', '22.52', '57.92', '2');
-INSERT INTO `pins` (`name`, `pos_x`, `pos_y`, `map_id`) VALUES ('', '68.12', '11.08', '2');
-INSERT INTO `pins` (`name`, `pos_x`, `pos_y`, `map_id`) VALUES ('', '75.41', '12.93', '2');
-INSERT INTO `pins` (`name`, `pos_x`, `pos_y`, `map_id`) VALUES ('', '80.09', '14.51', '2');
-INSERT INTO `pins` (`name`, `pos_x`, `pos_y`, `map_id`) VALUES ('B117', '77.04', '8.05', '2');
-INSERT INTO `pins` (`name`, `pos_x`, `pos_y`, `map_id`) VALUES ('B118', '81.28', '10.03', '2');
-INSERT INTO `pins` (`name`, `pos_x`, `pos_y`, `map_id`) VALUES ('B115', '73.99', '17.41', '2');
-INSERT INTO `pins` (`name`, `pos_x`, `pos_y`, `map_id`) VALUES ('B114', '79.11', '18.73', '2');
+('', '63.25', '36.73', '2', 1),
+('', '59.74', '36.94', '2', 1),
+('', '59.19', '31.66', '2', 1),
+('', '42.66', '31.79', '2', 1),
+('', '43.20', '18.21', '2', 1),
+('D131', '47.44', '19.13', '2', 1),
+('V19', '43.63', '13.98', '2', 1),
+('', '38.30', '17.81', '2', 1),
+('D127', '38.96', '13.19', '2', 1),
+('', '37.00', '24.41', '2', 1),
+('V18', '36.78', '35.62', '2', 1),
+('', '36.24', '46.97', '2', 1),
+('', '35.69', '17.28', '2', 1),
+('D126', '36.02', '12.80', '2', 1),
+('', '32.10', '16.89', '2', 1),
+('D125', '32.43', '13.06', '2', 1),
+('', '29.27', '16.49', '2', 1),
+('', '29.16', '22.56', '2', 1),
+('V17', '29.16', '34.83', '2', 1),
+('', '27.86', '46.97', '2', 1),
+('D124', '29.71', '12.40', '2', 1),
+('', '26.99', '16.49', '2', 1),
+('D123', '27.31', '11.87', '2', 1),
+('', '25.03', '16.36', '2', 1),
+('D122', '25.24', '11.48', '2', 1),
+('', '22.85', '15.83', '2', 1),
+('D121', '23.07', '11.61', '2', 1),
+('', '20.78', '15.44', '2', 1),
+('D120', '21.33', '11.35', '2', 1),
+('', '18.39', '17.02', '2', 1),
+('D119', '19.04', '10.82', '2', 1),
+('V16', '10.88', '16.62', '2', 1),
+('', '18.06', '34.17', '2', 1),
+('V15', '9.36', '31.79', '2', 1),
+('', '19.06', '44.99', '2', 1),
+('V14', '9.68', '44.59', '2', 1),
+('', '17.30', '52.77', '2', 1),
+('V13', '12.30', '52.11', '2', 1),
+('', '16.21', '65.70', '2', 1),
+('V12', '11.64', '65.17', '2', 1),
+('', '21.55', '67.15', '2', 1),
+('', '20.67', '73.22', '2', 1),
+('', '33.84', '68.21', '2', 1),
+('', '33.30', '73.22', '2', 1),
+('V1', '26.01', '82.45', '2', 1),
+('', '15.34', '72.56', '2', 1),
+('', '15.23', '75.46', '2', 1),
+('', '14.80', '77.97', '2', 1),
+('', '14.47', '81.00', '2', 1),
+('', '14.46', '83.91', '2', 1),
+('', '14.04', '86.41', '2', 1),
+('', '13.82', '88.92', '2', 1),
+('D110', '10.99', '72.30', '2', 1),
+('D109', '10.88', '74.67', '2', 1),
+('D108', '10.88', '77.97', '2', 1),
+('D107', '10.45', '80.08', '2', 1),
+('V9', '9.90', '83.38', '2', 1),
+('D105', '9.90', '85.88', '2', 1),
+('V8', '9.58', '88.52', '2', 1),
+('', '27.75', '52.11', '2', 1),
+('', '35.69', '52.24', '2', 1),
+('', '41.35', '52.90', '2', 1),
+('', '40.04', '58.71', '2', 1),
+('', '34.71', '58.05', '2', 1),
+('', '16.97', '57.39', '2', 1),
+('', '22.52', '57.92', '2', 1),
+('', '68.12', '11.08', '2', 1),
+('', '75.41', '12.93', '2', 1),
+('', '80.09', '14.51', '2', 1),
+('B117', '77.04', '8.05', '2', 1),
+('B118', '81.28', '10.03', '2', 1),
+('B115', '73.99', '17.41', '2', 1),
+('B114', '79.11', '18.73', '2', 1),
 
-INSERT INTO `pins` (`name`, `pos_x`, `pos_y`, `map_id`) VALUES ('', '63.89', '37.29', '3');
-INSERT INTO `pins` (`name`, `pos_x`, `pos_y`, `map_id`) VALUES ('', '60.44', '36.52', '3');
-INSERT INTO `pins` (`name`, `pos_x`, `pos_y`, `map_id`) VALUES ('', '61.20', '28.35', '3');
-INSERT INTO `pins` (`name`, `pos_x`, `pos_y`, `map_id`) VALUES ('', '58.64', '28.20', '3');
-INSERT INTO `pins` (`name`, `pos_x`, `pos_y`, `map_id`) VALUES ('', '56.21', '26.96', '3');
-INSERT INTO `pins` (`name`, `pos_x`, `pos_y`, `map_id`) VALUES ('', '52.37', '25.89', '3');
-INSERT INTO `pins` (`name`, `pos_x`, `pos_y`, `map_id`) VALUES ('', '48.14', '24.96', '3');
-INSERT INTO `pins` (`name`, `pos_x`, `pos_y`, `map_id`) VALUES ('', '44.05', '23.57', '3');
-INSERT INTO `pins` (`name`, `pos_x`, `pos_y`, `map_id`) VALUES ('', '70.17', '30.97', '3');
-INSERT INTO `pins` (`name`, `pos_x`, `pos_y`, `map_id`) VALUES ('', '74.26', '31.74', '3');
-INSERT INTO `pins` (`name`, `pos_x`, `pos_y`, `map_id`) VALUES ('', '79.13', '33.44', '3');
-INSERT INTO `pins` (`name`, `pos_x`, `pos_y`, `map_id`) VALUES ('', '84.25', '34.67', '3');
-INSERT INTO `pins` (`name`, `pos_x`, `pos_y`, `map_id`) VALUES ('', '88.60', '36.21', '3');
-INSERT INTO `pins` (`name`, `pos_x`, `pos_y`, `map_id`) VALUES ('', '89.24', '31.74', '3');
-INSERT INTO `pins` (`name`, `pos_x`, `pos_y`, `map_id`) VALUES ('', '87.96', '40.68', '3');
-INSERT INTO `pins` (`name`, `pos_x`, `pos_y`, `map_id`) VALUES ('A202', '45.33', '16.64', '3');
-INSERT INTO `pins` (`name`, `pos_x`, `pos_y`, `map_id`) VALUES ('A203', '49.42', '17.41', '3');
-INSERT INTO `pins` (`name`, `pos_x`, `pos_y`, `map_id`) VALUES ('A204', '54.16', '18.80', '3');
-INSERT INTO `pins` (`name`, `pos_x`, `pos_y`, `map_id`) VALUES ('A205', '58.51', '20.03', '3');
-INSERT INTO `pins` (`name`, `pos_x`, `pos_y`, `map_id`) VALUES ('A211', '71.06', '23.11', '3');
-INSERT INTO `pins` (`name`, `pos_x`, `pos_y`, `map_id`) VALUES ('A212', '75.29', '24.35', '3');
-INSERT INTO `pins` (`name`, `pos_x`, `pos_y`, `map_id`) VALUES ('A213', '80.54', '25.73', '3');
-INSERT INTO `pins` (`name`, `pos_x`, `pos_y`, `map_id`) VALUES ('A214', '85.92', '27.12', '3');
-INSERT INTO `pins` (`name`, `pos_x`, `pos_y`, `map_id`) VALUES ('A215', '90.27', '26.66', '3');
-INSERT INTO `pins` (`name`, `pos_x`, `pos_y`, `map_id`) VALUES ('A216', '92.70', '32.67', '3');
-INSERT INTO `pins` (`name`, `pos_x`, `pos_y`, `map_id`) VALUES ('A229', '42.77', '31.28', '3');
-INSERT INTO `pins` (`name`, `pos_x`, `pos_y`, `map_id`) VALUES ('A228', '46.73', '32.51', '3');
-INSERT INTO `pins` (`name`, `pos_x`, `pos_y`, `map_id`) VALUES ('A227', '50.58', '33.44', '3');
-INSERT INTO `pins` (`name`, `pos_x`, `pos_y`, `map_id`) VALUES ('A226', '54.16', '34.67', '3');
-INSERT INTO `pins` (`name`, `pos_x`, `pos_y`, `map_id`) VALUES ('A224', '57.75', '35.29', '3');
-INSERT INTO `pins` (`name`, `pos_x`, `pos_y`, `map_id`) VALUES ('A223', '70.04', '38.67', '3');
-INSERT INTO `pins` (`name`, `pos_x`, `pos_y`, `map_id`) VALUES ('A222', '73.62', '39.91', '3');
-INSERT INTO `pins` (`name`, `pos_x`, `pos_y`, `map_id`) VALUES ('A221', '78.36', '41.14', '3');
-INSERT INTO `pins` (`name`, `pos_x`, `pos_y`, `map_id`) VALUES ('A220', '82.71', '42.68', '3');
-INSERT INTO `pins` (`name`, `pos_x`, `pos_y`, `map_id`) VALUES ('A219', '86.81', '45.15', '3');
-INSERT INTO `pins` (`name`, `pos_x`, `pos_y`, `map_id`) VALUES ('A218', '91.81', '41.91', '3');
-
-
-INSERT INTO `pins` (`name`, `pos_x`, `pos_y`, `map_id`) VALUES ('', '64.31', '37.32', '4');
-INSERT INTO `pins` (`name`, `pos_x`, `pos_y`, `map_id`) VALUES ('', '60.72', '36.27', '4');
-INSERT INTO `pins` (`name`, `pos_x`, `pos_y`, `map_id`) VALUES ('', '61.59', '28.52', '4');
-INSERT INTO `pins` (`name`, `pos_x`, `pos_y`, `map_id`) VALUES ('', '58.65', '27.73', '4');
-INSERT INTO `pins` (`name`, `pos_x`, `pos_y`, `map_id`) VALUES ('', '55.39', '26.68', '4');
-INSERT INTO `pins` (`name`, `pos_x`, `pos_y`, `map_id`) VALUES ('', '51.69', '25.49', '4');
-INSERT INTO `pins` (`name`, `pos_x`, `pos_y`, `map_id`) VALUES ('', '48.10', '24.70', '4');
-INSERT INTO `pins` (`name`, `pos_x`, `pos_y`, `map_id`) VALUES ('', '44.29', '23.65', '4');
-INSERT INTO `pins` (`name`, `pos_x`, `pos_y`, `map_id`) VALUES ('', '70.18', '30.62', '4');
-INSERT INTO `pins` (`name`, `pos_x`, `pos_y`, `map_id`) VALUES ('', '74.32', '31.80', '4');
-INSERT INTO `pins` (`name`, `pos_x`, `pos_y`, `map_id`) VALUES ('', '79.54', '32.98', '4');
-INSERT INTO `pins` (`name`, `pos_x`, `pos_y`, `map_id`) VALUES ('', '86.51', '35.09', '4');
-INSERT INTO `pins` (`name`, `pos_x`, `pos_y`, `map_id`) VALUES ('', '89.01', '35.74', '4');
-INSERT INTO `pins` (`name`, `pos_x`, `pos_y`, `map_id`) VALUES ('', '89.23', '31.54', '4');
-INSERT INTO `pins` (`name`, `pos_x`, `pos_y`, `map_id`) VALUES ('', '90.97', '32.06', '4');
-INSERT INTO `pins` (`name`, `pos_x`, `pos_y`, `map_id`) VALUES ('A302', '45.81', '16.16', '4');
-INSERT INTO `pins` (`name`, `pos_x`, `pos_y`, `map_id`) VALUES ('A303', '49.40', '16.95', '4');
-INSERT INTO `pins` (`name`, `pos_x`, `pos_y`, `map_id`) VALUES ('A304', '52.88', '17.87', '4');
-INSERT INTO `pins` (`name`, `pos_x`, `pos_y`, `map_id`) VALUES ('A305', '56.37', '19.05', '4');
-INSERT INTO `pins` (`name`, `pos_x`, `pos_y`, `map_id`) VALUES ('A306', '59.85', '20.11', '4');
-INSERT INTO `pins` (`name`, `pos_x`, `pos_y`, `map_id`) VALUES ('A307', '63.00', '20.63', '4');
-INSERT INTO `pins` (`name`, `pos_x`, `pos_y`, `map_id`) VALUES ('A311', '71.49', '23.13', '4');
-INSERT INTO `pins` (`name`, `pos_x`, `pos_y`, `map_id`) VALUES ('A312', '75.52', '24.18', '4');
-INSERT INTO `pins` (`name`, `pos_x`, `pos_y`, `map_id`) VALUES ('A313', '80.41', '25.49', '4');
-INSERT INTO `pins` (`name`, `pos_x`, `pos_y`, `map_id`) VALUES ('A314', '85.20', '30.35', '4');
-INSERT INTO `pins` (`name`, `pos_x`, `pos_y`, `map_id`) VALUES ('A315', '89.77', '26.94', '4');
-INSERT INTO `pins` (`name`, `pos_x`, `pos_y`, `map_id`) VALUES ('A316', '91.95', '27.33', '4');
-INSERT INTO `pins` (`name`, `pos_x`, `pos_y`, `map_id`) VALUES ('A317', '93.58', '32.59', '4');
-INSERT INTO `pins` (`name`, `pos_x`, `pos_y`, `map_id`) VALUES ('A331', '42.66', '30.62', '4');
-INSERT INTO `pins` (`name`, `pos_x`, `pos_y`, `map_id`) VALUES ('A330', '47.01', '31.67', '4');
-INSERT INTO `pins` (`name`, `pos_x`, `pos_y`, `map_id`) VALUES ('A329', '51.03', '32.85', '4');
-INSERT INTO `pins` (`name`, `pos_x`, `pos_y`, `map_id`) VALUES ('A328', '54.62', '33.77', '4');
-INSERT INTO `pins` (`name`, `pos_x`, `pos_y`, `map_id`) VALUES ('A327', '57.67', '34.56', '4');
-INSERT INTO `pins` (`name`, `pos_x`, `pos_y`, `map_id`) VALUES ('A324', '69.86', '38.63', '4');
-INSERT INTO `pins` (`name`, `pos_x`, `pos_y`, `map_id`) VALUES ('A323', '73.56', '39.29', '4');
-INSERT INTO `pins` (`name`, `pos_x`, `pos_y`, `map_id`) VALUES ('A322', '78.13', '40.34', '4');
-INSERT INTO `pins` (`name`, `pos_x`, `pos_y`, `map_id`) VALUES ('A320', '85.42', '41.52', '4');
-INSERT INTO `pins` (`name`, `pos_x`, `pos_y`, `map_id`) VALUES ('A319', '88.36', '42.18', '4');
+('', '63.89', '37.29', '3', 1),
+('', '60.44', '36.52', '3', 1),
+('', '61.20', '28.35', '3', 1),
+('', '58.64', '28.20', '3', 1),
+('', '56.21', '26.96', '3', 1),
+('', '52.37', '25.89', '3', 1),
+('', '48.14', '24.96', '3', 1),
+('', '44.05', '23.57', '3', 1),
+('', '70.17', '30.97', '3', 1),
+('', '74.26', '31.74', '3', 1),
+('', '79.13', '33.44', '3', 1),
+('', '84.25', '34.67', '3', 1),
+('', '88.60', '36.21', '3', 1),
+('', '89.24', '31.74', '3', 1),
+('', '87.96', '40.68', '3', 1),
+('A202', '45.33', '16.64', '3', 1),
+('A203', '49.42', '17.41', '3', 1),
+('A204', '54.16', '18.80', '3', 1),
+('A205', '58.51', '20.03', '3', 1),
+('A211', '71.06', '23.11', '3', 1),
+('A212', '75.29', '24.35', '3', 1),
+('A213', '80.54', '25.73', '3', 1),
+('A214', '85.92', '27.12', '3', 1),
+('A215', '90.27', '26.66', '3', 1),
+('A216', '92.70', '32.67', '3', 1),
+('A229', '42.77', '31.28', '3', 1),
+('A228', '46.73', '32.51', '3', 1),
+('A227', '50.58', '33.44', '3', 1),
+('A226', '54.16', '34.67', '3', 1),
+('A224', '57.75', '35.29', '3', 1),
+('A223', '70.04', '38.67', '3', 1),
+('A222', '73.62', '39.91', '3', 1),
+('A221', '78.36', '41.14', '3', 1),
+('A220', '82.71', '42.68', '3', 1),
+('A219', '86.81', '45.15', '3', 1),
+('A218', '91.81', '41.91', '3', 1),
 
 
-INSERT INTO `pins` (`name`, `pos_x`, `pos_y`, `map_id`) VALUES ('', '64.09', '37.48', '5');
-INSERT INTO `pins` (`name`, `pos_x`, `pos_y`, `map_id`) VALUES ('', '60.07', '36.30', '5');
-INSERT INTO `pins` (`name`, `pos_x`, `pos_y`, `map_id`) VALUES ('', '61.59', '28.57', '5');
-INSERT INTO `pins` (`name`, `pos_x`, `pos_y`, `map_id`) VALUES ('', '69.64', '31.06', '5');
-INSERT INTO `pins` (`name`, `pos_x`, `pos_y`, `map_id`) VALUES ('', '74.10', '31.85', '5');
-INSERT INTO `pins` (`name`, `pos_x`, `pos_y`, `map_id`) VALUES ('', '77.26', '32.90', '5');
-INSERT INTO `pins` (`name`, `pos_x`, `pos_y`, `map_id`) VALUES ('', '80.41', '33.55', '5');
-INSERT INTO `pins` (`name`, `pos_x`, `pos_y`, `map_id`) VALUES ('', '83.24', '34.60', '5');
-INSERT INTO `pins` (`name`, `pos_x`, `pos_y`, `map_id`) VALUES ('', '85.85', '35.52', '5');
-INSERT INTO `pins` (`name`, `pos_x`, `pos_y`, `map_id`) VALUES ('', '88.57', '35.91', '5');
-INSERT INTO `pins` (`name`, `pos_x`, `pos_y`, `map_id`) VALUES ('', '89.23', '31.85', '5');
-INSERT INTO `pins` (`name`, `pos_x`, `pos_y`, `map_id`) VALUES ('', '56.15', '27.39', '5');
-INSERT INTO `pins` (`name`, `pos_x`, `pos_y`, `map_id`) VALUES ('', '54.19', '34.60', '5');
-INSERT INTO `pins` (`name`, `pos_x`, `pos_y`, `map_id`) VALUES ('A403-2', '47.66', '33.16', '5');
-INSERT INTO `pins` (`name`, `pos_x`, `pos_y`, `map_id`) VALUES ('A403-1', '50.16', '25.56', '5');
-INSERT INTO `pins` (`name`, `pos_x`, `pos_y`, `map_id`) VALUES ('A407', '57.56', '20.84', '5');
-INSERT INTO `pins` (`name`, `pos_x`, `pos_y`, `map_id`) VALUES ('A401A', '62.68', '21.49', '5');
-INSERT INTO `pins` (`name`, `pos_x`, `pos_y`, `map_id`) VALUES ('A401B', '71.06', '23.72', '5');
-INSERT INTO `pins` (`name`, `pos_x`, `pos_y`, `map_id`) VALUES ('A413', '75.63', '24.38', '5');
-INSERT INTO `pins` (`name`, `pos_x`, `pos_y`, `map_id`) VALUES ('A414', '79.22', '25.29', '5');
-INSERT INTO `pins` (`name`, `pos_x`, `pos_y`, `map_id`) VALUES ('A415', '81.72', '26.47', '5');
-INSERT INTO `pins` (`name`, `pos_x`, `pos_y`, `map_id`) VALUES ('A416', '84.55', '27.13', '5');
-INSERT INTO `pins` (`name`, `pos_x`, `pos_y`, `map_id`) VALUES ('A417', '87.05', '27.79', '5');
-INSERT INTO `pins` (`name`, `pos_x`, `pos_y`, `map_id`) VALUES ('A418', '90.21', '26.87', '5');
-INSERT INTO `pins` (`name`, `pos_x`, `pos_y`, `map_id`) VALUES ('A419', '93.69', '33.16', '5');
-INSERT INTO `pins` (`name`, `pos_x`, `pos_y`, `map_id`) VALUES ('A428', '75.08', '39.19', '5');
-INSERT INTO `pins` (`name`, `pos_x`, `pos_y`, `map_id`) VALUES ('A426', '81.94', '41.55', '5');
-INSERT INTO `pins` (`name`, `pos_x`, `pos_y`, `map_id`) VALUES ('A424', '87.49', '42.86', '5');
+('', '64.31', '37.32', '4', 1),
+('', '60.72', '36.27', '4', 1),
+('', '61.59', '28.52', '4', 1),
+('', '58.65', '27.73', '4', 1),
+('', '55.39', '26.68', '4', 1),
+('', '51.69', '25.49', '4', 1),
+('', '48.10', '24.70', '4', 1),
+('', '44.29', '23.65', '4', 1),
+('', '70.18', '30.62', '4', 1),
+('', '74.32', '31.80', '4', 1),
+('', '79.54', '32.98', '4', 1),
+('', '86.51', '35.09', '4', 1),
+('', '89.01', '35.74', '4', 1),
+('', '89.23', '31.54', '4', 1),
+('', '90.97', '32.06', '4', 1),
+('A302', '45.81', '16.16', '4', 1),
+('A303', '49.40', '16.95', '4', 1),
+('A304', '52.88', '17.87', '4', 1),
+('A305', '56.37', '19.05', '4', 1),
+('A306', '59.85', '20.11', '4', 1),
+('A307', '63.00', '20.63', '4', 1),
+('A311', '71.49', '23.13', '4', 1),
+('A312', '75.52', '24.18', '4', 1),
+('A313', '80.41', '25.49', '4', 1),
+('A314', '85.20', '30.35', '4', 1),
+('A315', '89.77', '26.94', '4', 1),
+('A316', '91.95', '27.33', '4', 1),
+('A317', '93.58', '32.59', '4', 1),
+('A331', '42.66', '30.62', '4', 1),
+('A330', '47.01', '31.67', '4', 1),
+('A329', '51.03', '32.85', '4', 1),
+('A328', '54.62', '33.77', '4', 1),
+('A327', '57.67', '34.56', '4', 1),
+('A324', '69.86', '38.63', '4', 1),
+('A323', '73.56', '39.29', '4', 1),
+('A322', '78.13', '40.34', '4', 1),
+('A320', '85.42', '41.52', '4', 1),
+('A319', '88.36', '42.18', '4', 1),
 
-INSERT INTO `pins` (`name`, `pos_x`, `pos_y`, `map_id`) VALUES ('', '56.80', '90.37', '6');
-INSERT INTO `pins` (`name`, `pos_x`, `pos_y`, `map_id`) VALUES ('', '59.63', '59.37', '6');
-INSERT INTO `pins` (`name`, `pos_x`, `pos_y`, `map_id`) VALUES ('', '59.63', '40.98', '6');
-INSERT INTO `pins` (`name`, `pos_x`, `pos_y`, `map_id`) VALUES ('', '45.81', '58.32', '6');
-INSERT INTO `pins` (`name`, `pos_x`, `pos_y`, `map_id`) VALUES ('', '45.92', '41.68', '6');
-INSERT INTO `pins` (`name`, `pos_x`, `pos_y`, `map_id`) VALUES ('', '35.91', '60.25', '6');
-INSERT INTO `pins` (`name`, `pos_x`, `pos_y`, `map_id`) VALUES ('', '30.47', '63.22', '6');
-INSERT INTO `pins` (`name`, `pos_x`, `pos_y`, `map_id`) VALUES ('', '22.74', '64.27', '6');
-INSERT INTO `pins` (`name`, `pos_x`, `pos_y`, `map_id`) VALUES ('', '18.61', '64.45', '6');
-INSERT INTO `pins` (`name`, `pos_x`, `pos_y`, `map_id`) VALUES ('', '19.91', '51.66', '6');
-INSERT INTO `pins` (`name`, `pos_x`, `pos_y`, `map_id`) VALUES ('', '19.91', '43.08', '6');
-INSERT INTO `pins` (`name`, `pos_x`, `pos_y`, `map_id`) VALUES ('', '20.02', '34.50', '6');
-INSERT INTO `pins` (`name`, `pos_x`, `pos_y`, `map_id`) VALUES ('', '19.80', '26.97', '6');
-INSERT INTO `pins` (`name`, `pos_x`, `pos_y`, `map_id`) VALUES ('', '20.13', '18.91', '6');
-INSERT INTO `pins` (`name`, `pos_x`, `pos_y`, `map_id`) VALUES ('', '21.98', '31.17', '6');
-INSERT INTO `pins` (`name`, `pos_x`, `pos_y`, `map_id`) VALUES ('', '28.40', '31.35', '6');
-INSERT INTO `pins` (`name`, `pos_x`, `pos_y`, `map_id`) VALUES ('', '42.11', '31.17', '6');
-INSERT INTO `pins` (`name`, `pos_x`, `pos_y`, `map_id`) VALUES ('', '68.34', '63.05', '6');
-INSERT INTO `pins` (`name`, `pos_x`, `pos_y`, `map_id`) VALUES ('', '75.73', '62.87', '6');
-INSERT INTO `pins` (`name`, `pos_x`, `pos_y`, `map_id`) VALUES ('', '82.15', '61.82', '6');
-INSERT INTO `pins` (`name`, `pos_x`, `pos_y`, `map_id`) VALUES ('', '35.90', '76.49', '6');
-INSERT INTO `pins` (`name`, `pos_x`, `pos_y`, `map_id`) VALUES ('S1', '55.82', '30.12', '6');
-INSERT INTO `pins` (`name`, `pos_x`, `pos_y`, `map_id`) VALUES ('S6', '28.51', '25.74', '6');
-INSERT INTO `pins` (`name`, `pos_x`, `pos_y`, `map_id`) VALUES ('S7', '13.82', '26.97', '6');
-INSERT INTO `pins` (`name`, `pos_x`, `pos_y`, `map_id`) VALUES ('S8', '14.25', '34.33', '6');
-INSERT INTO `pins` (`name`, `pos_x`, `pos_y`, `map_id`) VALUES ('S9', '13.60', '43.26', '6');
-INSERT INTO `pins` (`name`, `pos_x`, `pos_y`, `map_id`) VALUES ('S11', '13.60', '51.31', '6');
-INSERT INTO `pins` (`name`, `pos_x`, `pos_y`, `map_id`) VALUES ('S13', '18.17', '77.41', '6');
-INSERT INTO `pins` (`name`, `pos_x`, `pos_y`, `map_id`) VALUES ('S14', '22.74', '75.13', '6');
-INSERT INTO `pins` (`name`, `pos_x`, `pos_y`, `map_id`) VALUES ('S14A', '30.47', '73.91', '6');
-INSERT INTO `pins` (`name`, `pos_x`, `pos_y`, `map_id`) VALUES ('S15A', '68.34', '74.61', '6');
-INSERT INTO `pins` (`name`, `pos_x`, `pos_y`, `map_id`) VALUES ('S15B', '75.63', '76.01', '6');
-INSERT INTO `pins` (`name`, `pos_x`, `pos_y`, `map_id`) VALUES ('S15C', '81.94', '74.78', '6');
-INSERT INTO `pins` (`name`, `pos_x`, `pos_y`, `map_id`) VALUES ('S15D', '91.08', '63.05', '6');
 
-INSERT INTO `pins` (`name`, `pos_x`, `pos_y`, `map_id`) VALUES ('', '35.69', '77.99', '7');
-INSERT INTO `pins` (`name`, `pos_x`, `pos_y`, `map_id`) VALUES ('', '34.82', '53.21', '7');
-INSERT INTO `pins` (`name`, `pos_x`, `pos_y`, `map_id`) VALUES ('', '34.93', '64.64', '7');
-INSERT INTO `pins` (`name`, `pos_x`, `pos_y`, `map_id`) VALUES ('', '19.70', '52.34', '7');
-INSERT INTO `pins` (`name`, `pos_x`, `pos_y`, `map_id`) VALUES ('', '18.82', '65.16', '7');
-INSERT INTO `pins` (`name`, `pos_x`, `pos_y`, `map_id`) VALUES ('', '22.85', '65.16', '7');
-INSERT INTO `pins` (`name`, `pos_x`, `pos_y`, `map_id`) VALUES ('', '48.97', '65.68', '7');
-INSERT INTO `pins` (`name`, `pos_x`, `pos_y`, `map_id`) VALUES ('', '55.71', '66.55', '7');
-INSERT INTO `pins` (`name`, `pos_x`, `pos_y`, `map_id`) VALUES ('', '62.89', '65.86', '7');
-INSERT INTO `pins` (`name`, `pos_x`, `pos_y`, `map_id`) VALUES ('', '63.22', '55.98', '7');
-INSERT INTO `pins` (`name`, `pos_x`, `pos_y`, `map_id`) VALUES ('', '73.78', '54.59', '7');
-INSERT INTO `pins` (`name`, `pos_x`, `pos_y`, `map_id`) VALUES ('', '79.22', '40.03', '7');
-INSERT INTO `pins` (`name`, `pos_x`, `pos_y`, `map_id`) VALUES ('S2', '34.82', '37.44', '7');
-INSERT INTO `pins` (`name`, `pos_x`, `pos_y`, `map_id`) VALUES ('S13', '13.93', '52.51', '7');
-INSERT INTO `pins` (`name`, `pos_x`, `pos_y`, `map_id`) VALUES ('S7', '17.95', '78.16', '7');
-INSERT INTO `pins` (`name`, `pos_x`, `pos_y`, `map_id`) VALUES ('S6', '22.85', '77.30', '7');
-INSERT INTO `pins` (`name`, `pos_x`, `pos_y`, `map_id`) VALUES ('S19', '48.64', '77.47', '7');
-INSERT INTO `pins` (`name`, `pos_x`, `pos_y`, `map_id`) VALUES ('S18', '55.50', '77.64', '7');
-INSERT INTO `pins` (`name`, `pos_x`, `pos_y`, `map_id`) VALUES ('S3', '69.42', '66.20', '7');
+('', '64.09', '37.48', '5', 1),
+('', '60.07', '36.30', '5', 1),
+('', '61.59', '28.57', '5', 1),
+('', '69.64', '31.06', '5', 1),
+('', '74.10', '31.85', '5', 1),
+('', '77.26', '32.90', '5', 1),
+('', '80.41', '33.55', '5', 1),
+('', '83.24', '34.60', '5', 1),
+('', '85.85', '35.52', '5', 1),
+('', '88.57', '35.91', '5', 1),
+('', '89.23', '31.85', '5', 1),
+('', '56.15', '27.39', '5', 1),
+('', '54.19', '34.60', '5', 1),
+('A403-2', '47.66', '33.16', '5', 1),
+('A403-1', '50.16', '25.56', '5', 1),
+('A407', '57.56', '20.84', '5', 1),
+('A401A', '62.68', '21.49', '5', 1),
+('A401B', '71.06', '23.72', '5', 1),
+('A413', '75.63', '24.38', '5', 1),
+('A414', '79.22', '25.29', '5', 1),
+('A415', '81.72', '26.47', '5', 1),
+('A416', '84.55', '27.13', '5', 1),
+('A417', '87.05', '27.79', '5', 1),
+('A418', '90.21', '26.87', '5', 1),
+('A419', '93.69', '33.16', '5', 1),
+('A428', '75.08', '39.19', '5', 1),
+('A426', '81.94', '41.55', '5', 1),
+('A424', '87.49', '42.86', '5', 1),
 
-INSERT INTO `pins` (`name`, `pos_x`, `pos_y`, `map_id`) VALUES ('J001',  '19.416666666666664', '82.2303282959875'  , '8');
-INSERT INTO `pins` (`name`, `pos_x`, `pos_y`, `map_id`) VALUES ('', '28.583333333333332', '81.76133402813966', '8');
-INSERT INTO `pins` (`name`, `pos_x`, `pos_y`, `map_id`) VALUES ('', '35.91666666666667', '81.70922355393433', '8');
-INSERT INTO `pins` (`name`, `pos_x`, `pos_y`, `map_id`) VALUES ('J001a',  '26.5', '70.29702970297029', '8');
-INSERT INTO `pins` (`name`, `pos_x`, `pos_y`, `map_id`) VALUES ('', '35.91666666666667', '70.19280875455966', '8');
-INSERT INTO `pins` (`name`, `pos_x`, `pos_y`, `map_id`) VALUES ('J002',  '19.666666666666664', '55.65398645127671', '8');
-INSERT INTO `pins` (`name`, `pos_x`, `pos_y`, `map_id`) VALUES ('', '27.916666666666668', '52.475247524752476', '8');
-INSERT INTO `pins` (`name`, `pos_x`, `pos_y`, `map_id`) VALUES ('', '36', '52.37102657634184', '8');
-INSERT INTO `pins` (`name`, `pos_x`, `pos_y`, `map_id`) VALUES ('J003',  '19.25', '40.17717561229807', '8');
-INSERT INTO `pins` (`name`, `pos_x`, `pos_y`, `map_id`) VALUES ('', '28.583333333333332', '39.81240229286087', '8');
-INSERT INTO `pins` (`name`, `pos_x`, `pos_y`, `map_id`) VALUES ('', '35.91666666666667', '39.81240229286087', '8');
-INSERT INTO `pins` (`name`, `pos_x`, `pos_y`, `map_id`) VALUES ('J004',  '19', '23.814486711829076', '8');
-INSERT INTO `pins` (`name`, `pos_x`, `pos_y`, `map_id`) VALUES ('', '28.249999999999996', '27.61855132881709', '8');
-INSERT INTO `pins` (`name`, `pos_x`, `pos_y`, `map_id`) VALUES ('', '35.833333333333336', '27.722772277227726', '8');
-INSERT INTO `pins` (`name`, `pos_x`, `pos_y`, `map_id`) VALUES ('J005',  '53.75', '12.089630015633142', '8');
-INSERT INTO `pins` (`name`, `pos_x`, `pos_y`, `map_id`) VALUES ('', '44.25', '16.831683168316832', '8');
-INSERT INTO `pins` (`name`, `pos_x`, `pos_y`, `map_id`) VALUES ('', '35.91666666666667', '16.988014590932778', '8');
-INSERT INTO `pins` (`name`, `pos_x`, `pos_y`, `map_id`) VALUES ('J006',  '53.91666666666667', '31.162063574778532', '8');
-INSERT INTO `pins` (`name`, `pos_x`, `pos_y`, `map_id`) VALUES ('', '43.916666666666664', '36.26889004689943', '8');
-INSERT INTO `pins` (`name`, `pos_x`, `pos_y`, `map_id`) VALUES ('', '36', '36.32100052110474', '8');
-INSERT INTO `pins` (`name`, `pos_x`, `pos_y`, `map_id`) VALUES ('J010',  '44.5', '61.33402813965607', '8');
-INSERT INTO `pins` (`name`, `pos_x`, `pos_y`, `map_id`) VALUES ('', '36.083333333333336', '61.4382490880667', '8');
-INSERT INTO `pins` (`name`, `pos_x`, `pos_y`, `map_id`) VALUES ('J011',  '43.916666666666664', '70.14069828035435', '8');
-INSERT INTO `pins` (`name`, `pos_x`, `pos_y`, `map_id`) VALUES ('', '43.416666666666664', '78.37415320479415', '8');
-INSERT INTO `pins` (`name`, `pos_x`, `pos_y`, `map_id`) VALUES ('', '35.91666666666667', '78.4783741532048', '8');
-INSERT INTO `pins` (`name`, `pos_x`, `pos_y`, `map_id`) VALUES ('J015',  '43.916666666666664', '86.29494528400208', '8');
-INSERT INTO `pins` (`name`, `pos_x`, `pos_y`, `map_id`) VALUES ('', '36', '86.39916623241271', '8');
-INSERT INTO `pins` (`name`, `pos_x`, `pos_y`, `map_id`) VALUES ('', '70.25', '40.698280354351226', '8');
-INSERT INTO `pins` (`name`, `pos_x`, `pos_y`, `map_id`) VALUES ('', '62.416666666666664', '44.29390307451798', '8');
-INSERT INTO `pins` (`name`, `pos_x`, `pos_y`, `map_id`) VALUES ('', '43.25', '47.993746743095365', '8');
-INSERT INTO `pins` (`name`, `pos_x`, `pos_y`, `map_id`) VALUES ('', '35.91666666666667', '47.7853048462741', '8');
-INSERT INTO `pins` (`name`, `pos_x`, `pos_y`, `map_id`) VALUES ('', '53.5', '53.309015112037514', '8');
-INSERT INTO `pins` (`name`, `pos_x`, `pos_y`, `map_id`) VALUES ('', '42.916666666666664', '51.84992183428869', '8');
-INSERT INTO `pins` (`name`, `pos_x`, `pos_y`, `map_id`) VALUES ('', '36.583333333333336', '51.90203230849401', '8');
-INSERT INTO `pins` (`name`, `pos_x`, `pos_y`, `map_id`) VALUES ('', '35.91666666666667', '91.66232412714954', '8');
-INSERT INTO `pins` (`name`, `pos_x`, `pos_y`, `map_id`) VALUES ('', '23.5', '9.79676915059927', '8');
+('', '56.80', '90.37', '6', 1),
+('', '59.63', '59.37', '6', 1),
+('', '59.63', '40.98', '6', 1),
+('', '45.81', '58.32', '6', 1),
+('', '45.92', '41.68', '6', 1),
+('', '35.91', '60.25', '6', 1),
+('', '30.47', '63.22', '6', 1),
+('', '22.74', '64.27', '6', 1),
+('', '18.61', '64.45', '6', 1),
+('', '19.91', '51.66', '6', 1),
+('', '19.91', '43.08', '6', 1),
+('', '20.02', '34.50', '6', 1),
+('', '19.80', '26.97', '6', 1),
+('', '20.13', '18.91', '6', 1),
+('', '21.98', '31.17', '6', 1),
+('', '28.40', '31.35', '6', 1),
+('', '42.11', '31.17', '6', 1),
+('', '68.34', '63.05', '6', 1),
+('', '75.73', '62.87', '6', 1),
+('', '82.15', '61.82', '6', 1),
+('', '35.90', '76.49', '6', 1),
+('S1', '55.82', '30.12', '6', 1),
+('S6', '28.51', '25.74', '6', 1),
+('S7', '13.82', '26.97', '6', 1),
+('S8', '14.25', '34.33', '6', 1),
+('S9', '13.60', '43.26', '6', 1),
+('S11', '13.60', '51.31', '6', 1),
+('S13', '18.17', '77.41', '6', 1),
+('S14', '22.74', '75.13', '6', 1),
+('S14A', '30.47', '73.91', '6', 1),
+('S15A', '68.34', '74.61', '6', 1),
+('S15B', '75.63', '76.01', '6', 1),
+('S15C', '81.94', '74.78', '6', 1),
+('S15D', '91.08', '63.05', '6', 1),
 
-INSERT INTO `pins` (`name`, `pos_x`, `pos_y`, `map_id`) VALUES ('J101',  '33.166666666666664', '91.4624183006536', '9');
-INSERT INTO `pins` (`name`, `pos_x`, `pos_y`, `map_id`) VALUES ('', '43.583333333333336', '91.38071895424836', '9');
-INSERT INTO `pins` (`name`, `pos_x`, `pos_y`, `map_id`) VALUES ('', '31.833333333333335', '84.80392156862744', '9');
-INSERT INTO `pins` (`name`, `pos_x`, `pos_y`, `map_id`) VALUES ('', '43.583333333333336', '85.04901960784313', '9');
-INSERT INTO `pins` (`name`, `pos_x`, `pos_y`, `map_id`) VALUES ('J103',  '32.58333333333333', '77.32843137254902', '9');
-INSERT INTO `pins` (`name`, `pos_x`, `pos_y`, `map_id`) VALUES ('', '43.666666666666664', '77.36928104575163', '9');
-INSERT INTO `pins` (`name`, `pos_x`, `pos_y`, `map_id`) VALUES ('J104',  '31.416666666666664', '69.15849673202613', '9');
-INSERT INTO `pins` (`name`, `pos_x`, `pos_y`, `map_id`) VALUES ('', '43.583333333333336', '69.24019607843137', '9');
-INSERT INTO `pins` (`name`, `pos_x`, `pos_y`, `map_id`) VALUES ('J105',  '32.166666666666664', '57.638888888888886', '9');
-INSERT INTO `pins` (`name`, `pos_x`, `pos_y`, `map_id`) VALUES ('', '43.583333333333336', '57.761437908496724', '9');
-INSERT INTO `pins` (`name`, `pos_x`, `pos_y`, `map_id`) VALUES ('J106',  '31.666666666666664', '51.511437908496724', '9');
-INSERT INTO `pins` (`name`, `pos_x`, `pos_y`, `map_id`) VALUES ('', '43.5', '51.633986928104584', '9');
-INSERT INTO `pins` (`name`, `pos_x`, `pos_y`, `map_id`) VALUES ('J107', '32.58333333333333', '42.76960784313725', '9');
-INSERT INTO `pins` (`name`, `pos_x`, `pos_y`, `map_id`) VALUES ('', '43.583333333333336', '42.810457516339866', '9');
-INSERT INTO `pins` (`name`, `pos_x`, `pos_y`, `map_id`) VALUES ('J108',  '32.58333333333333', '33.29248366013072', '9');
-INSERT INTO `pins` (`name`, `pos_x`, `pos_y`, `map_id`) VALUES ('', '43.583333333333336', '33.33333333333333', '9');
-INSERT INTO `pins` (`name`, `pos_x`, `pos_y`, `map_id`) VALUES ('J109',  '22.833333333333332', '22.181372549019606', '9');
-INSERT INTO `pins` (`name`, `pos_x`, `pos_y`, `map_id`) VALUES ('', '33.416666666666664', '26.797385620915033', '9');
-INSERT INTO `pins` (`name`, `pos_x`, `pos_y`, `map_id`) VALUES ('', '43.5', '26.552287581699346', '9');
-INSERT INTO `pins` (`name`, `pos_x`, `pos_y`, `map_id`) VALUES ('J110',  '66.08333333333334', '10.82516339869281', '9');
-INSERT INTO `pins` (`name`, `pos_x`, `pos_y`, `map_id`) VALUES ('', '53.583333333333336', '15.727124183006536', '9');
-INSERT INTO `pins` (`name`, `pos_x`, `pos_y`, `map_id`) VALUES ('', '43.916666666666664', '15.890522875816993', '9');
-INSERT INTO `pins` (`name`, `pos_x`, `pos_y`, `map_id`) VALUES ('J111',  '53.91666666666667', '23.897058823529413', '9');
-INSERT INTO `pins` (`name`, `pos_x`, `pos_y`, `map_id`) VALUES ('', '43.583333333333336', '23.856209150326798', '9');
-INSERT INTO `pins` (`name`, `pos_x`, `pos_y`, `map_id`) VALUES ('J112',  '66.25', '37.29575163398693', '9');
-INSERT INTO `pins` (`name`, `pos_x`, `pos_y`, `map_id`) VALUES ('', '53.583333333333336', '35.41666666666667', '9');
-INSERT INTO `pins` (`name`, `pos_x`, `pos_y`, `map_id`) VALUES ('', '43.916666666666664', '35.375816993464056', '9');
-INSERT INTO `pins` (`name`, `pos_x`, `pos_y`, `map_id`) VALUES ('J114',  '53.583333333333336', '60.29411764705882', '9');
-INSERT INTO `pins` (`name`, `pos_x`, `pos_y`, `map_id`) VALUES ('', '43.833333333333336', '60.416666666666664', '9');
-INSERT INTO `pins` (`name`, `pos_x`, `pos_y`, `map_id`) VALUES ('J118',  '53.833333333333336', '77.36928104575163', '9');
-INSERT INTO `pins` (`name`, `pos_x`, `pos_y`, `map_id`) VALUES ('J119',  '66.75', '88.68464052287581', '9');
-INSERT INTO `pins` (`name`, `pos_x`, `pos_y`, `map_id`) VALUES ('', '53.41666666666667', '91.2173202614379', '9');
-INSERT INTO `pins` (`name`, `pos_x`, `pos_y`, `map_id`) VALUES ('', '65.91666666666667', '52.28758169934641', '9');
-INSERT INTO `pins` (`name`, `pos_x`, `pos_y`, `map_id`) VALUES ('', '53.91666666666667', '46.60947712418301', '9');
-INSERT INTO `pins` (`name`, `pos_x`, `pos_y`, `map_id`) VALUES ('', '27.583333333333332', '8.333333333333332', '9');
+('', '35.69', '77.99', '7', 1),
+('', '34.82', '53.21', '7', 1),
+('', '34.93', '64.64', '7', 1),
+('', '19.70', '52.34', '7', 1),
+('', '18.82', '65.16', '7', 1),
+('', '22.85', '65.16', '7', 1),
+('', '48.97', '65.68', '7', 1),
+('', '55.71', '66.55', '7', 1),
+('', '62.89', '65.86', '7', 1),
+('', '63.22', '55.98', '7', 1),
+('', '73.78', '54.59', '7', 1),
+('', '79.22', '40.03', '7', 1),
+('S2', '34.82', '37.44', '7', 1),
+('S13', '13.93', '52.51', '7', 1),
+('S7', '17.95', '78.16', '7', 1),
+('S6', '22.85', '77.30', '7', 1),
+('S19', '48.64', '77.47', '7', 1),
+('S18', '55.50', '77.64', '7', 1),
+('S3', '69.42', '66.20', '7', 1),
 
-INSERT INTO `pins` (`name`, `pos_x`, `pos_y`, `map_id`) VALUES ('J201',  '22.25', '88.50102669404516', '10');
-INSERT INTO `pins` (`name`, `pos_x`, `pos_y`, `map_id`) VALUES ('', '31.75', '85.17453798767967', '10');
-INSERT INTO `pins` (`name`, `pos_x`, `pos_y`, `map_id`) VALUES ('', '42.75', '85.21560574948665', '10');
-INSERT INTO `pins` (`name`, `pos_x`, `pos_y`, `map_id`) VALUES ('J202',  '31.583333333333335', '77.53593429158111', '10');
-INSERT INTO `pins` (`name`, `pos_x`, `pos_y`, `map_id`) VALUES ('', '42.916666666666664', '77.49486652977413', '10');
-INSERT INTO `pins` (`name`, `pos_x`, `pos_y`, `map_id`) VALUES ('J203',  '31.916666666666664', '69.40451745379876', '10');
-INSERT INTO `pins` (`name`, `pos_x`, `pos_y`, `map_id`) VALUES ('', '42.916666666666664', '69.40451745379876', '10');
-INSERT INTO `pins` (`name`, `pos_x`, `pos_y`, `map_id`) VALUES ('J204',  '21.75', '54.94866529774127', '10');
-INSERT INTO `pins` (`name`, `pos_x`, `pos_y`, `map_id`) VALUES ('', '32.083333333333336', '51.66324435318275', '10');
-INSERT INTO `pins` (`name`, `pos_x`, `pos_y`, `map_id`) VALUES ('', '42.916666666666664', '51.74537987679672', '10');
-INSERT INTO `pins` (`name`, `pos_x`, `pos_y`, `map_id`) VALUES ('J205',  '32.166666666666664', '42.95687885010267', '10');
-INSERT INTO `pins` (`name`, `pos_x`, `pos_y`, `map_id`) VALUES ('', '42.833333333333336', '42.71047227926078', '10');
-INSERT INTO `pins` (`name`, `pos_x`, `pos_y`, `map_id`) VALUES ('J206',  '32', '33.47022587268994', '10');
-INSERT INTO `pins` (`name`, `pos_x`, `pos_y`, `map_id`) VALUES ('', '42.833333333333336', '33.347022587268995', '10');
-INSERT INTO `pins` (`name`, `pos_x`, `pos_y`, `map_id`) VALUES ('J207',  '22.416666666666664', '22.09445585215606', '10');
-INSERT INTO `pins` (`name`, `pos_x`, `pos_y`, `map_id`) VALUES ('', '32.25', '26.611909650924026', '10');
-INSERT INTO `pins` (`name`, `pos_x`, `pos_y`, `map_id`) VALUES ('', '42.833333333333336', '26.529774127310062', '10');
-INSERT INTO `pins` (`name`, `pos_x`, `pos_y`, `map_id`) VALUES ('J208',  '65.75', '11.129363449691991', '10');
-INSERT INTO `pins` (`name`, `pos_x`, `pos_y`, `map_id`) VALUES ('', '52.75', '15.64681724845996', '10');
-INSERT INTO `pins` (`name`, `pos_x`, `pos_y`, `map_id`) VALUES ('', '43.083333333333336', '15.68788501026694', '10');
-INSERT INTO `pins` (`name`, `pos_x`, `pos_y`, `map_id`) VALUES ('J209',  '53.083333333333336', '23.860369609856263', '10');
-INSERT INTO `pins` (`name`, `pos_x`, `pos_y`, `map_id`) VALUES ('', '43.25', '23.655030800821354', '10');
-INSERT INTO `pins` (`name`, `pos_x`, `pos_y`, `map_id`) VALUES ('J210',  '65.66666666666666', '37.659137577002056', '10');
-INSERT INTO `pins` (`name`, `pos_x`, `pos_y`, `map_id`) VALUES ('', '52.75', '35.40041067761807', '10');
-INSERT INTO `pins` (`name`, `pos_x`, `pos_y`, `map_id`) VALUES ('', '43.166666666666664', '35.40041067761807', '10');
-INSERT INTO `pins` (`name`, `pos_x`, `pos_y`, `map_id`) VALUES ('J212',  '52.583333333333336', '60.4517453798768', '10');
-INSERT INTO `pins` (`name`, `pos_x`, `pos_y`, `map_id`) VALUES ('', '43.166666666666664', '60.4517453798768', '10');
-INSERT INTO `pins` (`name`, `pos_x`, `pos_y`, `map_id`) VALUES ('J216',  '53.91666666666667', '77.57700205338808', '10');
-INSERT INTO `pins` (`name`, `pos_x`, `pos_y`, `map_id`) VALUES ('J217',  '65.58333333333334', '89.03490759753593', '10');
-INSERT INTO `pins` (`name`, `pos_x`, `pos_y`, `map_id`) VALUES ('', '52.916666666666664', '91.58110882956879', '10');
-INSERT INTO `pins` (`name`, `pos_x`, `pos_y`, `map_id`) VALUES ('', '43.166666666666664', '91.58110882956879', '10');
-INSERT INTO `pins` (`name`, `pos_x`, `pos_y`, `map_id`) VALUES ('', '65.16666666666666', '52.361396303901444', '10');
-INSERT INTO `pins` (`name`, `pos_x`, `pos_y`, `map_id`) VALUES ('', '52.666666666666664', '47.02258726899384', '10');
-INSERT INTO `pins` (`name`, `pos_x`, `pos_y`, `map_id`) VALUES ('', '21.666666666666668', '8.459958932238192', '10');
+('J001',  '19.416666666666664', '82.2303282959875'  , '8', 1),
+('', '28.583333333333332', '81.76133402813966', '8', 1),
+('', '35.91666666666667', '81.70922355393433', '8', 1),
+('J001a',  '26.5', '70.29702970297029', '8', 1),
+('', '35.91666666666667', '70.19280875455966', '8', 1),
+('J002',  '19.666666666666664', '55.65398645127671', '8', 1),
+('', '27.916666666666668', '52.475247524752476', '8', 1),
+('', '36', '52.37102657634184', '8', 1),
+('J003',  '19.25', '40.17717561229807', '8', 1),
+('', '28.583333333333332', '39.81240229286087', '8', 1),
+('', '35.91666666666667', '39.81240229286087', '8', 1),
+('J004',  '19', '23.814486711829076', '8', 1),
+('', '28.249999999999996', '27.61855132881709', '8', 1),
+('', '35.833333333333336', '27.722772277227726', '8', 1),
+('J005',  '53.75', '12.089630015633142', '8', 1),
+('', '44.25', '16.831683168316832', '8', 1),
+('', '35.91666666666667', '16.988014590932778', '8', 1),
+('J006',  '53.91666666666667', '31.162063574778532', '8', 1),
+('', '43.916666666666664', '36.26889004689943', '8', 1),
+('', '36', '36.32100052110474', '8', 1),
+('J010',  '44.5', '61.33402813965607', '8', 1),
+('', '36.083333333333336', '61.4382490880667', '8', 1),
+('J011',  '43.916666666666664', '70.14069828035435', '8', 1),
+('', '43.416666666666664', '78.37415320479415', '8', 1),
+('', '35.91666666666667', '78.4783741532048', '8', 1),
+('J015',  '43.916666666666664', '86.29494528400208', '8', 1),
+('', '36', '86.39916623241271', '8', 1),
+('', '70.25', '40.698280354351226', '8', 1),
+('', '62.416666666666664', '44.29390307451798', '8', 1),
+('', '43.25', '47.993746743095365', '8', 1),
+('', '35.91666666666667', '47.7853048462741', '8', 1),
+('', '53.5', '53.309015112037514', '8', 1),
+('', '42.916666666666664', '51.84992183428869', '8', 1),
+('', '36.583333333333336', '51.90203230849401', '8', 1),
+('', '35.91666666666667', '91.66232412714954', '8', 1),
+('', '23.5', '9.79676915059927', '8', 1),
 
-INSERT INTO `pins` (`name`, `pos_x`, `pos_y`, `map_id`) VALUES ('J301a',  '22.416666666666664', '89.64667214461791', '11');
-INSERT INTO `pins` (`name`, `pos_x`, `pos_y`, `map_id`) VALUES ('', '33.416666666666664', '86.35990139687757', '11');
-INSERT INTO `pins` (`name`, `pos_x`, `pos_y`, `map_id`) VALUES ('', '43.583333333333336', '86.35990139687757', '11');
-INSERT INTO `pins` (`name`, `pos_x`, `pos_y`, `map_id`) VALUES ('J301',  '22', '73.3771569433032', '11');
-INSERT INTO `pins` (`name`, `pos_x`, `pos_y`, `map_id`) VALUES ('', '33.08333333333333', '70.5012325390304', '11');
-INSERT INTO `pins` (`name`, `pos_x`, `pos_y`, `map_id`) VALUES ('', '43.416666666666664', '70.46014790468365', '11');
-INSERT INTO `pins` (`name`, `pos_x`, `pos_y`, `map_id`) VALUES ('J302',  '22.583333333333332', '55.99835661462613', '11');
-INSERT INTO `pins` (`name`, `pos_x`, `pos_y`, `map_id`) VALUES ('', '33', '52.67050123253904', '11');
-INSERT INTO `pins` (`name`, `pos_x`, `pos_y`, `map_id`) VALUES ('', '43.333333333333336', '52.588331963845526', '11');
-INSERT INTO `pins` (`name`, `pos_x`, `pos_y`, `map_id`) VALUES ('J303',  '22', '56.16269515201314', '11');
-INSERT INTO `pins` (`name`, `pos_x`, `pos_y`, `map_id`) VALUES ('', '32.83333333333333', '34.22350041084634', '11');
-INSERT INTO `pins` (`name`, `pos_x`, `pos_y`, `map_id`) VALUES ('', '43.166666666666664', '34.141331142152836', '11');
-INSERT INTO `pins` (`name`, `pos_x`, `pos_y`, `map_id`) VALUES ('J304',  '22.25', '23.13064913722268', '11');
-INSERT INTO `pins` (`name`, `pos_x`, `pos_y`, `map_id`) VALUES ('', '33.916666666666664', '27.403451109285125', '11');
-INSERT INTO `pins` (`name`, `pos_x`, `pos_y`, `map_id`) VALUES ('', '43.416666666666664', '27.403451109285125', '11');
-INSERT INTO `pins` (`name`, `pos_x`, `pos_y`, `map_id`) VALUES ('J305',  '66.91666666666667', '13.886606409202958', '11');
-INSERT INTO `pins` (`name`, `pos_x`, `pos_y`, `map_id`) VALUES ('', '53.41666666666667', '16.433853738701724', '11');
-INSERT INTO `pins` (`name`, `pos_x`, `pos_y`, `map_id`) VALUES ('', '43.583333333333336', '16.516023007395233', '11');
-INSERT INTO `pins` (`name`, `pos_x`, `pos_y`, `map_id`) VALUES ('J306',  '66.41666666666667', '32.70336894001644', '11');
-INSERT INTO `pins` (`name`, `pos_x`, `pos_y`, `map_id`) VALUES ('', '53.583333333333336', '36.19556285949055', '11');
-INSERT INTO `pins` (`name`, `pos_x`, `pos_y`, `map_id`) VALUES ('', '43.833333333333336', '36.19556285949055', '11');
-INSERT INTO `pins` (`name`, `pos_x`, `pos_y`, `map_id`) VALUES ('J309',  '66.41666666666667', '65.48890714872637', '11');
-INSERT INTO `pins` (`name`, `pos_x`, `pos_y`, `map_id`) VALUES ('', '53.25', '65.52999178307313', '11');
-INSERT INTO `pins` (`name`, `pos_x`, `pos_y`, `map_id`) VALUES ('', '43.75', '65.61216105176663', '11');
-INSERT INTO `pins` (`name`, `pos_x`, `pos_y`, `map_id`) VALUES ('', '43.5', '78.9646672144618', '11');
-INSERT INTO `pins` (`name`, `pos_x`, `pos_y`, `map_id`) VALUES ('J313',  '66.75', '90.05751848808545', '11');
-INSERT INTO `pins` (`name`, `pos_x`, `pos_y`, `map_id`) VALUES ('', '53.25', '92.76910435497125', '11');
-INSERT INTO `pins` (`name`, `pos_x`, `pos_y`, `map_id`) VALUES ('', '43.75', '92.93344289235826', '11');
-INSERT INTO `pins` (`name`, `pos_x`, `pos_y`, `map_id`) VALUES ('', '65.91666666666667', '53.327855382087094', '11');
-INSERT INTO `pins` (`name`, `pos_x`, `pos_y`, `map_id`) VALUES ('', '53.833333333333336', '45.31635168447001', '11');
-INSERT INTO `pins` (`name`, `pos_x`, `pos_y`, `map_id`) VALUES ('', '51.24999999999999', '55.13557929334429', '11');
-INSERT INTO `pins` (`name`, `pos_x`, `pos_y`, `map_id`) VALUES ('', '27.166666666666668', '9.079704190632703', '11');
+('J101',  '33.166666666666664', '91.4624183006536', '9', 1),
+('', '43.583333333333336', '91.38071895424836', '9', 1),
+('', '31.833333333333335', '84.80392156862744', '9', 1),
+('', '43.583333333333336', '85.04901960784313', '9', 1),
+('J103',  '32.58333333333333', '77.32843137254902', '9', 1),
+('', '43.666666666666664', '77.36928104575163', '9', 1),
+('J104',  '31.416666666666664', '69.15849673202613', '9', 1),
+('', '43.583333333333336', '69.24019607843137', '9', 1),
+('J105',  '32.166666666666664', '57.638888888888886', '9', 1),
+('', '43.583333333333336', '57.761437908496724', '9', 1),
+('J106',  '31.666666666666664', '51.511437908496724', '9', 1),
+('', '43.5', '51.633986928104584', '9', 1),
+('J107', '32.58333333333333', '42.76960784313725', '9', 1),
+('', '43.583333333333336', '42.810457516339866', '9', 1),
+('J108',  '32.58333333333333', '33.29248366013072', '9', 1),
+('', '43.583333333333336', '33.33333333333333', '9', 1),
+('J109',  '22.833333333333332', '22.181372549019606', '9', 1),
+('', '33.416666666666664', '26.797385620915033', '9', 1),
+('', '43.5', '26.552287581699346', '9', 1),
+('J110',  '66.08333333333334', '10.82516339869281', '9', 1),
+('', '53.583333333333336', '15.727124183006536', '9', 1),
+('', '43.916666666666664', '15.890522875816993', '9', 1),
+('J111',  '53.91666666666667', '23.897058823529413', '9', 1),
+('', '43.583333333333336', '23.856209150326798', '9', 1),
+('J112',  '66.25', '37.29575163398693', '9', 1),
+('', '53.583333333333336', '35.41666666666667', '9', 1),
+('', '43.916666666666664', '35.375816993464056', '9', 1),
+('J114',  '53.583333333333336', '60.29411764705882', '9', 1),
+('', '43.833333333333336', '60.416666666666664', '9', 1),
+('J118',  '53.833333333333336', '77.36928104575163', '9', 1),
+('J119',  '66.75', '88.68464052287581', '9', 1),
+('', '53.41666666666667', '91.2173202614379', '9', 1),
+('', '65.91666666666667', '52.28758169934641', '9', 1),
+('', '53.91666666666667', '46.60947712418301', '9', 1),
+('', '27.583333333333332', '8.333333333333332', '9', 1),
+
+('J201',  '22.25', '88.50102669404516', '10', 1),
+('', '31.75', '85.17453798767967', '10', 1),
+('', '42.75', '85.21560574948665', '10', 1),
+('J202',  '31.583333333333335', '77.53593429158111', '10', 1),
+('', '42.916666666666664', '77.49486652977413', '10', 1),
+('J203',  '31.916666666666664', '69.40451745379876', '10', 1),
+('', '42.916666666666664', '69.40451745379876', '10', 1),
+('J204',  '21.75', '54.94866529774127', '10', 1),
+('', '32.083333333333336', '51.66324435318275', '10', 1),
+('', '42.916666666666664', '51.74537987679672', '10', 1),
+('J205',  '32.166666666666664', '42.95687885010267', '10', 1),
+('', '42.833333333333336', '42.71047227926078', '10', 1),
+('J206',  '32', '33.47022587268994', '10', 1),
+('', '42.833333333333336', '33.347022587268995', '10', 1),
+('J207',  '22.416666666666664', '22.09445585215606', '10', 1),
+('', '32.25', '26.611909650924026', '10', 1),
+('', '42.833333333333336', '26.529774127310062', '10', 1),
+('J208',  '65.75', '11.129363449691991', '10', 1),
+('', '52.75', '15.64681724845996', '10', 1),
+('', '43.083333333333336', '15.68788501026694', '10', 1),
+('J209',  '53.083333333333336', '23.860369609856263', '10', 1),
+('', '43.25', '23.655030800821354', '10', 1),
+('J210',  '65.66666666666666', '37.659137577002056', '10', 1),
+('', '52.75', '35.40041067761807', '10', 1),
+('', '43.166666666666664', '35.40041067761807', '10', 1),
+('J212',  '52.583333333333336', '60.4517453798768', '10', 1),
+('', '43.166666666666664', '60.4517453798768', '10', 1),
+('J216',  '53.91666666666667', '77.57700205338808', '10', 1),
+('J217',  '65.58333333333334', '89.03490759753593', '10', 1),
+('', '52.916666666666664', '91.58110882956879', '10', 1),
+('', '43.166666666666664', '91.58110882956879', '10', 1),
+('', '65.16666666666666', '52.361396303901444', '10', 1),
+('', '52.666666666666664', '47.02258726899384', '10', 1),
+('', '21.666666666666668', '8.459958932238192', '10', 1),
+
+('J301a',  '22.416666666666664', '89.64667214461791', '11', 1),
+('', '33.416666666666664', '86.35990139687757', '11', 1),
+('', '43.583333333333336', '86.35990139687757', '11', 1),
+('J301',  '22', '73.3771569433032', '11', 1),
+('', '33.08333333333333', '70.5012325390304', '11', 1),
+('', '43.416666666666664', '70.46014790468365', '11', 1),
+('J302',  '22.583333333333332', '55.99835661462613', '11', 1),
+('', '33', '52.67050123253904', '11', 1),
+('', '43.333333333333336', '52.588331963845526', '11', 1),
+('J303',  '22', '56.16269515201314', '11', 1),
+('', '32.83333333333333', '34.22350041084634', '11', 1),
+('', '43.166666666666664', '34.141331142152836', '11', 1),
+('J304',  '22.25', '23.13064913722268', '11', 1),
+('', '33.916666666666664', '27.403451109285125', '11', 1),
+('', '43.416666666666664', '27.403451109285125', '11', 1),
+('J305',  '66.91666666666667', '13.886606409202958', '11', 1),
+('', '53.41666666666667', '16.433853738701724', '11', 1),
+('', '43.583333333333336', '16.516023007395233', '11', 1),
+('J306',  '66.41666666666667', '32.70336894001644', '11', 1),
+('', '53.583333333333336', '36.19556285949055', '11', 1),
+('', '43.833333333333336', '36.19556285949055', '11', 1),
+('J309',  '66.41666666666667', '65.48890714872637', '11', 1),
+('', '53.25', '65.52999178307313', '11', 1),
+('', '43.75', '65.61216105176663', '11', 1),
+('', '43.5', '78.9646672144618', '11', 1),
+('J313',  '66.75', '90.05751848808545', '11', 1),
+('', '53.25', '92.76910435497125', '11', 1),
+('', '43.75', '92.93344289235826', '11', 1),
+('', '65.91666666666667', '53.327855382087094', '11', 1),
+('', '53.833333333333336', '45.31635168447001', '11', 1),
+('', '51.24999999999999', '55.13557929334429', '11', 1),
+('', '27.166666666666668', '9.079704190632703', '11', 1);
