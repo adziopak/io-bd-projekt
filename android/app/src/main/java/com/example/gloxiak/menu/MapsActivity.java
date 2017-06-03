@@ -58,6 +58,17 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        getBuildingsData();
+
+        if (googleServicesAvailable()) {
+            setContentView(R.layout.activity_maps);
+            initMap();
+        }
+
+
+    }
+
+    public void getBuildingsData() {
         requestQueue = Volley.newRequestQueue(this);
 
         JsonObjectRequest jsonObjectRequest = new JsonObjectRequest(Request.Method.GET, "http://skkshowcase.cba.pl/android/buildingList",
@@ -110,14 +121,7 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
         );
         requestQueue.add(jsonObjectRequest);
 
-        if (googleServicesAvailable()) {
-            setContentView(R.layout.activity_maps);
-            initMap();
-        }
-
-
     }
-
     public boolean googleServicesAvailable() {
         GoogleApiAvailability api = GoogleApiAvailability.getInstance();
         int isAvailable = api.isGooglePlayServicesAvailable(this);
@@ -161,7 +165,6 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
         mMap = googleMap;
         showCurrentLocation();
         goToLocation(buildingLat[0], buildingLng[0]); //trzeba zaczynac od budynku V
-        //dodac wszystkie markery
         putMarkers();
 
         mMap.setInfoWindowAdapter(new GoogleMap.InfoWindowAdapter() {
