@@ -1,7 +1,10 @@
 package com.example.gloxiak.menu;
 
 import android.app.Dialog;
+import android.content.Context;
 import android.content.pm.PackageManager;
+import android.net.ConnectivityManager;
+import android.net.NetworkInfo;
 import android.os.Build;
 import android.os.Bundle;
 import android.support.v4.app.ActivityCompat;
@@ -58,15 +61,30 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        getBuildingsData();
-        if (googleServicesAvailable()) {
-            setContentView(R.layout.activity_maps);
-            initMap();
+        if (isNetworkAvailable()) {
+            getBuildingsData();
+            if (googleServicesAvailable()) {
+                setContentView(R.layout.activity_maps);
+                initMap();
+            }
         }
 
 
     }
 
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        finish();
+        System.exit(0);
+    }
+
+    private boolean isNetworkAvailable(){
+        ConnectivityManager connectivityManager
+                = (ConnectivityManager) getSystemService(Context.CONNECTIVITY_SERVICE);
+        NetworkInfo activeNetworkInfo = connectivityManager.getActiveNetworkInfo();
+        return activeNetworkInfo != null && activeNetworkInfo.isConnected();
+    }
     public void getBuildingsData() {
         requestQueue = Volley.newRequestQueue(this);
 
@@ -184,7 +202,7 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
             @Override
             public void onInfoWindowClick(Marker marker) {
                 if (marker.getTitle().equals(buildingNames[0])) {
-                 //dodac onclicklistenera
+                 //dodac onclicklistenera pozniej
                 }
             }
         });
