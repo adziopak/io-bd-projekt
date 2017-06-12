@@ -3,8 +3,6 @@ package com.example.gloxiak.menu;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
 import android.widget.SearchView;
 import android.view.View;
 import android.support.design.widget.NavigationView;
@@ -16,15 +14,11 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Button;
-import android.widget.TextView;
-import android.widget.Toast;
-
-import org.w3c.dom.Text;
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
-     Button[] buttons = new Button[10];
+     Button[] buttons = new Button[8];
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -41,37 +35,93 @@ public class MainActivity extends AppCompatActivity
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
         
-        
-        buttons[3]= (Button) findViewById(R.id.button3);
+        //for 1 to 7
+        buttons[1]= (Button) findViewById(R.id.button1);
         buttons[2] = (Button) findViewById(R.id.button2);
+        buttons[3]= (Button) findViewById(R.id.button3);
+        buttons[4] = (Button) findViewById(R.id.button4);
+        buttons[5]= (Button) findViewById(R.id.button5);
+        buttons[6] = (Button) findViewById(R.id.button6);
+        buttons[7] = (Button) findViewById(R.id.button7);
           Context mContext = this;
-        int checkExistence = mContext.getResources().getIdentifier("v1" , "drawable", mContext.getPackageName());
+        //1 to 7
+        int checkExistence = mContext.getResources().getIdentifier("v0" , "drawable", mContext.getPackageName());
         if ( checkExistence != 0 ) 
-        {  // the resouce exists...
-            buttons[3].setVisibility(View.VISIBLE);
-        }
-        else 
-        { 
-            buttons[3].setVisibility(View.INVISIBLE);
-        }
-        checkExistence = mContext.getResources().getIdentifier("p", "drawable", mContext.getPackageName());
-        if ( checkExistence != 0 )
         {  // the resouce exists...
             buttons[2].setVisibility(View.VISIBLE);
         }
         else 
-        {
+        { 
             buttons[2].setVisibility(View.INVISIBLE);
+        }
+        checkExistence = mContext.getResources().getIdentifier("p0", "drawable", mContext.getPackageName());
+        if ( checkExistence != 0 )
+        {  // the resouce exists...
+            buttons[1].setVisibility(View.VISIBLE);
+        }
+        else 
+        {
+            buttons[1].setVisibility(View.INVISIBLE);
 
         }
-        
-        buttons[3].setOnClickListener(new View.OnClickListener() {
+        checkExistence = mContext.getResources().getIdentifier("s0", "drawable", mContext.getPackageName());
+        if ( checkExistence != 0 )
+        {  // the resouce exists...
+            buttons[3].setVisibility(View.VISIBLE);
+        }
+        else
+        {
+            buttons[3].setVisibility(View.INVISIBLE);
+
+        }
+        checkExistence = mContext.getResources().getIdentifier("h0", "drawable", mContext.getPackageName());
+        if ( checkExistence != 0 )
+        {  // the resouce exists...
+            buttons[4].setVisibility(View.VISIBLE);
+        }
+        else
+        {
+            buttons[4].setVisibility(View.INVISIBLE);
+
+        }
+        checkExistence = mContext.getResources().getIdentifier("j0", "drawable", mContext.getPackageName());
+        if ( checkExistence != 0 )
+        {  // the resouce exists...
+            buttons[5].setVisibility(View.VISIBLE);
+        }
+        else
+        {
+            buttons[5].setVisibility(View.INVISIBLE);
+
+        }
+        checkExistence = mContext.getResources().getIdentifier("k0", "drawable", mContext.getPackageName());
+        if ( checkExistence != 0 )
+        {  // the resouce exists...
+            buttons[6].setVisibility(View.VISIBLE);
+        }
+        else
+        {
+            buttons[6].setVisibility(View.INVISIBLE);
+
+        }
+        checkExistence = mContext.getResources().getIdentifier("l0", "drawable", mContext.getPackageName());
+        if ( checkExistence != 0 )
+        {  // the resouce exists...
+            buttons[7].setVisibility(View.VISIBLE);
+        }
+        else
+        {
+            buttons[7].setVisibility(View.INVISIBLE);
+
+        }
+        for(int i=1; i<=7; i++){
+        buttons[i].setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent newAct = new Intent(MainActivity.this, BuildingActivity.class);
                 startActivity(newAct);
             }
-        });
+        }); }
     }
 
     @Override
