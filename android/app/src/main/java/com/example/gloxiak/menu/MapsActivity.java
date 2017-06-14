@@ -24,8 +24,6 @@ import com.android.volley.toolbox.JsonObjectRequest;
 import com.android.volley.toolbox.Volley;
 import com.google.android.gms.common.ConnectionResult;
 import com.google.android.gms.common.GoogleApiAvailability;
-import com.google.android.gms.common.api.GoogleApiClient;
-import com.google.android.gms.location.LocationRequest;
 import com.google.android.gms.maps.CameraUpdate;
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
@@ -43,19 +41,14 @@ import org.json.JSONObject;
 public class MapsActivity extends AppCompatActivity implements OnMapReadyCallback {
 
     GoogleMap mMap;
-    GoogleApiClient googleApiClient;
-    LocationRequest locationRequest;
     RequestQueue requestQueue;
-
-    //pobrac z jsona zamiast w taki sposob
-
 
     String[] buildingNames;
     String[] buildingLatx;
     String[] buildingLngx;
-
     Double[] buildingLat;
     Double[] buildingLng;
+    int existance = 0;
 
 
     @Override
@@ -79,12 +72,13 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
         System.exit(0);
     }
 
-    private boolean isNetworkAvailable(){
+    private boolean isNetworkAvailable() {
         ConnectivityManager connectivityManager
                 = (ConnectivityManager) getSystemService(Context.CONNECTIVITY_SERVICE);
         NetworkInfo activeNetworkInfo = connectivityManager.getActiveNetworkInfo();
         return activeNetworkInfo != null && activeNetworkInfo.isConnected();
     }
+
     public void getBuildingsData() {
         requestQueue = Volley.newRequestQueue(this);
 
@@ -94,22 +88,22 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
                     public void onResponse(JSONObject response) {
                         try {
                             JSONArray jsonArray = response.getJSONArray("buildingList");
-                            buildingNames= new String[jsonArray.length()];
+                            buildingNames = new String[jsonArray.length()];
                             buildingLatx = new String[jsonArray.length()];
                             buildingLngx = new String[jsonArray.length()];
 
 
-                            for (int i = 0; i < jsonArray.length(); i ++){
+                            for (int i = 0; i < jsonArray.length(); i++) {
                                 JSONObject building = jsonArray.getJSONObject(i);
                                 String lat = building.getString("lat");
                                 buildingLatx[i] = lat;
                             }
-                            for (int i = 0; i < jsonArray.length(); i ++){
+                            for (int i = 0; i < jsonArray.length(); i++) {
                                 JSONObject building = jsonArray.getJSONObject(i);
                                 String name = building.getString("name");
                                 buildingNames[i] = "Budynek" + " " + name;
                             }
-                            for (int i = 0; i < jsonArray.length(); i ++){
+                            for (int i = 0; i < jsonArray.length(); i++) {
                                 JSONObject building = jsonArray.getJSONObject(i);
                                 String lng = building.getString("lon");
                                 buildingLngx[i] = lng;
@@ -117,13 +111,12 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
                             buildingLat = new Double[buildingLatx.length];
                             buildingLng = new Double[buildingLngx.length];
 
-                            for (int i = 0 ; i < buildingLatx.length; i ++){
+                            for (int i = 0; i < buildingLatx.length; i++) {
                                 buildingLat[i] = Double.parseDouble(buildingLatx[i]);
                             }
-                            for (int i = 0 ; i < buildingLngx.length; i ++){
+                            for (int i = 0; i < buildingLngx.length; i++) {
                                 buildingLng[i] = Double.parseDouble(buildingLngx[i]);
                             }
-
                         } catch (JSONException e) {
                             e.printStackTrace();
                         }
@@ -132,13 +125,14 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
                 new Response.ErrorListener() {
                     @Override
                     public void onErrorResponse(VolleyError error) {
-                        Log.d("JSONBUILDINGLIST","error");
+                        Log.d("JSONBUILDINGLIST", "error");
                     }
                 }
         );
         requestQueue.add(jsonObjectRequest);
 
     }
+
     public boolean googleServicesAvailable() {
         GoogleApiAvailability api = GoogleApiAvailability.getInstance();
         int isAvailable = api.isGooglePlayServicesAvailable(this);
@@ -202,7 +196,7 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
             @Override
             public void onInfoWindowClick(Marker marker) {
                 if (marker.getTitle().equals(buildingNames[0])) {
-                 //dodac onclicklistenera pozniej
+                    //dodac onclicklistenera pozniej
                 }
             }
         });
@@ -210,7 +204,7 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
     }
 
     private void putMarkers() {
-        for (int i = 0; i < buildingNames.length ; i++) {
+        for (int i = 0; i < buildingNames.length; i++) {
             putMarker(buildingNames[i], buildingLat[i], buildingLng[i]);
         }
     }
