@@ -21,6 +21,8 @@ class AndroidController
 
 				case 'map':
 					return $this->map();
+                                case 'sendPins':
+                                    return $this->sendPins();
 			}
 		}
 
@@ -75,6 +77,56 @@ class AndroidController
             return json_encode($stmt->get_result()->fetch_all(MYSQLI_ASSOC));
         }
     }
+    
+        public function sendPins()
+       {
+           $name = NULL;           
+           $floor = NULL;  
+           $pinName = NULL;
+        
+        //sprawdza czy podano name i floor i zwraca piny
+        if(isset($_GET['name']) && isset($_GET['floor']))
+        {
+            $name = $_GET['name'];
+            $floor = $_GET['floor'];
+            
+            $dbconn = new DatabaseConnect;
+            $stmt = $dbconn->prepare("select p.id, p.name, p.pos_x, p.pos_y from pins p inner join maps m on p.map_id = m.id inner join buildings b on m.building_id = b.id where b.name=? and m.floor=?");
+            $stmt->bind_param("si",$name,$floor);
+            $stmt->execute();
+            
+            header('Content-Type: application/json');
+            return json_encode($stmt->get_result()->fetch_all(MYSQLI_ASSOC));
+        }
+        
+        //jesli nie podano floor zwraca wszystkie pimy budynku
+        if(isset($_GET['name']))
+        {
+            $name = $_GET['name'];
+            
+            $dbconn = new DatabaseConnect;
+            $stmt = $dbconn->prepare("select * from pins inner join maps on pins.map_id = maps.id inner join buildings on maps.building_id = buildings.id where buildings.name=?" );
+            $stmt->bind_param("s",$name);
+            $stmt->execute();
+            
+            header('Content-Type: application/json');
+            return json_encode($stmt->get_result()->fetch_all(MYSQLI_ASSOC));
+        }
+        
+        //zwracanie pojedynczego pinu po nazwie
+        if(isset($_GET['pinName']))
+        {
+            $pinName = $_GET['pinName'];
+            
+            $dbconn = new DatabaseConnect;
+            $stmt = $dbconn->prepare("select * from pins p where p.name=?" );
+            $stmt->bind_param("s",$pinName);
+            $stmt->execute();
+            
+            header('Content-Type: application/json');
+            return json_encode($stmt->get_result()->fetch_all(MYSQLI_ASSOC));
+        }
+       }
 }
 
 ?>
