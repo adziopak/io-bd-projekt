@@ -22,8 +22,14 @@ public class LoadingActivity extends AppCompatActivity {
                 Intent home = new Intent(LoadingActivity.this, MainActivity.class);
                 startActivity(home);
                 finish();
+
+                Intent json = new Intent(LoadingActivity.this, JsonActivity.class);
+                startActivity(json);
+                finish();
             }
         },SPLASH_TIME_OUT);
+
+
     }
 
 }
