@@ -1,13 +1,13 @@
 package com.example.gloxiak.menu;
 
-import android.content.Intent;
-import android.net.Uri;
+import android.content.Context;
+import android.net.ConnectivityManager;
+import android.net.NetworkInfo;
 import android.support.v7.app.AppCompatActivity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.app.ProgressDialog;
 import android.os.AsyncTask;
-import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.widget.ListAdapter;
 import android.widget.ListView;
@@ -21,121 +21,197 @@ import org.json.JSONArray;
 import java.util.ArrayList;
 import java.util.HashMap;
 
-public class JsonActivity extends AppCompatActivity {
-
-    String imgname;
-
+public class JsonActivity extends AppCompatActivity
+{
+    HttpHandler sh = new HttpHandler();
     private String TAG = JsonActivity.class.getSimpleName();
+    private ListView lvMap, lvPin;
 
-    private ProgressDialog pDialog;
-    private ListView lv;
+    private String[] urlTabMap = {"http://skkshowcase.cba.pl/android/map?name=V", "http://skkshowcase.cba.pl/android/map?name=P",
+            "http://skkshowcase.cba.pl/android/map?name=J", "http://skkshowcase.cba.pl/android/map?name=S"};
 
-    // URL : stąd pobieramy dane
-    private static String url = "http://skkshowcase.cba.pl/android/map?name=";
+    private String[] urlTabPin = {"http://skkshowcase.cba.pl/android/sendPins?name=V", "http://skkshowcase.cba.pl/android/sendPins?name=P",
+            "http://skkshowcase.cba.pl/android/sendPins?name=J", "http://skkshowcase.cba.pl/android/sendPins?name=S"};
 
-    ArrayList<HashMap<String, String>> dataList;
+    private int h = 0, w = 0;
+    private String urlMap = urlTabMap[h];
+    private String urlPin = urlTabPin[w];
+
+    ArrayList<HashMap<String, String>> dataListMap;
+    ArrayList<HashMap<String, String>> dataListPin;
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    protected void onCreate(Bundle savedInstanceState)
+    {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_json);
 
-        dataList = new ArrayList<>();
-        lv = (ListView) findViewById(R.id.list);
+        dataListMap = new ArrayList<>();
+        dataListPin = new ArrayList<>();
 
-        new GetData().execute(getIntent().getExtras().getString("query"));
+        lvMap = (ListView) findViewById(R.id.list);
+        lvPin = (ListView) findViewById(R.id.list);
+
+        new GetData().execute();
     }
 
-    /**
-     * Async task class to get json by making HTTP call
-     */
-    private class GetData extends AsyncTask<String, Void, Void> {
+    private class GetData extends AsyncTask<Void, Void, Void>
+    {
 
         @Override
-        protected void onPreExecute() {
+        protected void onPreExecute()
+        {
             super.onPreExecute();
-            // Showing progress dialog
-            pDialog = new ProgressDialog(JsonActivity.this);
-            pDialog.setMessage("Please wait...");
-            pDialog.setCancelable(false);
-            pDialog.show();
-
         }
 
-        @Override
-        protected Void doInBackground(String... query) {
-            HttpHandler sh = new HttpHandler();
+        protected ArrayList getMapData()
+        {
+            while (h < urlTabMap.length)
+            {
+                String jsonStrMap = sh.makeServiceCall(urlMap);
+                Log.e(TAG, "Response from url: " + jsonStrMap);
+                if (jsonStrMap != null) {
+                    try {
+                        JSONArray dataArrayMap = new JSONArray(jsonStrMap);
+                        for (int i = 0; i < dataArrayMap.length(); i++) {
+                            JSONObject jsonObjMap = dataArrayMap.getJSONObject(i);
 
-            String jsonStr = sh.makeServiceCall(url + Uri.encode(query[0], "@#&=*+-_.,:!?()/~'%"));
-            Log.e(TAG, "Response from url: " + jsonStr);
+                            //tutaj wdecydujemy co ma byc zapisywane do listy
+                            String nameMap = jsonObjMap.getString("name");
+                            HashMap<String, String> data_tmp_map = new HashMap<>();
+                            data_tmp_map.put("name", nameMap);
+                            dataListMap.add(data_tmp_map);
 
-            if (jsonStr != null) {
-                try {
+                        }
+                        if (h < (urlTabMap.length)- 1)
+                        {
+                            urlMap = urlTabMap[h + 1];
+                        }
+                        h = h + 1;
 
-                    JSONArray dataArray = new JSONArray(jsonStr);
+                    } catch (final JSONException e) {
+                        Log.e(TAG, "Json parsing error: " + e.getMessage());
+                        runOnUiThread(new Runnable() {
+                            @Override
+                            public void run() {
+                                Toast.makeText(getApplicationContext(),
+                                        "Json parsing error: " + e.getMessage(),
+                                        Toast.LENGTH_LONG)
+                                        .show();
+                            }
+                        });
 
-                    for (int i = 0; i < dataArray.length(); i++) {
-                        JSONObject jsonObj = dataArray.getJSONObject(i);
-
-                        String name = jsonObj.getString("image");
-
-
-                        HashMap<String, String> data_tmp = new HashMap<>();
-
-                        data_tmp.put("image", name);
-                        imgname=name;
-                        dataList.add(data_tmp);
                     }
-                } catch (final JSONException e) {
-                    Log.e(TAG, "Json parsing error: " + e.getMessage());
+
+                } else {
+                    Log.e(TAG, "Couldn't get json from server.");
                     runOnUiThread(new Runnable() {
                         @Override
                         public void run() {
                             Toast.makeText(getApplicationContext(),
-                                    "Json parsing error: " + e.getMessage(),
+                                    "Couldn't get json from server. Check LogCat for possible errors!",
                                     Toast.LENGTH_LONG)
                                     .show();
                         }
                     });
 
                 }
-            } else {
-                Log.e(TAG, "Couldn't get json from server.");
-                runOnUiThread(new Runnable() {
-                    @Override
-                    public void run() {
-                        Toast.makeText(getApplicationContext(),
-                                "Couldn't get json from server. Check LogCat for possible errors!",
-                                Toast.LENGTH_LONG)
-                                .show();
-                    }
-                });
-
             }
+            return dataListMap;
+        }
 
+        protected ArrayList getPinData()
+        {
+            while(w < urlTabPin.length)
+            {
+                String jsonStrPin = sh.makeServiceCall(urlPin);
+                Log.e(TAG, "Response from url: " + jsonStrPin);
+                if (jsonStrPin != null) {
+                    try {
+                        JSONArray dataArrayPin = new JSONArray(jsonStrPin);
+                        for (int j = 0; j < dataArrayPin.length(); j++) {
+                            JSONObject jsonObjPin = dataArrayPin.getJSONObject(j);
+
+                            //tutaj wdecydujemy co ma byc zapisywane do listy
+                            String namePin = jsonObjPin.getString("name");
+                            HashMap<String, String> data_tmp_Pin = new HashMap<>();
+                            data_tmp_Pin.put("name", namePin);
+                            dataListPin.add(data_tmp_Pin);
+
+                        }
+                        if (w < (urlTabPin.length) - 1)
+                        {
+                            urlPin = urlTabPin[w + 1];
+                        }
+                        w = w + 1;
+
+                    } catch (final JSONException e) {
+                        Log.e(TAG, "Json parsing error: " + e.getMessage());
+                        runOnUiThread(new Runnable() {
+                            @Override
+                            public void run() {
+                                Toast.makeText(getApplicationContext(),
+                                        "Json parsing error: " + e.getMessage(),
+                                        Toast.LENGTH_LONG)
+                                        .show();
+                            }
+                        });
+
+                    }
+
+                } else {
+                    Log.e(TAG, "Couldn't get json from server.");
+                    runOnUiThread(new Runnable() {
+                        @Override
+                        public void run() {
+                            Toast.makeText(getApplicationContext(),
+                                    "Couldn't get json from server. Check LogCat for possible errors!",
+                                    Toast.LENGTH_LONG)
+                                    .show();
+                        }
+                    });
+
+                }
+            }
+            return dataListPin;
+        }
+
+        private boolean isNetworkAvailable(){
+            ConnectivityManager connectivityManager
+                    = (ConnectivityManager) getSystemService(Context.CONNECTIVITY_SERVICE);
+            NetworkInfo activeNetworkInfo = connectivityManager.getActiveNetworkInfo();
+            return activeNetworkInfo != null && activeNetworkInfo.isConnected();
+        }
+
+        @Override
+        protected Void doInBackground(Void... arg0)
+        {
+            if (isNetworkAvailable())
+            {
+            getMapData();
+            getPinData();
+            }
+            while (!isNetworkAvailable())
+            {
+                if (isCancelled());
+                break;
+            }
             return null;
         }
 
         @Override
         protected void onPostExecute(Void result) {
             super.onPostExecute(result);
-            // Dismiss the progress dialog
-            if (pDialog.isShowing())
-                pDialog.dismiss();
-            /**
-             * Updating parsed JSON data into ListView
-             * */
-            ListAdapter adapter = new SimpleAdapter(
-                    JsonActivity.this, dataList,
-                    R.layout.list_item, new String[]{"image"}, new int[]{R.id.name});
 
-            lv.setAdapter(adapter);
+            if(!isNetworkAvailable())
+                Toast.makeText(JsonActivity.this, "Nie udało się pobrać danych, brak połączenia z internetem", Toast.LENGTH_LONG).show();
 
-            Intent intent=new Intent(getBaseContext(), SearchActivity.class);
-            intent.putExtra("img", imgname);
-            startActivity(intent);
+            Intent main = new Intent(JsonActivity.this, MainActivity.class);
+            startActivity(main);
             finish();
         }
 
     }
 }
+
+
