@@ -142,11 +142,8 @@ public class MainActivity extends AppCompatActivity
         SearchView sv = (SearchView) findViewById(R.id.searchViewNav);
         sv.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
             public boolean onQueryTextSubmit(String query) {
-                Intent newAct = new Intent(MainActivity.this, JsonActivity.class);
                 Bundle b = new Bundle();
                 b.putString("query", query);
-                newAct.putExtras(b);
-                startActivity(newAct);
                 return true;
             }
 
