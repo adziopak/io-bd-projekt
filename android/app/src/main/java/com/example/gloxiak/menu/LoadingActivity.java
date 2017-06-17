@@ -22,6 +22,7 @@ public class LoadingActivity extends AppCompatActivity {
                 Intent home = new Intent(LoadingActivity.this, MainActivity.class);
                 startActivity(home);
                 finish();
+                System.exit(0);
 
                 Intent json = new Intent(LoadingActivity.this, JsonActivity.class);
                 startActivity(json);
