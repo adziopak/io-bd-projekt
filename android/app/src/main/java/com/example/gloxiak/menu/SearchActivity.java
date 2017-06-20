@@ -24,13 +24,14 @@ public class SearchActivity extends AppCompatActivity {
         setContentView(R.layout.activity_search);
         //double posX = 0.32;
         //double posY = 0.44;
-        double posX = 0.44;
-        double posY = 0.70;
         int mapWidth = 1150;
         int mapHeight = 1750;
         textView3=(TextView)findViewById(R.id.textView9);
         Bundle extras = getIntent().getExtras();
         if(extras!=null) {
+
+            double posX = extras.getInt("positionX");
+            double posY = extras.getInt("positionY");;
             String s = extras.getString("img");
             textView3.setText(s);
             String newString=s.replace(".png","");
@@ -50,7 +51,7 @@ public class SearchActivity extends AppCompatActivity {
             PhotoViewAttacher photoView= new PhotoViewAttacher(imgVwv);
             photoView.update();
             imageLayout.addView(imgVwv, layoutParams);
-        }else textView3.setText("nic");
+        }else textView3.setText("ERROR");
 
 
 
