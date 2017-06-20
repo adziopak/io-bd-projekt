@@ -206,9 +206,15 @@ public class JsonActivity extends AppCompatActivity
             if(!isNetworkAvailable())
                 Toast.makeText(JsonActivity.this, "Nie udało się pobrać danych, brak połączenia z internetem", Toast.LENGTH_LONG).show();
 
-            Intent main = new Intent(JsonActivity.this, MainActivity.class);
-            startActivity(main);
-            finish();
+            //Intent main = new Intent(JsonActivity.this, MainActivity.class);
+            //startActivity(main);
+            //Intent search = new Intent(getBaseContext(), SearchActivity.class);
+            //search.putExtra("positionX", positionX);
+            //search.putExtra("positionY", positionY);
+            //search.putExtra("img", imgname);
+            //startActivity(search);
+            //finish();
+
         }
 
     }
