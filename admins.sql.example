@@ -1,7 +1,10 @@
-
 INSERT INTO `admins` (`id`, `user_name`, `user_password`, `last_visit`) VALUES
-(1, 'przykladowa_nazwa', 'przykladowe_zsaltowane_haslo', NULL);
+(1, 'admin', '$2y$10$zU33fGnHlz/aFuWjLrsBi.uELHwQixZ7im1Olh9Y6/VSDmgNUZV.i', NULL);
 
 -- przykladowa_nazwa: root
 -- przykladowe_zsaltowane_haslo: $2y$10$zU33fGnHlz/aFuWjLrsBi.uELHwQixZ7im1Olh9Y6/VSDmgNUZV.i
 -- daje wyniki: root / root
+
+
+--- JESLI NIC NIE ZMIENISZ W NINIEJSZYM PLIKU, TO DANE DOSTEPOWE DO PANELU ADMINA: admin/root
+--- LOGUJESZ SIE DO NIEGO www.adres.pl/adminPanel

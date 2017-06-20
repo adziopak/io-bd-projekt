@@ -8,14 +8,14 @@ SET foreign_key_checks = 1;
 
 CREATE TABLE admins (
     id              INTEGER NOT NULL PRIMARY KEY AUTO_INCREMENT,
-    user_name       VARCHAR2(45) NOT NULL,
-    user_password   VARCHAR2(61) NOT NULL,
+    user_name       VARCHAR(45) NOT NULL,
+    user_password   VARCHAR(61) NOT NULL,
     last_visit      DATE
 );
 
 CREATE TABLE buildings (
     id         INTEGER NOT NULL PRIMARY KEY AUTO_INCREMENT,
-    name       VARCHAR2(45) NOT NULL,
+    name       VARCHAR(45) NOT NULL,
     lat        FLOAT NOT NULL,
     lon        FLOAT NOT NULL,
     admin_id   INTEGER NOT NULL
@@ -24,8 +24,8 @@ CREATE TABLE buildings (
 CREATE TABLE maps (
     id             INTEGER NOT NULL PRIMARY KEY AUTO_INCREMENT,
     floor          INTEGER NOT NULL,
-    image          VARCHAR2(45) NOT NULL,
-    image_md5      VARCHAR2(33) NOT NULL,
+    image          VARCHAR(45) NOT NULL,
+    image_md5      VARCHAR(33) NOT NULL,
     image_width    INTEGER NOT NULL,
     image_height   INTEGER NOT NULL,
     building_id    INTEGER NOT NULL,
@@ -41,7 +41,7 @@ CREATE TABLE paths (
 
 CREATE TABLE pins (
     id         INTEGER NOT NULL PRIMARY KEY AUTO_INCREMENT,
-    name       VARCHAR2(45),
+    name       VARCHAR(45),
     pos_x      FLOAT NOT NULL,
     pos_y      FLOAT NOT NULL,
     map_id     INTEGER NOT NULL,

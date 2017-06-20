@@ -1,4 +1,4 @@
-INSERT INTO `maps` (`id`, `floor`, `image`, `image_md5`, `map_width`, `map_height`, `building_id`, `editor_id`) VALUES
+INSERT INTO `maps` (`id`, `floor`, `image`, `image_md5`, `image_width`, `image_height`, `building_id`, `admin_id`) VALUES
 (1, 0, 'v0.png', '783191851af030ffca1e62b9c3435405', 1470, 1086, 1, 1),
 (2, 1, 'v1.png', '793afa182013900bf416566b82142079', 1500, 1231, 1, 1),
 (3, 2, 'v2.png', '4fd4e80105f7a747fd1a231c29c4943a', 1500, 1239, 1, 1),
