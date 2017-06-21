@@ -179,10 +179,17 @@ class AdminPanelController
 			die();
 		}
 		
-	// $edit=new Admin;		
-	// $this->userName=$_GET['userName'];
-	// if($_GET['userPassword']==$_GET['userPassword2']
-	//	$this->userPassword=$_GET['userPassword]'];
+	$edit=new Admin;
+	$edit->userName=$_GET['userName'];
+	$edit->userPassword=password_hash($_GET['userPassword'], PASSWORD_DEFAULT);
+	if($_GET['userPassword']==$_GET['userPassword2'])
+	{
+	      $edit->update();
+	      $view = new addEditorView(true);
+	} 
+	else {$view = new addEditorView(false);}
+	echo $view->render();
+	
 	
 
 		
