@@ -1,11 +1,14 @@
 <?php
 require_once 'models/admin.php';
 require_once 'models/map.php';
+require_once 'models/path.php';
 require_once 'views/adminPanel/indexView.php';
 require_once 'views/adminPanel/loginView.php';
 require_once 'views/adminPanel/alreadyLoggedView.php';
 require_once 'views/adminPanel/addBuildingView.php';
 require_once 'views/adminPanel/buildingAddedView.php';
+require_once  'views/adminPanel/choosePathView.php';
+require_once  'views/adminPanel/addPathView.php';
 
 
 // obsluga panalu admina/edytora
@@ -31,6 +34,9 @@ class AdminPanelController
 
 				case 'addPath':
 					return $this->addPath();
+
+				case 'choosePath':
+					return $this->choosePath();
 
 				case 'addAdmin':
 					return $this->addAdmin();
@@ -166,8 +172,46 @@ class AdminPanelController
 			header("Location: /adminPanel/login");
 			die();
 		}
+		if (isset($_POST['first_pin']) && isset($_POST['second_pin']))
+		{
+			$path = new Path;
+			$path->firstPinId = $_POST['first_pin'];
+			$path->secondPinId = $_POST['second_pin'];
+			$path->adminId = $_SESSION['loginUserId'];
+			$path->update();
 
+		}
+		if (!isset($_GET['name']) || !isset($_GET['floor']))
+		{
+			header("Location: /adminPanel/choosePath");
+			die();
+		}
+
+		$building = Building::GetByName($_GET['name']);
+		$map = $building->getMap($_GET['floor']);
+		$view = new addPathView;
+		$view->map = $map;
+
+		
+		$view->pins = $map->getPins();
+		$view->paths = PathCoords::GetAllFromMapId($map->id);
+		
+
+		return $view->render();
 		// Funkcjonalnosc dodawania sciezek
+	}
+
+	public function choosePath()
+	{
+		if (!isset($_SESSION['loginUserId']))
+		{
+			header("Location: /adminPanel/login");
+			die();
+		}
+	$view = new choosePathView;
+	$view->floors = BuildingFloor::GetAll();
+	return $view->render();
+	
 	}
 
 	// /adminPanel/addAdmin
